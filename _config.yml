@@ -134,10 +134,10 @@ menu:
     #translation_key: menu.1_worldwide
   #- path: menu.1_national_indicators_path
     #translation_key: menu.1_national_indicators
-  #- translation_key: menu.1_help
-    #dropdown:
-    #- path: /help/navigation/
-     # translation_key: menu.1_help_2_navigation
+  - translation_key: menu.1_help
+    dropdown:
+    - path: /help/navigation/
+      translation_key: menu.1_help_2_navigation
     - path: /help/guidance/
       translation_key: menu.1_help_2_guidance
     - path: /help/faq/
