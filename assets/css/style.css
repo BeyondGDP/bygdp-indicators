@@ -2728,8 +2728,23 @@ body.contrast-high #search-bar-on-page button:hover {
 body.contrast-high.layout-search form input, body.contrast-high.layout-search form label {
   color: black; }
 
-.goal-icon-image {
-  background-color: transparent; }
+.kacheln {
+  display: grid;
+  gap: 20px;
+  /* Standard: 1 Spalte (1x4) */
+  grid-template-columns: 1fr; }
+
+/* Tablet: 2x2 */
+@media (min-width: 768px) {
+  .kacheln {
+    grid-template-columns: repeat(2, 1fr); } }
+/* Desktop: 4x1 */
+@media (min-width: 1200px) {
+  .kacheln {
+    grid-template-columns: repeat(4, 1fr); } }
+.kachel {
+  background: transparent;
+  padding: 30px; }
 
 #sources {
   hyphens: auto; }
