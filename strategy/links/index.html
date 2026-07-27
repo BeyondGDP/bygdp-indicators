@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
+        <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://beyondgdp.github.io/bygdp-data/de',
+
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
+  },
+
+  // A hook which can be replaced to alter whether/how the values that are
+  // displayed on indicator tables/graphs get rounded. A "context" parameter
+  // is also passed which contains additional information.
+  dataRounding: function(value, context) {
+    // Alterations go here.
+    return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
+  language: 'de',
+
+  language_numbers: '',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
+};
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data !== null && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+
+        
+    <title>Links - Deutschlands SDG Indikatoren</title>
+
+
+
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+
+        <!--[if IE 9]>
+        <script src="/bygdp-indicators/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/bygdp-indicators/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/bygdp-indicators/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/bygdp-indicators/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/bygdp-indicators/assets/img/favicons/favicon.ico" />
+
+        
+        <link rel="manifest" href="/bygdp-indicators/manifest.json">
+        
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260727064723">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
+
+        
+
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/ie.css">
+        <![endif]-->
+
+        
+
+    </head>
+<body class="language-de
+layout-page
+">
+<!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"Beta-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_contacts.suggestions\">Kommentare</a>.","internet_explorer_message":"Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari.","internet_explorer_message_title":"Dieser Internet-Browser wird nicht mehr unterstützt","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">Dieser Internet-Browser wird nicht mehr unterstützt</h2>
+    <p class="internet-explorer-message-body">Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari.</p>
+</div>
+<!-- <div id="disclaimer">
+    
+<div class="container">
+  <div class="disclaimer-alert">
+    <strong class="phase-tag">beta</strong>
+    
+    Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href="mailto:sdg-indicators@destatis.de">Kommentare</a>.
+    
+  </div>
+</div>
+
+</div> -->
+
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/bygdp-indicators/" id="home" onclick="updateVisitCountMinus()">
+    <img src="/bygdp-indicators/assets/img/de/SDG_logo.png" alt="Zum Hauptinhalt springen" />
+</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+
+
+
+<ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/bygdp-indicators/" >Start</a>
+</li>
+<li class="nav-item ">
+    <a class="nav-link" href="/bygdp-indicators/reporting-status/" >Status</a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-agenda2030" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Strategie
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-agenda2030"><li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/strategy/2030_agenda/" >Agenda 2030</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/strategy/monitoring/" >Monitoring</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/strategy/publications/" >Publikationen</a>
+</li>
+<li class=" active">
+    <a class="dropdown-item" href="/bygdp-indicators/strategy/links/" >Links</a>
+</li>
+</ul>
+          </li><li class="nav-item ">
+    <a class="nav-link" href="/bygdp-indicators/worldwide/" >Weltweit</a>
+</li>
+<li class="nav-item ">
+    <a class="nav-link" href="https://dns-indikatoren.de" >Nationale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/DNS Wheel.png" title="Klicken Sie hier um zur Seite der DNS Indikatoren zu gelangen" alt="Link DNS" style="width:24px;height:24px;"/></a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Hilfe
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/help/navigation/" >Aufbau der Online Plattform</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/help/guidance/" >Technische Hinweise</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/help/faq/" >FAQ</a>
+</li>
+</ul>
+          </li></ul>
+
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/bygdp-indicators/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Suche</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Suche">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container d-flex">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/bygdp-indicators/en/strategy/links/">
+                English
+            </a>
+        </li></ul>
+</div>
+
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/bygdp-indicators/en/strategy/links/">
+                English
+            </a>
+        </li></ul>
+</div>
+</span><a title="" aria-label=""
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="top" tabindex=-1></div>
+
+
+<div class="container">
+    <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        <li class="breadcrumb-item" >
+            <a href="/bygdp-indicators/">Start</a>
+        </li>
+        <li class="breadcrumb-item active">Links</li>
+    </ol>
+</nav>
+</div>
+<div id="main-content" class="container" role="main">
+    <div>
+        <h1>Links</h1>
+        
+
+
+    <div class="flex-container">
+  <div class="leftColumn" >
+    <div class=collapsibleElements>
+      <button class="collapsible">Vereinte Nationen</button>
+      <div class="content">
+        <p></p>
+          <h4><a href="https://unstats.un.org/sdgs/iaeg-sdgs/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">IAEG-SDGs</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://unstats.un.org/sdgs/dataportal" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">SDG Global Database</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://unstats.un.org/wiki/display/SDGeHandbook/Home" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">E-Handbook on Sustainable Development Goals Indicators</a> (nicht auf Deutsch verfügbar)</h4>
+        <p></p>
+        <h3 style="width: 80%;">Der Bericht über die Ziele für nachhaltige Entwicklung</h3>
+        <p></p>
+          <h4><a href="https://unstats.un.org/sdgs/report/2023/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2023: Special Edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://unstats.un.org/sdgs/report/2022/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2022</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://unstats.un.org/sdgs/report/2021/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2021</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://unstats.un.org/sdgs/report/2020/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2020</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://unstats.un.org/sdgs/report/2019/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2019</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://unstats.un.org/sdgs/report/2018/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2018</a> (nicht auf Deutsch verfügbar)</h4>
+        <p></p>
+      </div>
+      <button class="collapsible">Wirtschaftskommission für Europa</button>
+      <div class="content">
+        <h3 style="width: 80%;">Halfway to 2030: How many targets will be achieved in the UNECE region</h3>
+        <p></p>
+          <h4><a href="https://unece.org/info/Statistics/pub/353864" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">Is the UNECE region on track for 2030?</a> (nicht auf Deutsch verfügbar)</h4>
+        <p></p>
+        <h3 style="width: 80%;">Road Map on Statistics for Sustainable Development Goals – Second Edition</h3>
+        <p></p>
+          <h4><a href="https://unece.org/statistics/publications/road-map-statistics-sustainable-development-goals" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">Road Map on Statistics for Sustainable Development Goals</a> (nicht auf Deutsch verfügbar)</h4>
+        <p></p>
+      </div>
+      <button class="collapsible">Europäischen Union</button>
+      <div class="content">
+        <p></p>
+          <h4><a href="https://ec.europa.eu/eurostat/web/sdi/overview" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Indikatoren der EU-Kommission</a></h4>
+          <h4><a href="https://ec.europa.eu/eurostat/web/sdi/database" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Eurostat: Datenbank</a></h4>
+        <p></p>
+        <h3 style="width: 80%;">Sustainable development in the European Union — Monitoring report on progress towards the SDGs in an EU context</h3>
+        <p></p>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/15234730/21637496/KS-01-24-018-EN-N.pdf/897a6d1f-d3b7-0b34-86b0-0cdaec00e494?version=1.0&t=1748938863594" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2025 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/15234730/19397895/KS-05-24-071-EN-N.pdf/730c983a-fa93-6ce2-7905-2379de04f3e9?version=1.0&t=1718611411114" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2024 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/15234730/16817772/KS-04-23-184-EN-N.pdf/845a1782-998d-a767-b097-f22ebe93d422?version=2.0&t=1688373085450" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2023 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/3217494/14665254/KS-09-22-019-EN-N.pdf/2edccd6a-c90d-e2ed-ccda-7e3419c7c271?t=1654253664613" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2022 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/15234730/15241861/KS-03-21-096-EN-N.pdf/e8413539-6c6a-131f-45d7-6af7178a0b67?t=1667395592318" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2021 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/3217494/11011074/KS-02-20-202-EN-N.pdf/334a8cfe-636a-bb8a-294a-73a052882f7f" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2020 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/3217494/9940483/KS-02-19-165-EN-N.pdf/1965d8f5-4532-49f9-98ca-5334b0652820" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2019 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/15234730/15229310/KS-01-18-656-EN-N.pdf/af0d775e-7874-d79b-548a-2c0055d8d24b?t=1667250557724" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2018 edition</a> (nicht auf Deutsch verfügbar)</h4>
+        <p></p>
+        <h3 style="width: 80%;">Sustainable development in the European Union Statistical annex to the EU voluntary review 2023 edition</h3>
+        <p></p>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/4031688/21633693/KS-01-24-019-EN-N.pdf/f9dadd64-0f61-0ccf-3a17-0faef59f2cd9?version=1.0&t=1748954046467" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2025 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/4031688/19398139/KS-05-24-072-EN-N.pdf/021a09dd-277d-87d1-e347-867f0263ab59?version=1.1&t=1718618520865" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2024 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/7870049/16817926/KS-05-23-188-EN-N.pdf/3b2ee0b2-5bc8-d139-ed93-af99827dc50a?version=2.0&t=1688373164670" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2023 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/4031688/14665125/KS-06-22-017-EN-N.pdf/8febd4ca-49e4-abd3-23ca-76c48eb4b4e6?t=1653033908879" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2022 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/4031688/12878925/KS-03-21-097-EN-N.pdf/c7d90bf7-c3ae-00b5-7804-80526931036b?t=1623827181153" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2021 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/4031688/11010788/KS-01-20-192-EN-N.pdf/ae63aff0-a6f3-1d47-da83-c6886b9daaab" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2020 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/documents/4031688/9925908/KS-02-19-166-EN-N.pdf/e985fa37-b510-4cae-b30e-c247989163d9" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2019 edition</a> (nicht auf Deutsch verfügbar)</h4>
+          <h4><a href="https://ec.europa.eu/eurostat/en/web/products-catalogues/-/KS-02-18-827" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2018 edition</a> (nicht auf Deutsch verfügbar)</h4>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = (content.scrollHeight + 10) + "px";
+      }
+    });
+  }
+</script>
+
+
+
+    </div>
+</div>
+
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('von open-sdg', 'De');">
+                              Seite basiert auf Open SDG
+                            </a>
+                        </li>
+                        
+                        <li>
+                              
+                                
+                                  <a href="mailto:sdg-indicators@destatis.de">Kontakt</a>
+                                
+                              
+                          </li>
+                        <li>
+                              <a href="/bygdp-indicators/imprint/ ">Im­pres­s­um</a>
+                              
+                          </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script type="text/javascript"  src="/bygdp-indicators/assets/js/loadash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = '';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Suche';</script>
+
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260727064723'></script>
+
+
+    
+    
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260727064723"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
+</script>
+
+
+</body>
+</html>
+
