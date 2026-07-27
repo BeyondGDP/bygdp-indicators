@@ -142,7 +142,7 @@ menu:
       translation_key: menu.1_help_2_guidance
     - path: /help/faq/
       translation_key: menu.1_help_2_faq
-  
+
 observation_attributes:
   - field: COMMENT_OBS_0
     label: ''
@@ -207,7 +207,7 @@ remote_theme: open-sdg/open-sdg@2.4.0
 
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
-goal_image_base: https://sdg-indikatoren.de/assets/img/goals
+goal_image_base: https://beyondgdp.github.io/bygdp-indicators/assets/img/goals/
 
 accessible_tabs: true
 accessible_charts: true
