@@ -2747,11 +2747,11 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
 /* 2 Spalten */
 @media (min-width: 700px) {
   .kacheln {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    grid-template-columns: repeat(2, minmax(250, 1fr)); } }
 /* 4 Spalten */
 @media (min-width: 1100px) {
   .kacheln {
-    grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    grid-template-columns: repeat(4, minmax(250, 1fr)); } }
 #sources {
   hyphens: auto; }
 
