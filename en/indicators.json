@@ -2,7 +2,7 @@
   {
     "goal": {
       "id": "1",
-      "title": "End poverty in all its forms everywhere",
+      "title": "Foundational Principles",
       "indicators": [
         
         {
@@ -42,7 +42,7 @@
   {
     "goal": {
       "id": "2",
-      "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
+      "title": "Current ell-being",
       "indicators": [
         
         {
@@ -114,7 +114,7 @@
   {
     "goal": {
       "id": "3",
-      "title": "Ensure healthy lives and promote well-being for all at all ages",
+      "title": "Equity & Inclusion",
       "indicators": [
         
         {
@@ -138,7 +138,7 @@
   {
     "goal": {
       "id": "4",
-      "title": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+      "title": "Sustainability & Resilience",
       "indicators": [
         
         {
