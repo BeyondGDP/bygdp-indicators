@@ -121,9 +121,9 @@ var translations = {
         
     <title>
         
-        SDG Indikator 2.1.1 -
+        SDG Indikator 2.2.1 -
         
-        Verfügbares Haushaltseinkommen pro Kopf - Deutschlands SDG Indikatoren
+        Gesunde Lebenserwartung bei der Geburt - Deutschlands SDG Indikatoren
     </title>
 
 
@@ -171,11 +171,123 @@ var translations = {
 
     </head>
 <body class="language-de
-layout-indicator-iframe
+layout-indicator
 ">
 <!-- <div class="container"> -->
 
 <script>translations['header'] = {"alpha":"Beta-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_contacts.suggestions\">Kommentare</a>.","internet_explorer_message":"Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari.","internet_explorer_message_title":"Dieser Internet-Browser wird nicht mehr unterstützt","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">Dieser Internet-Browser wird nicht mehr unterstützt</h2>
+    <p class="internet-explorer-message-body">Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari.</p>
+</div>
+<!-- <div id="disclaimer">
+    
+<div class="container">
+  <div class="disclaimer-alert">
+    <strong class="phase-tag">beta</strong>
+    
+    Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href="mailto:sdg-indicators@destatis.de">Kommentare</a>.
+    
+  </div>
+</div>
+
+</div> -->
+
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/bygdp-indicators/" style="max-width: 100px;" id="home" onclick="updateVisitCountMinus()">
+    <img src="/bygdp-indicators/assets/img/de/BYGDP_logo.png" alt="Zum Hauptinhalt springen" />
+</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+
+
+
+<ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/bygdp-indicators/" >Start</a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Hilfe
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/help/navigation/" >Aufbau der Online Plattform</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/help/guidance/" >Technische Hinweise</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/help/faq/" >FAQ</a>
+</li>
+</ul>
+          </li></ul>
+
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/bygdp-indicators/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Suche</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Suche">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container d-flex">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/bygdp-indicators/en/2-2-1/">
+                English
+            </a>
+        </li></ul>
+</div>
+
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/bygdp-indicators/en/2-2-1/">
+                English
+            </a>
+        </li></ul>
+</div>
+</span><a title="" aria-label=""
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="top" tabindex=-1></div>
+
 
 
 <script type="text/template" id="item_template">
@@ -277,14 +389,69 @@ layout-indicator-iframe
                 <div>
                     <h1>
                         
-                        Indikator 2.1.1
+                        Indikator 2.2.1
                         
-                        <span class="lead-copy">Verfügbares Haushaltseinkommen pro Kopf</span>
+                        <span class="lead-copy">Gesunde Lebenserwartung bei der Geburt</span>
                     </h1>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="container">
+  
+<nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item">
+            <a href="/bygdp-indicators/">Start</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/bygdp-indicators/2/"
+               title="Ziel 2 - global_goals.2-short"
+               aria-label="Ziel  - ">
+               Ziel 2
+            </a>
+        </li>
+        <li class="breadcrumb-item active">Indikator 2.2.1</li>
+        
+    </ol>
+</nav>
+
+
+  
+
+
+
+
+
+
+
+
+
+<!---Indicator page-->
+<!---3 Btns if there is a corresponding Indicator-->
+<div class="container">
+  <div class="row justify-content-md-center">
+    
+      <div class="col d-grid gap-2">
+        <a href="https://beyondgdp.github.io/bygdp-indicators//2-1-3" class="btn btn-primary btn-block goal-2 navigation-btn" role="button">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Vorheriger Indikator </b>
+        </a>
+      </div>
+
+      <div class="col d-grid gap-2">
+        <a href="https://beyondgdp.github.io/bygdp-indicators//2-2-2" class="btn btn-primary btn-block goal-2 navigation-btn" role="button">
+          <b class="btn-label hidden-sm hidden-xs">Nächster Indikator </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    
+  </div>
+</div>
+
+  
 </div>
 
 <div id="main-content" class="container goal-2" role="main">
@@ -313,10 +480,10 @@ layout-indicator-iframe
 
 <div class="row"
   id="indicatorData"
-  data-indicatorid='indicator_2-1-1'
-  data-id="2-1-1"
+  data-indicatorid='indicator_2-2-1'
+  data-id="2-2-1"
   data-country="Germany"
-  data-charttitle="Verfügbares Haushaltseinkommen pro Kopf"
+  data-charttitle="Gesunde Lebenserwartung bei der Geburt"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
@@ -383,6 +550,10 @@ data-event-label="Change to Sources tab"
 </li>
   
     
+    
+        <li role="presentation" class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab">Bearbeiten</a>
+        </li>
     
 </ul>
 
@@ -695,7 +866,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Indikatorenbezeichnung </th>
         <td style="width: 100%">
           
-            <p>Verfügbares Haushaltseinkommen pro Kopf</p>
+            <p>Gesunde Lebenserwartung bei der Geburt</p>
 
           
         </td>
@@ -955,13 +1126,71 @@ data-event-label="Change to Sources tab"
 </div>
     
     
+        <div role="tabpanel" class="tab-pane" id="edit">
+            <div class="edit-container">
+  
+  
+
+  
+  
+
+
+  <a class="btn btn-primary" href="http://prose.io/#beyondgdp/bygdp-data/edit/develop/data/indicator_2-2-1.csv">Daten bearbeiten</a>
+  
+
+  
+  <a class="btn btn-primary" href="http://prose.io/#beyondgdp/bygdp-data/edit/develop/meta/2-2-1.md">Metadaten bearbeiten</a>
+  
+
+  
+
+</div>
+
+        </div>
+    
 </div>
 
 </div>
   </div>
 </div>
 
+  <a href="#top"></a>
 </div>
+
+
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('von open-sdg', 'De');">
+                              Seite basiert auf Open SDG
+                            </a>
+                        </li>
+                        
+                        <li>
+                              
+                                
+                                  <a href="mailto:sdg-indicators@destatis.de">Kontakt</a>
+                                
+                              
+                          </li>
+                        <li>
+                              <a href="/bygdp-indicators/imprint/ ">Im­pres­s­um</a>
+                              
+                          </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -1000,10 +1229,7 @@ data-event-label="Change to Sources tab"
     new accessibilitySwitcher();
 </script>
 
-<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-<script>
-    new pym.Child();
-</script>
 
 </body>
 </html>
+
