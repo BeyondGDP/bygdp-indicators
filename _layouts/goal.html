@@ -17,26 +17,26 @@
   {% assign target = page.t.general.target_1 %}
   {% assign previous_goal = 4 %}
   {% assign next_goal = 2 %}
-  {% assign prev = page.t.page.t.global_goals.4-title %}
-  {% assign next = page.t.page.t.global_goals.2-title %}
+  {% assign prev = page.t.global_goals.4-title %}
+  {% assign next = page.t.global_goals.2-title %}
 {% elsif page.goal.number == '2' %}
   {% assign target = page.t.general.target_2 %}
   {% assign previous_goal = 1 %}
-  {% assign next_goal = 2 %}
-  {% assign prev = page.t.page.t.global_goals.1-title %}
-  {% assign next = page.t.page.t.global_goals.3-title %}
+  {% assign next_goal = 3 %}
+  {% assign prev = page.t.global_goals.1-title %}
+  {% assign next = page.t.global_goals.3-title %}
 {% elsif page.goal.number == '3' %}
   {% assign target = page.t.general.target_3 %}
   {% assign previous_goal = 2 %}
   {% assign next_goal = 4 %}
-  {% assign prev = page.t.page.t.global_goals.2-title %}
-  {% assign next = page.t.page.t.global_goals.4-title %}
+  {% assign prev = page.t.global_goals.2-title %}
+  {% assign next = page.t.global_goals.4-title %}
 {% else %}
   {% assign target = page.t.general.target_3 %}
   {% assign previous_goal = 3 %}
   {% assign next_goal = 1 %}
-  {% assign prev = page.t.page.t.global_goals.3-title %}
-  {% assign next = page.t.page.t.global_goals.1-title %}
+  {% assign prev = page.t.global_goals.3-title %}
+  {% assign next = page.t.global_goals.1-title %}
 {% endif %}
 
 <div class="container">
