@@ -121,9 +121,9 @@ var translations = {
         
     <title>
         
-        SDG Indikator 2.8.1 -
+        SDG Indikator 2.8.2 -
         
-        Jahresmittelwerte der Feinstaubkonzentrationen in Städten - Deutschlands SDG Indikatoren
+        Anteil der Bevölkerung, der Zugang zu sicher verwalteten Trinkwasserversorgungsdiensten hat - Deutschlands SDG Indikatoren
     </title>
 
 
@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728094151">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728100215">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -279,7 +279,7 @@ layout-indicator-iframe
                         
                         Indikator
                         
-                        <span class="lead-copy">Jahresmittelwerte der Feinstaubkonzentrationen in Städten</span>
+                        <span class="lead-copy">Anteil der Bevölkerung, der Zugang zu sicher verwalteten Trinkwasserversorgungsdiensten hat</span>
                     </h1>
                 </div>
             </div>
@@ -300,7 +300,7 @@ layout-indicator-iframe
 
 <div class="row" id="page-content">
   <div class="col-xs-12">
-    <p><span></span></p>
+    <p>Die rechtlichen Grundlagen der Wasserversorgung in Deutschland sind auf Bundesebene im <a href="https://www.gesetze-im-internet.de/whg_2009/" target="_blank" onclick="return confirm_alert('des Justizministeriums','De');">Wasserhaushaltsgesetz</a> (WHG) und auf Landesebene in den jeweiligen <a href="https://www.saarheim.de/Gesetze_Laender/wasserg_laender.htm" target="_blank" onclick="return confirm_alert('Saarheim','De');">Wassergesetzen der Bundesländer</a> geregelt. Die Wasserversorgung ist eine öffentliche Aufgabe und wird in der Regel von den Kommunen wahrgenommen. Der Anschluss- und Benutzungszwang an die öffentliche Wasserversorgung soll eine sichere Versorgung der Bevölkerung mit Trinkwasser gewährleisten sowie die private Nutzung von Grundwasser verhindern oder einschränken. Über 99 % der Bevölkerung in Deutschland sind an zentrale Trinkwasserverteilungsnetze angeschlossen.</p>
 
   </div>
 </div>
@@ -313,22 +313,22 @@ layout-indicator-iframe
 
 <div class="row"
   id="indicatorData"
-  data-indicatorid='indicator_2-8-1'
-  data-id="2-8-1"
+  data-indicatorid='indicator_2-8-2'
+  data-id="2-8-2"
   data-country="Deutschland"
-  data-charttitle="Jahresmittelwerte der Feinstaubkonzentrationen in Städten"
-  data-charttitles="[{&quot;unit&quot;:&quot;Mikrogramm pro m³&quot;,&quot;title&quot;:&quot;Bevölkerungsgewichtete Jahresmittelwerte von Feinstaub&quot;},{&quot;unit&quot;:&quot;Millionen Einwohner/-innen&quot;,&quot;title&quot;:&quot;Bevölkerung mit erhöhter Feinstaubexposition&quot;}]"
+  data-charttitle="Bevölkerung mit Anschluss an die öffentliche Wasserversorgung"
+  data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit=""
+  data-measurementunit="Prozent"
   data-xaxislabel=""
   data-showdata="true"
   data-showinfo=""
-  data-graphtype="line"
+  data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;series&quot;:&quot;Bevölkerung mit erhöhter Feinstaubexposition&quot;,&quot;field&quot;:&quot;Feinstaubkonzentration&quot;,&quot;value&quot;:&quot;PM₁₀&quot;},{&quot;series&quot;:&quot;Bevölkerung mit erhöhter Feinstaubexposition&quot;,&quot;field&quot;:&quot;Feinstaubkonzentration&quot;,&quot;value&quot;:&quot;PM₂,₅&quot;}]"
+  data-startvalues="&quot;&quot;"
   data-graphlimits="null"
   data-stackeddisaggregation=""
   data-fill="false"
@@ -344,10 +344,10 @@ layout-indicator-iframe
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Mikrogramm pro m³&quot;,&quot;Millionen Einwohner/-innen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;level of fine particulate matter&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;PM₁₀&quot;,&quot;PM₂,₅&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Feinstaubkonzentration&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Bevölkerungsgewichtete Jahresmittelwerte von Feinstaub&quot;,&quot;Bevölkerung mit erhöhter Feinstaubexposition&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
-  data-graphstepsize="[{&quot;unit&quot;:&quot;Mikrogramm pro m³&quot;,&quot;step&quot;:2.0},{&quot;unit&quot;:&quot;Millionen Einwohner/-innen&quot;,&quot;step&quot;:10.0}]"
+  data-graphstepsize="[{&quot;step&quot;:10.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
@@ -379,15 +379,109 @@ layout-indicator-iframe
   <div id="datatables">
 
     
-    <a role="button" href="https://beyondgdp.github.io/bygdp-data/de/data/2-8-1.csv" class="btn btn-primary btn-download" download='indicator_2-8-1.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
+    <a role="button" href="https://beyondgdp.github.io/bygdp-data/de/headline/2-8-2.csv" class="btn btn-primary btn-download" download="indicator_2-8-2.csv" tabindex="0" role="button">Speichern der Headline im CSV-Format</a>
+    
+    <a role="button" href="https://beyondgdp.github.io/bygdp-data/de/data/2-8-2.csv" class="btn btn-primary btn-download" download='indicator_2-8-2.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
 
     <p class="no-js-disaggregation-hint"></p>
 
     
     <h3></h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Bevölkerung mit Anschluss an die öffentliche Wasserversorgung</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td class="table-value">99.3</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td class="table-value">99.3</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td class="table-value">99.4</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td class="table-value">99.4</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td class="table-value">99.5</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    <p>Datenquelle: <a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></p>
+    
+    
+    <p>Geographische Abdeckung: Deutschland</p>
+    
+    
+    <p>Einheit: Prozent</p>
+    
+    
+    <p>Anmerkung: </p>
+    
+  </div>
   
 
 </div>
@@ -473,7 +567,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Bevölkerungsgewichtete Jahresmittelwerte von Feinstaub</h4>
+          <h4 id="chart-heading" class="chart-title">Bevölkerung mit Anschluss an die öffentliche Wasserversorgung</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -494,9 +588,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Datenquelle</u>:</dt>
+            <dt><u>Datenquellen</u>:</dt>
           
-          <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');" title="Klicken Sie hier um zur Website der Organisation Umweltbundesamt (UBA) zu gelangen."> Umweltbundesamt (UBA) </a></dd>
+          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a>, <a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');" title="Klicken Sie hier um zur Website der Organisation Umweltbundesamt (UBA) zu gelangen."> Umweltbundesamt (UBA) </a>, <a href="https://www.bmj.de" target="_blank" onclick="return confirm_alert('des Bundesministeriums der Justiz und für Verbraucherschutz','De');" title="Klicken Sie hier um zur Website der Organisation Bundesministerium der Justiz und für Verbraucherschutz (BMJV) und das Bundesamt für Justiz (BfJ) zu gelangen."> Bundesministerium der Justiz und für Verbraucherschutz (BMJV) und das Bundesamt für Justiz (BfJ) </a></dd>
         
 
         
@@ -580,9 +674,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Datenquelle</u>:</dt>
+            <dt><u>Datenquellen</u>:</dt>
           
-          <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');" title="Klicken Sie hier um zur Website der Organisation Umweltbundesamt (UBA) zu gelangen."> Umweltbundesamt (UBA) </a></dd>
+          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a>, <a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');" title="Klicken Sie hier um zur Website der Organisation Umweltbundesamt (UBA) zu gelangen."> Umweltbundesamt (UBA) </a>, <a href="https://www.bmj.de" target="_blank" onclick="return confirm_alert('des Bundesministeriums der Justiz und für Verbraucherschutz','De');" title="Klicken Sie hier um zur Website der Organisation Bundesministerium der Justiz und für Verbraucherschutz (BMJV) und das Bundesamt für Justiz (BfJ) zu gelangen."> Bundesministerium der Justiz und für Verbraucherschutz (BMJV) und das Bundesamt für Justiz (BfJ) </a></dd>
         
 
         
@@ -711,17 +805,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
       
       <tr>
-        <th scope="row" style="min-width:130px;">Verfügbare Zeitreihen </th>
+        <th scope="row" style="min-width:130px;">Verfügbare Zeitreihe </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Bevölkerungsgewichtete Jahresmittelwerte von Feinstaub</li> <li> Bevölkerung mit erhöhter Feinstaubexposition</li></ul>
+            <p>Bevölkerung mit Anschluss an die öffentliche Wasserversorgung</p>
 
           
         </td>
@@ -797,12 +886,17 @@ data-event-label="Change to Sources tab"
       
       
       
+        
+          
+      
+      
+      
       
       <tr>
         <th scope="row" style="min-width:130px;">Datenstand </th>
         <td style="width: 100%">
           
-            <p>Zuletzt aktualisiert am 01.10.2025. Sobald Daten für weitere Berichtszeiträume vorliegen, werden diese zeitnah hinzugefügt.</p>
+            <p>Zuletzt aktualisiert am 12.08.2024. Sobald Daten für weitere Berichtszeiträume vorliegen, werden diese zeitnah hinzugefügt.</p>
 
           
         </td>
@@ -1007,7 +1101,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Indikatorenbezeichnung </th>
         <td style="width: 100%">
           
-            <p>Jahresmittelwerte der Feinstaubkonzentrationen in Städten</p>
+            <p>Anteil der Bevölkerung, der Zugang zu sicher verwalteten Trinkwasserversorgungsdiensten hat</p>
 
           
         </td>
@@ -1269,8 +1363,8 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
-        <h4 class="sr-only">Datenquelle 1</h4>
       
+        <h4>Datenquelle 1</h4>
       
       
 <table class="table metadata-content">
@@ -1329,7 +1423,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;"> </th>
         <td style="width: 100%">
           
-            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');"><img src="https://sdg-indikatoren.de/public/OrgImgDe/uba.png" alt="Logo uba" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
+            <p><a href="https://www.destatis.de" target="_blank"><img src="https://sdg-indikatoren.de/public/OrgImgDe/destatis.png" alt="Logo destatis" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
 
           
         </td>
@@ -1345,7 +1439,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Organisation </th>
         <td style="width: 100%">
           
-            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');" title="Klicken Sie hier um zur Website der Organisation Umweltbundesamt (UBA) zu gelangen."> Umweltbundesamt (UBA) </a></p>
+            <p><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></p>
 
           
         </td>
@@ -1387,8 +1481,8 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://www.umweltbundesamt.de/indikator-bevoelkerungsgewichtete" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');">
-                  Bevölkerungsgewichtete Feinstaubbelastung (PM₂,₅) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/Wasserwirtschaft/_inhalt.html#sprg238684" target="_blank">
+                  Öffentliche Wasserversorgung <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
             
@@ -1433,114 +1527,33 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row" style="min-width:130px;"> </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://www.umweltbundesamt.de/indikator-bevoelkerungsgewichtete-0" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');">
-                  Bevölkerungsgewichtete Feinstaubbelastung (PM₁₀) <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row" style="min-width:130px;"> </th>
-        <td style="width: 100%">
           
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://www.umweltbundesamt.de/indikator-belastung-der-bevoelkerung-durch-0" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');">
-                  Von Überschreitung des WHO-Richtwertes (von 2021) für Feinstaub (PM₂,₅) betroffene Bevölkerung <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row" style="min-width:130px;"> </th>
-        <td style="width: 100%">
           
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://www.umweltbundesamt.de/indikator-belastung-der-bevoelkerung-durch" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');">
-                  Von Überschreitung des WHO-Richtwertes (von 2021) für Feinstaub (PM₁₀) betroffene Bevölkerung <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
-      
+          
       
       
       
+        
+          
       
-  
+      
+      
+        
+          
+      
+      
+      
+        
+          
       
       
       
@@ -1753,6 +1766,791 @@ data-event-label="Change to Sources tab"
 
     </div>
     
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Datenquelle 2</h4>
+      
+      
+<table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;"> </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');"><img src="https://sdg-indikatoren.de/public/OrgImgDe/uba.png" alt="Logo uba" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Organisation </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');" title="Klicken Sie hier um zur Website der Organisation Umweltbundesamt (UBA) zu gelangen."> Umweltbundesamt (UBA) </a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Datenquelle </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://www.umweltbundesamt.de/publikationen/wasserwirtschaft-in-deutschland-grundlagen" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');">
+                  Wasserwirtschaft in Deutschland <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;"> </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://www.umweltbundesamt.de/system/files/medien/479/publikationen/uba_rund_um_das_trinkwasser_ratgeber_web_0.pdf" target="_blank" onclick="return confirm_alert('des Umweltbundesamts','De');">
+                  Rund um das Trinkwasser <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Datenquelle 3</h4>
+      
+      
+<table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;"> </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.bmj.de" target="_blank" onclick="return confirm_alert('des Bundesministeriums der Justiz und für Verbraucherschutz','De');"><img src="https://sdg-indikatoren.de/public/OrgImgDe/bmjv.png" alt="Logo bmjv" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Organisation </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.bmj.de" target="_blank" onclick="return confirm_alert('des Bundesministeriums der Justiz und für Verbraucherschutz','De');" title="Klicken Sie hier um zur Website der Organisation Bundesministerium der Justiz und für Verbraucherschutz (BMJV) und das Bundesamt für Justiz (BfJ) zu gelangen."> Bundesministerium der Justiz und für Verbraucherschutz (BMJV) und das Bundesamt für Justiz (BfJ) </a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Datenquelle </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://www.gesetze-im-internet.de/whg_2009/" target="_blank" onclick="return confirm_alert('des Bundesministeriums der Justiz und für Verbraucherschutz','De');">
+                  Wasserhaushaltsgesetz (WHG) in der jeweils gültigen Fassung <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
   </div>
 
 
@@ -1794,12 +2592,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728094151'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728100215'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728094151"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728100215"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
