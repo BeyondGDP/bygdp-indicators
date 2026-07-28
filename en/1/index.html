@@ -146,7 +146,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728062036">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728062937">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -287,6 +287,20 @@ data-event-label="high"
 
 
 
+<div class="container">
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/bygdp-indicators/en/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Goal 1</li>
+        
+    </ol>
+</nav>
+  
+</div>
+
 <div class="heading goal-banner goal-1">
   <div class="container">
     <div class="row">
@@ -309,84 +323,51 @@ data-event-label="high"
 
 
 
-<div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/bygdp-indicators/en/">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Goal 1</li>
-        
-    </ol>
-</nav>
-  
-</div>
-
-<div id="main-content" class="container goal-indicators goal-1 goal-by-target" role="main">
-
+<div id="main-content" class="container" role="main">
 
   
 
 
 
-  
-
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col d-grid gap-2">
-        <a href="https://beyondgdp.github.io/bygdp-indicators//en//4" class="btn btn-primary btn-block goal-1 navigation-btn text-nowrap" role="button">
-          <b><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous goal</b>
-        </a>
+  <div class="container g-0 ">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading"></h2>
       </div>
-
-      <div class="col d-grid gap-2">
-        <a href="https://beyondgdp.github.io/bygdp-indicators//en//2" class="btn btn-primary btn-block goal-1 navigation-btn text-nowrap" role="button">
-          <b>Next goal <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
-        </a>
-      </div>
+      
     </div>
-  </div>
-
-  
-  <div class="container">
-    <div class="row">
-      <div class="col" style="padding-left: 0px;">
-        <h2>Theme</h2>
-      </div>
-      <div class="col" style="padding-left: 0px;">
-        <h2>Indicators</h2>
-      </div>
-    </div>
-
-    
+    <hr class="goal-page-column-header-rule">
     
       
-      <div class="row">
-        <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">1.1</div>
-            </span>
-            <p style="padding-left: 0px;">
-              Peace
-            </p>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.1</span>
+            </h3>
           </div>
-        </div>
-
-        <div class="col indicator-cards no-gutters">
+          <div class="col goal-page-target-name">
+            <span class="target-name">Peace</span>
+          </div>
+          
+      </div>
+        
 
           
-            
-            
-            
-            
+          
+          
+          
 
-            <div class="row" style="margin-bottom: 25px;">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">1.1.1</div>
-                  <div class="align-right">
+              <span class="indicator-name"><a href="/bygdp-indicators/en/1-1-1/">Number of total conflict-related deaths per 100,000 population</a></span>
+              
 
 
 
@@ -404,43 +385,44 @@ data-event-label="high"
 
         </li></ul>
 
-</div>
-                </span>
-                <a href="/bygdp-indicators/en/1-1-1/" style="padding-left: 0px;">
-                  Number of total conflict-related deaths per 100,000 population
-                </a>
-              
+
             </div>
-          
+            
+            
           </div>
-        </div>
+        
+        <hr class="goal-page-target-rule" />
+    
       
-      
-      <div class="row">
-        <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">1.2</div>
-            </span>
-            <p style="padding-left: 0px;">
-              Human Rights
-            </p>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.2</span>
+            </h3>
           </div>
-        </div>
-
-        <div class="col indicator-cards no-gutters">
+          <div class="col goal-page-target-name">
+            <span class="target-name">Human Rights</span>
+          </div>
+          
+      </div>
+        
 
           
-            
-            
-            
-            
+          
+          
+          
 
-            <div class="row" style="margin-bottom: 25px;">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.2.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">1.2.1</div>
-                  <div class="align-right">
+              <span class="indicator-name"><a href="/bygdp-indicators/en/1-2-1/">Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law</a></span>
+              
 
 
 
@@ -458,24 +440,29 @@ data-event-label="high"
 
         </li></ul>
 
-</div>
-                </span>
-                <a href="/bygdp-indicators/en/1-2-1/" style="padding-left: 0px;">
-                  Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law
-                </a>
-              
-            </div>
-          
-            
-            
-            
-            
 
-            <div class="row" style="margin-bottom: 25px;">
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.2.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">1.2.2</div>
-                  <div class="align-right">
+              <span class="indicator-name"><a href="/bygdp-indicators/en/1-2-2/">Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age</a></span>
+              
 
 
 
@@ -493,43 +480,44 @@ data-event-label="high"
 
         </li></ul>
 
-</div>
-                </span>
-                <a href="/bygdp-indicators/en/1-2-2/" style="padding-left: 0px;">
-                  Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age
-                </a>
-              
+
             </div>
-          
+            
+            
           </div>
-        </div>
+        
+        <hr class="goal-page-target-rule" />
+    
       
-      
-      <div class="row">
-        <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">1.3</div>
-            </span>
-            <p style="padding-left: 0px;">
-              Respect for the Planet
-            </p>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.3</span>
+            </h3>
           </div>
-        </div>
-
-        <div class="col indicator-cards no-gutters">
+          <div class="col goal-page-target-name">
+            <span class="target-name">Respect for the Planet</span>
+          </div>
+          
+      </div>
+        
 
           
-            
-            
-            
-            
+          
+          
+          
 
-            <div class="row" style="margin-bottom: 25px;">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">1.3.1</div>
-                  <div class="align-right">
+              <span class="indicator-name"><a href="/bygdp-indicators/en/1-3-1/">Total greenhouse gas emissions per year</a></span>
+              
 
 
 
@@ -547,24 +535,29 @@ data-event-label="high"
 
         </li></ul>
 
-</div>
-                </span>
-                <a href="/bygdp-indicators/en/1-3-1/" style="padding-left: 0px;">
-                  Total greenhouse gas emissions per year
-                </a>
-              
-            </div>
-          
-            
-            
-            
-            
 
-            <div class="row" style="margin-bottom: 25px;">
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">1.3.2</div>
-                  <div class="align-right">
+              <span class="indicator-name"><a href="/bygdp-indicators/en/1-3-2/">Biodiversity intactness index</a></span>
+              
 
 
 
@@ -582,19 +575,19 @@ data-event-label="high"
 
         </li></ul>
 
-</div>
-                </span>
-                <a href="/bygdp-indicators/en/1-3-2/" style="padding-left: 0px;">
-                  Biodiversity intactness index
-                </a>
-              
+
             </div>
-          
+            
+            
           </div>
-        </div>
-      
-    </div>
+        
+        <hr class="goal-page-target-rule" />
+    
   </div>
+  <a href="#top"></a>
+</div>
+
+
 
 <footer role="contentinfo">
     <div class="container">
@@ -656,12 +649,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728062036'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728062937'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728062036"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728062937"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
