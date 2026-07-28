@@ -39,7 +39,7 @@
         },
         {
           "id": "1-3-2",
-          "title": "",
+          "title": "Index für den Erhalt der biologischen Vielfalt",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-3-2/",
@@ -53,6 +53,22 @@
       "title": "Current Well-being",
       "indicators": [
         
+        {
+          "id": "2-1-1",
+          "title": "Verfügbares Haushaltseinkommen pro Kopf",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-1-2",
+          "title": "Gesamtquote der Unterauslastung der Arbeitskräfte",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-1-2/",
+          "status": "notstarted"
+        },
         {
           "id": "2-1-3",
           "title": "Anteil des Zeitaufwands für unbezahlte Haus- und Pflegearbeit, nach Geschlecht, Alter und Ort",
