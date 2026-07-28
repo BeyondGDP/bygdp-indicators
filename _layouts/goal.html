@@ -89,7 +89,6 @@
         <div class="col indicator-cards no-gutters">
 
           {% for indicator in group.items %}
-
             {% assign tag_classes = "" | split: "," %}
             {% if indicator.tags %}
               {% for tag in indicator.tags %}
