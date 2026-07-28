@@ -10,12 +10,8 @@
     {% endunless %}
 {% endif %}
 {% if show_reporting_status or has_tags %}
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="{{ page.t.indicator.tags }}">
     {%- if show_reporting_status -%}
-        <li class="list-inline-item">
-        <span class="visually-hidden">{{ page.t.indicator.status }}</span>
-        {% include components/reportingstatus/reporting-status-label.html indicator=include.indicator %}
-        </li>
+        {% include components/reportingstatus/reporting-status-label.html indicator=include.indicator %}        
     {%- endif -%}
     {%- for tag in include.tags -%}
         <li class="list-inline-item">

@@ -101,12 +101,13 @@
                 <span class="indicator-number"><span class="visually-hidden">{{ page.t.general.indicator }}{{ indicator.number }}</span> </span>
               </h4>
             </div>
-            <div class="col goal-page-indicator-name">
+            <div class="col goal-page-indicator-name" style="position relative">
               {% if indicator.placeholder and indicator.placeholder != '' %}
               <span class="indicator-name">{{ indicator.placeholder }}</span>
               {% else %}
-              <span class="indicator-name"><a href="{{ indicator.url }}">{{ indicator.name }}</a></span>
+              <span class="indicator-name"><a href="{{ indicator.url }}">{{ indicator.name }}</a>
               {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
+              </span>
             </div>
             {% endif %}
           </div>
