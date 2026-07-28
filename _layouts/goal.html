@@ -8,18 +8,37 @@
 <div class="container">
   {% include components/goal/breadcrumbs.html %}
 </div>
+{% if page.goal.number == '1' %}
+  {% assign target = page.t.general.target_1 %}
+  {% assign previous_goal = 4 %}
+  {% assign next_goal = 2 %}
+{% elsif page.goal.number == '2' %}
+  {% assign target = page.t.general.target_2 %}
+  {% assign previous_goal = 1 %}
+  {% assign next_goal = 2 %}
+{% elsif page.goal.number == '3' %}
+  {% assign target = page.t.general.target_3 %}
+  {% assign previous_goal = 2 %}
+  {% assign next_goal = 4 %}
+{% else %}
+  {% assign target = page.t.general.target_3 %}
+  {% assign previous_goal = 3 %}
+  {% assign next_goal = 1 %}
+{% endif %}
+{% assign prev = page.t.page.t.global_goals. | append: previous_goal | append: -title %}
+{% assign next = page.t.page.t.global_goals. | append: next_goal | append: -title %}
 
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col d-grid gap-2">
       <a href="{{ baseurl }}/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
-        <b><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.t.general.prev_goal }}</b>
+        <b><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ prev }}</b>
       </a>
     </div>
 
     <div class="col d-grid gap-2">
       <a href="{{ baseurl }}/{{ language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
-        <b>{{ page.t.general.next_goal }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
+        <b>{{ next }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
       </a>
     </div>
   </div>
@@ -30,13 +49,6 @@
 <div id="main-content" class="container" role="main">
 
   {% include components/goal/goal-content.html content=content %}
-  {% if page.goal.number == '1' %}
-    {% assign target = page.t.general.target_1 %}
-  {% elsif page.goal.number == '2' %}
-    {% assign target = page.t.general.target_2 %}
-  {% else %}
-    {% assign target = page.t.general.target_3 %}
-  {% endif %}
 
   <div class="container g-0 {% if show_progress %}goal-showing-progress{% endif %}">
     <div class="row align-items-end">
