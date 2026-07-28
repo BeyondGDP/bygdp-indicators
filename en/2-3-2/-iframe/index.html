@@ -123,7 +123,7 @@ var translations = {
         
         SDG Indicator 2.3.2 -
         
-        Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill - German Indicators For The UN Sustainable Development Goals
+        Proportion of youth and adults with information and communications technology skills - German Indicators For The UN Sustainable Development Goals
     </title>
 
 
@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728085233">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728085511">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -279,7 +279,7 @@ layout-indicator-iframe
                         
                         Indicator 2.3.2
                         
-                        <span class="lead-copy">Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill</span>
+                        <span class="lead-copy">Proportion of youth and adults with information and communications technology skills</span>
                     </h1>
                 </div>
             </div>
@@ -344,7 +344,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="[{&quot;value&quot;:10.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;type of ict skill&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Copying or moving of files and folders&quot;,&quot;Using copy or cut and paste tools to duplicate or move information on screen&quot;,&quot;Writing code in a programming language&quot;,&quot;Connecting and installing new devices, eg a printer or a modem&quot;,&quot;Transferring files between computer and other devices&quot;,&quot;Installing software or apps&quot;,&quot;Creating files integrating elements such as text, pictures, tables, charts, animations or sound&quot;,&quot;Using spreadsheet`s advanced functions to organize and analyze data, such as sorting, filtering, using formulas, creating charts&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Type of ICT skill&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 to under 25 years&quot;,&quot;25 to under 65 years&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0}]"
   data-graphstepsize="null"
@@ -747,56 +747,18 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row" style="min-width:130px;">Compliance with the UN metadata </th>
-        <td style="width: 100%">
-          
-            <p>The time series is compliant with the UN metadata.</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row" style="min-width:130px;">National metadata </th>
-        <td style="width: 100%">
           
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://sdg-indikatoren.de/public/Meta/4.4.1.pdf" target="_blank">
-                  Metadata on the presented time series <span class="visuallyhidden">opens in a new window</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
-      
+          
       
       
       
-      
-  
+        
+          
       
       
       
@@ -1045,19 +1007,8 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row" style="min-width:130px;">Target </th>
-        <td style="width: 100%">
-          
-            <p>By 2030, substantially increase the number of youth and adults who have relevant skills, including technical and vocational skills, for employment, decent jobs and entrepreneurship</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1066,7 +1017,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Indicator name </th>
         <td style="width: 100%">
           
-            <p>Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill</p>
+            <p>Proportion of youth and adults with information and communications technology skills</p>
 
           
         </td>
@@ -1082,50 +1033,8 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row" style="min-width:130px;">Tier category </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/" target="_blank" onclick="return confirm_alert('der Statistischen Division der Vereinten Nationen','En');">
-                  Tier II <span class="visuallyhidden">opens in a new window</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row" style="min-width:130px;">UN custodian agency </th>
-        <td style="width: 100%">
           
-            <p>UNESCO Institute for Statistics (UNESCO-UIS)<br />International Telecommunication Union (ITU)</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
       
@@ -1134,40 +1043,18 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row" style="min-width:130px;">Link to UN metadata </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-04-04-01.pdf" target="_blank" onclick="return confirm_alert('the Statistical Devision of the UN','En');">
-                  Metadata on this indicator <span class="visuallyhidden">opens in a new window</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
+          
       
       
       
+        
+          
       
-  
+      
+      
+        
+          
       
       
       
@@ -2261,12 +2148,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728085233'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728085511'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728085233"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728085511"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

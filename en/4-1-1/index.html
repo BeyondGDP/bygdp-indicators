@@ -121,9 +121,9 @@ var translations = {
         
     <title>
         
-        SDG Indicator 4.4.1 -
+        SDG Indicator 4.1.1 -
         
-        Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill - German Indicators For The UN Sustainable Development Goals
+        Net produced capital stock - German Indicators For The UN Sustainable Development Goals
     </title>
 
 
@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728085233">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260728085511">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -171,11 +171,123 @@ var translations = {
 
     </head>
 <body class="language-en
-layout-indicator-iframe
+layout-indicator
 ">
 <!-- <div class="container"> -->
 
 <script>translations['header'] = {"alpha":"Beta","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_contacts.suggestions\">feedback</a>.","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari.","internet_explorer_message_title":"This internet browser is no longer supported","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari.</p>
+</div>
+<!-- <div id="disclaimer">
+    
+<div class="container">
+  <div class="disclaimer-alert">
+    <strong class="phase-tag">beta</strong>
+    
+    This is a development website. We welcome your <a href="mailto:sdg-indicators@destatis.de">feedback</a>.
+    
+  </div>
+</div>
+
+</div> -->
+
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/bygdp-indicators/en/" style="max-width: 100px;" id="home" onclick="updateVisitCountMinus()">
+    <img src="/bygdp-indicators/assets/img/en/BYGDP_logo.png" alt="To main menu" />
+</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+
+
+
+<ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/bygdp-indicators/en/" >Start</a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Help
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/en/help/navigation/" >Structure of the online platform</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/en/help/guidance/" >Technical guidance</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/bygdp-indicators/en/help/faq/" >FAQ</a>
+</li>
+</ul>
+          </li></ul>
+
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/bygdp-indicators/en/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container d-flex">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/bygdp-indicators/4-1-1/">
+                Deutsch
+            </a>
+        </li><li class="language-option-en list-inline-item" style="opacity:0.3">
+            <span>
+                English
+            </span>
+        </li></ul>
+</div>
+
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/bygdp-indicators/4-1-1/">
+                Deutsch
+            </a>
+        </li><li class="language-option-en list-inline-item" style="opacity:0.3">
+            <span>
+                English
+            </span>
+        </li></ul>
+</div>
+</span><a title="" aria-label=""
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="top" tabindex=-1></div>
+
 
 
 <script type="text/template" id="item_template">
@@ -277,14 +389,62 @@ layout-indicator-iframe
                 <div>
                     <h1>
                         
-                        Indicator 4.4.1
+                        Indicator 4.1.1
                         
-                        <span class="lead-copy">Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill</span>
+                        <span class="lead-copy">Net produced capital stock</span>
                     </h1>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="container">
+  
+<nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item">
+            <a href="/bygdp-indicators/en/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/bygdp-indicators/en/4/"
+               title="Goal 4 - global_goals.4-short"
+               aria-label="Goal  - ">
+               Goal 4
+            </a>
+        </li>
+        <li class="breadcrumb-item active">Indicator 4.1.1</li>
+        
+    </ol>
+</nav>
+
+
+  
+
+
+
+
+<!---Indicator page-->
+<!---3 Btns if there is a corresponding Indicator-->
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col d-grid gap-2">
+      <a href="https://beyondgdp.github.io/bygdp-indicators/en/3-6-1" class="btn btn-primary btn-block goal-4 navigation-btn" role="button">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous indicator </b>
+      </a>
+    </div>
+
+    <div class="col d-grid gap-2">
+      <a href="https://beyondgdp.github.io/bygdp-indicators/en/4-1-2" class="btn btn-primary btn-block goal-4 navigation-btn" role="button">
+        <b class="btn-label hidden-sm hidden-xs">Next indicator </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+  
 </div>
 
 <div id="main-content" class="container goal-4" role="main">
@@ -298,6 +458,13 @@ layout-indicator-iframe
 
   
 
+<div class="row" id="page-content">
+  <div class="col-xs-12">
+    <p><span></span></p>
+
+  </div>
+</div>
+
 
   
 
@@ -306,16 +473,16 @@ layout-indicator-iframe
 
 <div class="row"
   id="indicatorData"
-  data-indicatorid='indicator_4-4-1'
-  data-id="4-4-1"
+  data-indicatorid='indicator_4-1-1'
+  data-id="4-1-1"
   data-country="Germany"
-  data-charttitle="Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill"
+  data-charttitle="Netto-Kapitalstock"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
-  data-showdata="true"
+  data-showdata="false"
   data-showinfo=""
   data-graphtype="line"
   data-graphtypes="null"
@@ -337,7 +504,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;type of ict skill&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Copying or moving of files and folders&quot;,&quot;Using copy or cut and paste tools to duplicate or move information on screen&quot;,&quot;Writing code in a programming language&quot;,&quot;Connecting and installing new devices, eg a printer or a modem&quot;,&quot;Transferring files between computer and other devices&quot;,&quot;Installing software or apps&quot;,&quot;Creating files integrating elements such as text, pictures, tables, charts, animations or sound&quot;,&quot;Using spreadsheet`s advanced functions to organize and analyze data, such as sorting, filtering, using formulas, creating charts&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Type of ICT skill&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 to under 25 years&quot;,&quot;25 to under 65 years&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;A&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a&quot;,&quot;b&quot;,&quot;&quot;]},&quot;title&quot;:&quot;A&quot;},{&quot;name&quot;:&quot;B&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a&quot;,&quot;b&quot;,&quot;&quot;]},&quot;title&quot;:&quot;B&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-graphstepsize="null"
@@ -345,276 +512,8 @@ layout-indicator-iframe
   data-proxyseries="null"
 >
   
-  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
-  <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
-    <div id="serieses"></div>
-<div id="toolbar">
-  <span id="series-help">
-    <h4 style = "margin-bottom: 8px;">Selection</h4>
-  </span>
-  <div id="fields">
-    <p class="async-loading" data-img="/bygdp-indicators/assets/img/loading-small.gif"></p>
-  </div>
-</div>
-<div id="units"></div>
-
-  </div>
-  <div id="indicator-main" class="indicator-main col-md-9">
+  <div id="indicator-main" class="indicator-main col-md-12">
     
-
-
-
-
-<div id="headlineTable">
-
-  <div id="datatables">
-
-    
-    <a role="button" href="https://beyondgdp.github.io/bygdp-data/en/data/4-4-1.csv" class="btn btn-primary btn-download" download='indicator_4-4-1.csv' tabindex='0' role='button'>Download Source CSV</a>
-
-    <p class="no-js-disaggregation-hint"></p>
-
-    
-    <h3></h3>
-    
-  </div>
-
-  
-
-</div>
-
-
-<section>
-
-  <p class="async-loading" data-img="/bygdp-indicators/assets/img/loading-small.gif"></p>
-
-  <div class="async-loaded mt-4" style="display:none;">
-
-    <div style="display: none;">
-    <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Chart tab"
-
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Table tab"
-
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
-  
-</ul>
-
-    <div class="tab-content data-view">
-    
-      
-        <div role="tabpanel" class="tab-pane active" id="chartview">
-          
-
-    <div id="dataset-size-warning" style="display:none" role="alert">
-      <i class="fa fa-bolt"><span class="sr-only"></span></i>
-      There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
-    </div>
-
-    
-    
-    <div id="selectionsChart">
-      <figure role="group">
-        <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
-          <div id="chart" class="plot-container">
-            <canvas
-    role="img"
-    aria-labelledby="chart-heading"
-    aria-describedby="table-alternative chart-annotations"
-    tabindex="0"
- ></canvas>
-
-          </div>
-          <div id="plotLegend"></div>
-          
-
-
-
-<div id="selectionChartFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-
-        
-
-        
-
-        
-
-        
-          
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ><u>Note</u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ></dd>
-          
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ><u><u>Last data update:</u><br></u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ></dd>
-          
-        
-
-        
-          <dl class="observation-attribute-list" style= "margin-bottom: 10px;"></dl>
-        
-
-        
-    </dl>
-</div>
-
-        </div>
-      </figure>
-      <div id="chartSelectionDownload" class="clearfix">
-        <button
-          id="btnSave"
-          title=""
-          aria-label=""
-          class='btn btn-primary btn-download'>
-          Download Chart Image
-        </button><!--
-   --></div>
-    </div>
-
-
-
-        </div>
-      
-    
-      
-        <div role="tabpanel" class="tab-pane " id="tableview">
-          <div style="display: none;">
-            <span id="column-sort-info"></span>
-          </div>
-          <div id="selectionsTable"></div>
-<dl id="tableTargetLines" class="clearfix"></dl>
-
-
-
-
-<div id="selectionTableFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-
-        
-
-        
-
-        
-
-        
-          
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ><u>Note</u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ></dd>
-          
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ><u><u>Last data update:</u><br></u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ></dd>
-          
-        
-
-        
-          <dl class="observation-attribute-list" style= "margin-bottom: 10px;"></dl>
-        
-
-        
-    </dl>
-</div>
-
-<div id="tableSelectionDownload" class="clearfix"></div>
-
-        </div>
-      
-    
-  </div>
-  
-
-  </div>
-
-</section>
-
   
   <div class="mt-4">
 <ul class="nav nav-tabs" role="tablist">
@@ -644,6 +543,10 @@ data-event-label="Change to Sources tab"
 </li>
   
     
+    
+        <li role="presentation" class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab">Edit</a>
+        </li>
     
 </ul>
 
@@ -956,7 +859,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Indicator name </th>
         <td style="width: 100%">
           
-            <p>Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill</p>
+            <p>Net produced capital stock</p>
 
           
         </td>
@@ -1216,13 +1119,71 @@ data-event-label="Change to Sources tab"
 </div>
     
     
+        <div role="tabpanel" class="tab-pane" id="edit">
+            <div class="edit-container">
+  
+  
+
+  
+  
+
+
+  <a class="btn btn-primary" href="http://prose.io/#beyondgdp/bygdp-data/edit/develop/data/indicator_4-1-1.csv">Edit Data</a>
+  
+
+  
+  <a class="btn btn-primary" href="http://prose.io/#beyondgdp/bygdp-data/edit/develop/meta/4-1-1.md">Edit Metadata</a>
+  
+
+  
+
+</div>
+
+        </div>
+    
 </div>
 
 </div>
   </div>
 </div>
 
+  <a href="#top"></a>
 </div>
+
+
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('open-sdg', 'En');">
+                              Site built using Open SDG
+                            </a>
+                        </li>
+                        
+                        <li>
+                              
+                                
+                                  <a href="mailto:sdg-indicators@destatis.de">Contact us</a>
+                                
+                              
+                          </li>
+                        <li>
+                              <a href="/bygdp-indicators/en/imprint/ ">Legal Notice</a>
+                              
+                          </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -1251,20 +1212,17 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728085233'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260728085511'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728085233"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260728085511"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
 
-<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-<script>
-    new pym.Child();
-</script>
 
 </body>
 </html>
+

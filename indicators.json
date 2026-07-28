@@ -86,8 +86,16 @@
           "status": "notstarted"
         },
         {
+          "id": "2-2-2",
+          "title": "Babys mit niedrigem Geburtsgewicht (Anteil an den Geburten)",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-2-2/",
+          "status": "notstarted"
+        },
+        {
           "id": "2-3-1",
-          "title": "Anteil der Kinder und Jugendlichen a) in der 2./3. Klasse, b) am Ende der Grundschule und c) am Ende der Sekundarstufe I mit einem Mindestniveau in i) Lesen und ii) Mathematik, nach Geschlecht",
+          "title": "Anteil der Kinder und Jugendlichen, die ein Mindestleistungsniveau in Lesen und Mathematik erreichen",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-3-1/",
@@ -95,7 +103,7 @@
         },
         {
           "id": "2-3-2",
-          "title": "Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie (IKT), nach Art der Kompetenz",
+          "title": "Anteil der Jugendlichen und Erwachsenen mit Kenntnissen im Bereich der Informations- und Kommunikationstechnologie",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-3-2/",
@@ -103,7 +111,7 @@
         },
         {
           "id": "2-4-1",
-          "title": "Anzahl der Opfer vorsätzlicher Tötung je 100&nbsp;000 Einwohner/-innen, nach Geschlecht und Alter",
+          "title": "Vorsätzliche Tötungsdelikte pro 100.000 Einwohnerinnen/ Einwohner",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-4-1/",
@@ -111,15 +119,31 @@
         },
         {
           "id": "2-4-2",
-          "title": "Anteil der Bevölkerung, der sich nach Einbruch der Dunkelheit in seiner Wohnumgebung allein sicher fühlt",
+          "title": "Anteil der Bevölkerung, der sich sicher fühlt, wenn er nach Einbruch der Dunkelheit allein in der Umgebung seines Wohnortes spazieren geht",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-4-2/",
           "status": "complete"
         },
         {
+          "id": "2-5-1",
+          "title": "Lebenszufriedenheit",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-6-1",
+          "title": "Anteil der Personen, die angaben, sich „einen Großteil des gestrigen Tages“ einsam gefühlt zu haben",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-6-1/",
+          "status": "notstarted"
+        },
+        {
           "id": "2-7-1",
-          "title": "Anteil der Bevölkerung, der mit seiner letzten Erfahrung mit öffentlichen Dienstleistungen zufrieden war",
+          "title": "Anteil der Bevölkerung, der mit seiner letzten Erfahrung mit öffentlichen Dienstleistungen zufrieden ist",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-7-1/",
@@ -127,7 +151,7 @@
         },
         {
           "id": "2-8-1",
-          "title": "Bevölkerungsgewichtete Jahresmittelwerte der Feinstaubkonzentration (z. B. PM₂,₅ und PM₁₀) in Städten",
+          "title": "Jahresmittelwerte der Feinstaubkonzentrationen in Städten",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-8-1/",
@@ -135,7 +159,7 @@
         },
         {
           "id": "2-8-2",
-          "title": "Anteil der Bevölkerung, der eine sicher verwaltete Trinkwasserversorgung nutzt",
+          "title": "Anteil der Bevölkerung, der Zugang zu sicher verwalteten Trinkwasserversorgungsdiensten hat",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-8-2/",
@@ -150,8 +174,32 @@
       "indicators": [
         
         {
+          "id": "3-1-1",
+          "title": "Vermögensanteil der reichsten 1 %",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-2-1",
+          "title": "Gini Index",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-3-1",
+          "title": "Anteil der von Armut betroffenen Personen gemessen an der gesellschaftlichen Armutsgrenze (festgelegt auf einem Basiswert)",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-3-1/",
+          "status": "notstarted"
+        },
+        {
           "id": "3-4-1",
-          "title": "Durchschnittlicher Stundenverdienst von Beschäftigten, nach Geschlecht, Alter, Beruf und Menschen mit Behinderungen",
+          "title": "Durchschnittlicher Stundenlohn von Frauen im Verhältnis zu dem der Männer",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-4-1/",
@@ -159,11 +207,19 @@
         },
         {
           "id": "3-5-1",
-          "title": "Anteil der ländlichen Bevölkerung, der höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt lebt",
+          "title": "Anteil der ländlichen Bevölkerung, der im Umkreis von 2 km um eine ganzjährig befahrbare Straße lebt",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-5-1/",
           "status": "complete"
+        },
+        {
+          "id": "3-6-1",
+          "title": "Multidimensionaler Armutsindex",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-6-1/",
+          "status": "notstarted"
         }]
     }
   },
@@ -174,20 +230,52 @@
       "indicators": [
         
         {
+          "id": "4-1-1",
+          "title": "Netto-Kapitalstock",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-1-1/",
+          "status": "notstarted"
+        },
+        {
           "id": "4-2-1",
-          "title": "Anteil junger Menschen (im Alter von 15-24 Jahren), die sich weder in Schul- oder Berufsausbildung noch in Erwerbstätigkeit befinden",
+          "title": "Anteil der Jugendlichen, die weder eine Schule besuchen, noch einer Beschäftigung nachgehen oder eine Ausbildung absolvieren (NEET)",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-2-1/",
           "status": "complete"
         },
         {
+          "id": "4-2-2",
+          "title": "Potenzielle verlorene Lebensjahre (PYLL), alle Ursachen",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-3-1",
+          "title": "Anteil der Personen, die der Meinung sind, dass man den meisten Menschen vertrauen kann",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-3-1/",
+          "status": "notstarted"
+        },
+        {
           "id": "4-4-1",
-          "title": "Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie (IKT), nach Art der Kompetenz",
+          "title": "Anteil der Bevölkerung, der angibt, Vertrauen in die öffentliche Verwaltung zu haben",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-4-1/",
-          "status": "complete"
+          "status": "notstarted"
+        },
+        {
+          "id": "4-5-1",
+          "title": "Umweltvermögenswerte (Land, Wasser, Boden und Bodenschätze usw.), die auf dem System der Umweltökonomischen Gesamtrechnung (SEEA) aufbauen und durch Ansätze der Ökosystembilanzierung ergänzt werden, die Ökosysteme als integrierte Vermögenswerte erfassen",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-5-1/",
+          "status": "notstarted"
         }]
     }
   }]
