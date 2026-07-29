@@ -1,8 +1,8 @@
 {
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-    "name": "SDG Indikatoren für Deutschland",
+    "name": "Beyond GDP Indikatoren für Deutschland",
     "background_color": "#fff",
-    "short_name": "SDGs Deutschland",
+    "short_name": "Beyond GDP Deutschland",
     "start_url": ".",
     "display": "standalone",
     "description": "",
