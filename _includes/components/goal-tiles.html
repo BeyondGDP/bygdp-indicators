@@ -15,9 +15,8 @@
         {% endif %}
 
         <section>
-          <h2 class="column-header header-{{ goal.number }}">{{ page.t.global_goals.goal.name }}</h2>
+          <h2 class="column-header header-{{ color }}">{{ page.t.global_goals.goal.name }}</h2>
           <div class="item-list">
-            <p> {{ goal }}
         {% for group in goal_indicators %}
 
           {% assign target = group.name | sdg_lookup %}
@@ -26,6 +25,7 @@
             <span class="item-label">{{ target.name }}</span>
           </button>
         {% endfor %}
+          </div>
         </section>
       {% endif %}
     {% endfor %}
