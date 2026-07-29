@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2",
-          "title": "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months<br>Proportion of ever-partnered women and girls subjected to physical and/or sexual violence by a current or former intimate partner in the previous 12 months",
+          "title": "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months<br><br>Proportion of ever-partnered women and girls subjected to physical and/or sexual violence by a current or former intimate partner in the previous 12 months",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-2/",
@@ -43,6 +43,14 @@
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-2-2/",
+          "status": "complete"
+        },
+        {
+          "id": "1-3",
+          "title": "Total greenhouse gas emissions and greenhouse gas emissions per capita<br><br>Biodiversity intactness index",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/1-3/",
           "status": "complete"
         },
         {
