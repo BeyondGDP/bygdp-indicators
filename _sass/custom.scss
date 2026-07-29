@@ -1,3 +1,142 @@
+:root {
+  --orange: #f5a623;
+  --orange-light: #fdead0;
+  --purple: #8e5a9e;
+  --purple-light: #e8ddee;
+  --green: #7cb342;
+  --green-light: #e5efd8;
+  --magenta: #a6215e;
+  --magenta-light: #f2dde5;
+  --text: #2c2c2c;
+  --radius-pill: 999px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: #ffffff;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+}
+
+.board {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.column-header {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 18px;
+}
+
+.header-orange { background: var(--orange); }
+.header-purple { background: var(--purple); }
+.header-green  { background: var(--green); }
+.header-magenta { background: var(--magenta); }
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.item-btn:hover {
+  filter: brightness(0.95);
+}
+
+.item-btn:active {
+  transform: scale(0.98);
+}
+
+.item-btn:focus-visible {
+  outline: 3px solid #333;
+  outline-offset: 2px;
+}
+
+.item-btn.orange   { background: var(--orange-light); }
+.item-btn.purple   { background: var(--purple-light); }
+.item-btn.green    { background: var(--green-light); }
+.item-btn.magenta  { background: var(--magenta-light); }
+
+.item-icon {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.item-label {
+  font-weight: 500;
+}
+
+.principles-section {
+  margin-top: 32px;
+}
+
+.principles-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 18px;
+}
+
+/* Responsive: Spalten untereinander auf kleinen Bildschirmen */
+@media (max-width: 720px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .principles-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * {
     box-sizing: border-box;
 }
