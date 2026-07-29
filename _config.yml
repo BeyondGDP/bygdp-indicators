@@ -297,8 +297,8 @@ map_layers:
 
 progressive_web_app:
   enabled: true
-  name: SDG Indikatoren für Deutschland
-  short_name: SDGs Deutschland
+  name: Beyond GDP Indikatoren für Deutschland
+  short_name: Beyond GDP Deutschland
   precaching: true
 
 proxy_indicators:
