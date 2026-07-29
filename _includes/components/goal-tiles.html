@@ -5,19 +5,29 @@
     <!-- CURRENT WELL-BEING -->
     {% for goal in page.goals %}
       {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_number' %}
+      {% if goal.number != 1 %}
+        {% if goal.number == 2 %}
+          {% assign color = 'orange' %}
+        {% elif goal.numer == 3 %}
+          {% assign color = 'purple' %}
+        {% else %}
+          {% assign color = 'green' %}
+        {% endif %}
 
-      <section>
-        <h2 class="column-header header-{{ goal.number }}">{{ page.t.global_goals.goal.name }}</h2>
-        <div class="item-list">
-          <p> {{ goal }}
-      {% for group in goal_indicators %}
-        {% assign target = group.name | sdg_lookup %}
-        <button class="item-btn {{ goal.number }}" data-item="Material conditions and work">
-          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
-          <span class="item-label">{{ target.name }}</span>
-        </button>
-      {% endfor %}
-      </section>
+        <section>
+          <h2 class="column-header header-{{ goal.number }}">{{ page.t.global_goals.goal.name }}</h2>
+          <div class="item-list">
+            <p> {{ goal }}
+        {% for group in goal_indicators %}
+
+          {% assign target = group.name | sdg_lookup %}
+          <button class="item-btn {{ color }}" data-item="{{ target.name }}">
+            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
+            <span class="item-label">{{ target.name }}</span>
+          </button>
+        {% endfor %}
+        </section>
+      {% endif %}
     {% endfor %}
 
 

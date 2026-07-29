@@ -1,6 +1,6 @@
 :root {
-  --2: #f5a623;
-  --2-light: #fdead0;
+  --orange: #f5a623;
+  --orange-light: #fdead0;
   --purple: #8e5a9e;
   --purple-light: #e8ddee;
   --green: #7cb342;
@@ -43,7 +43,7 @@ body {
   margin-bottom: 18px;
 }
 
-.header-2 { background: var(--2); }
+.header-orange { background: var(--orange); }
 .header-purple { background: var(--purple); }
 .header-green  { background: var(--green); }
 .header-magenta { background: var(--magenta); }
@@ -83,7 +83,7 @@ body {
   outline-offset: 2px;
 }
 
-.item-btn.2   { background: var(--2-light); }
+.item-btn.orange   { background: var(--orange-light); }
 .item-btn.purple   { background: var(--purple-light); }
 .item-btn.green    { background: var(--green-light); }
 .item-btn.magenta  { background: var(--magenta-light); }
