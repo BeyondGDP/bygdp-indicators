@@ -1,11 +1,134 @@
-<div class="goal-tiles">
-    <div class="kacheln">
-        {% for goal in page.goals %}
-        <div class="kachel">
-            <a href="{{ goal.url }}">
-                <img src="{{ goal.icon }}" alt="{{ page.t.general.goal }} {{ goal.number }} - {{ goal.short | escape }}" class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
-            </a>
-        </div>
-        {% endfor %}
+<div class="board">
+
+  <div class="columns">
+
+    <!-- CURRENT WELL-BEING -->
+    <section>
+      <h2 class="column-header header-orange">CURRENT WELL-BEING</h2>
+      <div class="item-list">
+        <button class="item-btn orange" data-item="Material conditions and work">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-1.png" alt="">
+          <span class="item-label">Material conditions and work</span>
+        </button>
+        <button class="item-btn orange" data-item="Health">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-2.png" alt="">
+          <span class="item-label">Health</span>
+        </button>
+        <button class="item-btn orange" data-item="Education">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-3.png" alt="">
+          <span class="item-label">Education</span>
+        </button>
+        <button class="item-btn orange" data-item="Security">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-4.png" alt="">
+          <span class="item-label">Security</span>
+        </button>
+        <button class="item-btn orange" data-item="Subjective well-being">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-5.png" alt="">
+          <span class="item-label">Subjective well-being</span>
+        </button>
+        <button class="item-btn orange" data-item="Social cohesion">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-6.png" alt="">
+          <span class="item-label">Social cohesion</span>
+        </button>
+        <button class="item-btn orange" data-item="Quality of institutions">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-7.png" alt="">
+          <span class="item-label">Quality of institutions</span>
+        </button>
+        <button class="item-btn orange" data-item="Environmental quality">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/2-8.png" alt="">
+          <span class="item-label">Environmental quality</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- EQUITY & INCLUSION -->
+    <section>
+      <h2 class="column-header header-purple">EQUITY &amp; INCLUSION</h2>
+      <div class="item-list">
+        <button class="item-btn purple" data-item="Wealth inequality">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/3-1.png" alt="">
+          <span class="item-label">Wealth inequality</span>
+        </button>
+        <button class="item-btn purple" data-item="Income inequality">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/3-2.png" alt="">
+          <span class="item-label">Income inequality</span>
+        </button>
+        <button class="item-btn purple" data-item="Poverty">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/3-3.png" alt="">
+          <span class="item-label">Poverty</span>
+        </button>
+        <button class="item-btn purple" data-item="Work inclusion">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/3-4.png" alt="">
+          <span class="item-label">Work inclusion</span>
+        </button>
+        <button class="item-btn purple" data-item="Regional inequalities">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/3.5.png" alt="">
+          <span class="item-label">Regional inequalities</span>
+        </button>
+        <button class="item-btn purple" data-item="Overlapping deprivations">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/3-6.png" alt="">
+          <span class="item-label">Overlapping deprivations</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SUSTAINABILITY & RESILIENCE -->
+    <section>
+      <h2 class="column-header header-green">SUSTAINABILITY &amp; RESILIENCE</h2>
+      <div class="item-list">
+        <button class="item-btn green" data-item="Produced capital">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/4-1.png" alt="">
+          <span class="item-label">Produced capital</span>
+        </button>
+        <button class="item-btn green" data-item="Human capital">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/4-2.png" alt="">
+          <span class="item-label">Human capital</span>
+        </button>
+        <button class="item-btn green" data-item="Social capital">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/4-3.png" alt="">
+          <span class="item-label">Social capital</span>
+        </button>
+        <button class="item-btn green" data-item="Institutional capital">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/4-4.png" alt="">
+          <span class="item-label">Institutional capital</span>
+        </button>
+        <button class="item-btn green" data-item="Natural capital">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/4-5.png" alt="">
+          <span class="item-label">Natural capital</span>
+        </button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOUNDATIONAL PRINCIPLES -->
+  <div class="principles-section">
+    <h2 class="column-header header-magenta">FOUNDATIONAL PRINCIPLES</h2>
+    <div class="principles-row">
+      <button class="item-btn magenta" data-item="Peace">
+        <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-1.png" alt="">
+        <span class="item-label">Peace</span>
+      </button>
+      <button class="item-btn magenta" data-item="Human Rights">
+        <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-2.png" alt="">
+        <span class="item-label">Human Rights</span>
+      </button>
+      <button class="item-btn magenta" data-item="Respect for the Planet">
+        <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-3.png" alt="">
+        <span class="item-label">Respect for the Planet</span>
+      </button>
     </div>
+  </div>
+
 </div>
+
+<script>
+  document.querySelectorAll('.item-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.getAttribute('data-item');
+      console.log('Geklickt:', item);
+      // Hier kann eigene Logik ergänzt werden, z.B.
+      // eine Detailansicht öffnen oder Daten nachladen.
+    });
+  });
+</script>

@@ -1,0 +1,11 @@
+<div class="goal-tiles">
+    <div class="kacheln">
+        {% for goal in page.goals %}
+        <div class="kachel">
+            <a href="{{ goal.url }}">
+                <img src="{{ goal.icon }}" alt="{{ page.t.general.goal }} {{ goal.number }} - {{ goal.short | escape }}" class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -205,7 +205,9 @@ plugins:
 #remote_theme: brockfanning/open-sdg@map-series-unit-behaviors
 remote_theme: open-sdg/open-sdg@2.4.0
 
-
+custom_css:
+  - /_sass/custom_frontpage.scss
+  
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://beyondgdp.github.io/bygdp-indicators/assets/img/goals/
 
