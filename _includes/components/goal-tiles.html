@@ -12,8 +12,8 @@
           <p> {{ goal }}
       {% for group in goal_indicators %}
         {% assign target = group.name | sdg_lookup %}
-        <button class="item-btn {{ goal.color }}" data-item="Material conditions and work">
-          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target-slug }}.png" alt="{{ target-slug }}">
+        <button class="item-btn {{ goal.number }}" data-item="Material conditions and work">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
           <span class="item-label">{{ target.name }}</span>
         </button>
       {% endfor %}
