@@ -54,9 +54,9 @@ frontpage_goals_grid:
     description: frontpage.instructions
 
 frontpage_cards:
-    - rule_color: grey
-      title: ''
-      include: components/download-all-data.html
+    # - rule_color: grey
+    #   title: ''
+    #   include: components/download-all-data.html
     #- rule_color: grey
      # title: ''
      # include: components/joint_action_column.html
