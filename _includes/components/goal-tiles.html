@@ -3,9 +3,23 @@
   <div class="columns">
 
     <!-- CURRENT WELL-BEING -->
-    <p> {{ page.goals }}<\<p>
-    <p> {{ page.indicators }}<\<p>
-    <p> {{ page.goals.indicators }}<\<p>
+    {% for goal in page.goals %}
+      {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_number' %}
+      <section>
+        <h2 class="column-header header-{{ goal.number }}">{{ page.t.global_goals.2-title }}</h2>
+        <div class="item-list">
+
+      {% for group in goal_indicators %}
+        {% assign target = group.name | sdg_lookup %}
+        <button class="item-btn {{ goal.number }}" data-item="Material conditions and work">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target-slug }}.png" alt="{{ target-slug }}">
+          <span class="item-label">{{ target.name }}</span>
+        </button>
+      {% endfor %}
+      </section>
+    {% endfor %}
+
+    
     <section>
       <h2 class="column-header header-orange">{{ page.t.global_goals.2-title }}</h2>
       <div class="item-list">
