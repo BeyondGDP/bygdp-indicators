@@ -12,9 +12,7 @@
 <div class="container">
   <!-- {% include components/indicator/breadcrumbs.html %} -->
   {% include components/indicator/navigationbuttons.html %}
-  {% if site.create_indicators.previous_next_links %}
-    {% include components/previous-next-links.html previous_label=page.t.indicator.previous next_label=page.t.indicator.next %}
-  {% endif %}
+
 </div>
 
 <div id="main-content" class="container goal-{{ page.goal.number }}" role="main">
