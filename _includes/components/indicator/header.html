@@ -17,8 +17,10 @@
             {% endunless %}
                 <div>
                     <h1>
-                        {% unless page.indicator.standalone %}
-                        {{ page.t.general.indicator }}
+                        {% if page.indicator.name contains "<br>" %}
+                          {{ page.t.general.indicators }}
+                        {% else %}
+                          {{ page.t.general.indicators }}
                         {% endunless %}
                         <span class="lead-copy">{{ page.indicator.name }}</span>
                     </h1>
