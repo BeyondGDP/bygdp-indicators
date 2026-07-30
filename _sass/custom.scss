@@ -101,7 +101,7 @@ body {
 .item-btn.green    { background: var(--green-light); }
 .item-btn.magenta  { background: var(--magenta-light); }
 
-body.high-contrast {
+body.contrast-high {
   --orange-light: #000000;
   --purple-light: #000000;
   --green-light: #000000;
@@ -109,12 +109,12 @@ body.high-contrast {
   --text: #ffffff;
 }
 
-body.high-contrast .item-btn {
+body.contrast-high .item-btn {
   color: #ffffff;
   border: 2px solid #ffffff;
 }
 
-body.high-contrast .item-btn:focus-visible {
+body.contrast-high .item-btn:focus-visible {
   outline: 3px solid #ffff00;
 }
 
