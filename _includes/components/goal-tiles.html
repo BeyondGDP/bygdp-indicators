@@ -22,7 +22,7 @@
           {% assign target = group.name | sdg_lookup %}
           <button class="item-btn {{ color }}" onclick="location.href='{{ baseurl }}/{{ target.slug }}'" data-item="{{ target.name }}">
             <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
-            <span class="item-label">{{ page.t.global_targets.1-1-title }</span>
+            <span class="item-label">{{ target.name }}</span>
           </button>
         {% endfor %}
           </div>
