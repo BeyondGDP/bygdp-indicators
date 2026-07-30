@@ -101,8 +101,21 @@ body {
 .item-btn.green    { background: var(--green-light); }
 .item-btn.magenta  { background: var(--magenta-light); }
 
-.item-btn.contrast-high {
-  background-color: $color-dark-highContrast;
+body.high-contrast {
+  --orange-light: #000000;
+  --purple-light: #000000;
+  --green-light: #000000;
+  --magenta-light: #000000;
+  --text: #ffffff;
+}
+
+body.high-contrast .item-btn {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body.high-contrast .item-btn:focus-visible {
+  outline: 3px solid #ffff00;
 }
 
 .item-icon {
