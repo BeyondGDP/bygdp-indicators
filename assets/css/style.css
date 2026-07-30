@@ -2834,6 +2834,9 @@ body {
 .item-btn.magenta {
   background: var(--magenta-light); }
 
+.item-btm.contrast-high {
+  background-color: black; }
+
 .item-icon {
   width: 32px;
   height: 32px;
