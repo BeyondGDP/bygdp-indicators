@@ -32,6 +32,12 @@ body {
   gap: 24px;
 }
 
+.columns_navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
 .column-header {
   color: #fff;
   font-weight: 700;
