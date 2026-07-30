@@ -2738,6 +2738,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   --magenta: #a6215e;
   --magenta-light: #f2dde5;
   --text: #2c2c2c;
+  --text-other: #ffffff;
   --radius-pill: 999px; }
 
 * {
