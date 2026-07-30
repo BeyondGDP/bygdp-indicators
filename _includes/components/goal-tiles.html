@@ -20,10 +20,7 @@
         {% for group in goal_indicators %}
 
           {% assign target = group.name | sdg_lookup %}
-          {% assign target_title_key = target.slug | append: '-title' | slugify %}
-          <p> {{ target_title_key }}</p>
-          {% assign title = page.t.global_targets.target_title_key %}
-          <p>{{ title }}</p>
+          {% assign target_title_key = target.slug  %}
           <button class="item-btn {{ color }}" onclick="location.href='{{ baseurl }}/{{ target.slug }}'" data-item="{{ target.name }}">
             <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
             <span class="item-label">{{ page.t.global_targets.target_title_key }}</span>
