@@ -78,6 +78,11 @@ body {
   transition: filter 0.15s ease, transform 0.1s ease;
 }
 
+.item-btn-nav {
+  justify-content: center;
+  padding: 12px;
+}
+
 .item-btn:hover {
   filter: brightness(0.95);
 }
@@ -132,14 +137,9 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .item-label-nav {
     display: none;
-  }
-
-  .item-btn-nav {
-    justify-content: center;
-    padding: 12px;
   }
 
   .item-icon-nav {
