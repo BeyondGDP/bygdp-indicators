@@ -107,6 +107,10 @@ body {
   font-weight: 500;
 }
 
+.item-label-nav {
+  font-weight: 500;
+}
+
 .principles-section {
   margin-top: 32px;
 }
@@ -128,6 +132,20 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .item-label-nav {
+    display: none;
+  }
+
+  .item-btn-nav {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .item-icon-nav {
+    margin: 0;
+  }
+}
 
 
 
