@@ -2856,7 +2856,7 @@ body {
   margin-top: 18px; }
 
 /* Responsive: Spalten untereinander auf kleinen Bildschirmen */
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .columns {
     grid-template-columns: 1fr; }
 
