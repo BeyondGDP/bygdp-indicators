@@ -101,6 +101,10 @@ body {
 .item-btn.green    { background: var(--green-light); }
 .item-btn.magenta  { background: var(--magenta-light); }
 
+.item-btm.contrast-high {
+  background-color: $color-dark-highContrast;
+}
+
 .item-icon {
   width: 32px;
   height: 32px;
