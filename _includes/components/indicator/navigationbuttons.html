@@ -20,7 +20,7 @@
 {% else %}
   {% assign color = 'green' %}
 {% endif %}
-{% assign previous = page.indicator.previous %}
+{% assign previous = page.indicator.previous | append: '-title' %}
 
 <!---Indicator page-->
 <!---3 Btns if there is a corresponding Indicator-->
