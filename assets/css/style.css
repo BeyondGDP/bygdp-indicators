@@ -2839,6 +2839,9 @@ body {
 .item-label {
   font-weight: 500; }
 
+.item-label-nav {
+  font-weight: 500; }
+
 .principles-section {
   margin-top: 32px; }
 
@@ -2855,6 +2858,16 @@ body {
 
   .principles-row {
     grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+  .item-label-nav {
+    display: none; }
+
+  .item-btn-nav {
+    justify-content: center;
+    padding: 12px; }
+
+  .item-icon-nav {
+    margin: 0; } }
 * {
   box-sizing: border-box; }
 
