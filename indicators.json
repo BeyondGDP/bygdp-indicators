@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2",
-          "title": "Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsnormen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat<br>Anteil der Frauen und Mädchen im Alter von 15 Jahren und älter, die in den vorangegangenen 12 Monaten physischer, sexueller oder psychischer Gewalt durch aktuelle oder ehemalige Intimpartner/-innen ausgesetzt waren, nach Art der Gewalt und Alter",
+          "title": "Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsnormen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat<br><br>Anteil der Frauen und Mädchen im Alter von 15 Jahren und älter, die in den vorangegangenen 12 Monaten physischer, sexueller oder psychischer Gewalt durch aktuelle oder ehemalige Intimpartner/-innen ausgesetzt waren, nach Art der Gewalt und Alter",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-2/",
@@ -77,6 +77,14 @@
       "title": "Aktuelles Wohlergehen",
       "indicators": [
         
+        {
+          "id": "2-1",
+          "title": "Verfügbares Haushaltseinkommen pro Kopf<br><br>Gesamtquote der Unterauslastung der Arbeitskräfte<br><br>Anteil der Zeit, der für unbezahlte Haus- und Betreuungsarbeit aufgewendet wird",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-1/",
+          "status": "complete"
+        },
         {
           "id": "2-1-1",
           "title": "Verfügbares Haushaltseinkommen pro Kopf",
