@@ -2767,7 +2767,7 @@ body {
   gap: 24px; }
 
 .column-header {
-  color: #fff;
+  color: var(--text);
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
@@ -2839,7 +2839,12 @@ body.contrast-high {
   --purple-light: #000000;
   --green-light: #000000;
   --magenta-light: #000000;
-  --text: #ffffff; }
+  --orange: #ffffff;
+  --purple: #ffffff;
+  --green: #ffffff;
+  --magenta: #ffffff;
+  --text: #ffffff;
+  --text-other: #000000; }
 
 body.contrast-high .item-btn {
   color: #ffffff;
