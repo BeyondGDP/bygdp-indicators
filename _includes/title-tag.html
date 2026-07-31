@@ -3,8 +3,7 @@
         {% unless page.indicator.standalone %}
         Beyond GDP -
         {% endunless %}
-        {% assign id = page.indicator.permalink | replace: '/', '' %}
-        {{ page.t.global_targets.id }}
+        {{ page.indicator.target | escape }}
     </title>
 {% elsif page.goal %}
     {% if page.goal_heading and page.goal_heading != '' %}
