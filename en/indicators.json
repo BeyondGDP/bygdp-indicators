@@ -375,11 +375,11 @@
         
         {
           "id": "4-1",
-          "title": "global_indicators.4-1-title",
+          "title": "Net produced capital stock",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-1/",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "4-1-1",
@@ -391,7 +391,7 @@
         },
         {
           "id": "4-2",
-          "title": "global_indicators.4-2-title",
+          "title": "<ul style='padding-left: 25px;'><li>Share of youth not in education, employment or training (NEET)</li> <li> Potential years of life lost (PYLL), all causes</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-2/",
@@ -415,11 +415,11 @@
         },
         {
           "id": "4-3",
-          "title": "global_indicators.4-3-title",
+          "title": "Share of people who say most people can be trusted",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-3/",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "4-3-1",
@@ -431,11 +431,11 @@
         },
         {
           "id": "4-4",
-          "title": "global_indicators.4-4-title",
+          "title": "Proportion of population reporting they have confidence in the civil services",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-4/",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "4-4-1",
@@ -447,11 +447,11 @@
         },
         {
           "id": "4-5",
-          "title": "global_indicators.4-5-title",
+          "title": "Environmental assets (land, water, soil and subsoil resources, etc.) building on the System of Environmental Economic Accounting (SEEA) and complemented by ecosystem accounting approaches that capture ecosystems as integrated assets",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-5/",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "4-5-1",

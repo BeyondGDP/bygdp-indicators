@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260731090614">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260731091744">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -391,7 +391,7 @@ data-event-label="high"
                         
                           Indikator
                         
-                        <span class="lead-copy">global_indicators.4-2-title</span>
+                        <span class="lead-copy">Anteil der Jugendlichen, die weder eine Schule besuchen, noch einer Beschäftigung nachgehen oder eine Ausbildung absolvieren (NEET)</span>
                     </h1>
                 </div>
             </div>
@@ -416,19 +416,19 @@ data-event-label="high"
 <!---3 Btns if there is a corresponding Indicator-->
 <div class="columns-navigation">
   <section>
-    <button class="item-btn item-btn-nav green" onclick="location.href='https://beyondgdp.github.io/bygdp-indicators//'">
+    <button class="item-btn item-btn-nav green" onclick="location.href='https://beyondgdp.github.io/bygdp-indicators//4-1'">
       <span class="item-label">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        <span class="item-label item-label-nav hidden-sm hidden-xs"> </span>
-        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/.png" alt="">
+        <span class="item-label item-label-nav hidden-sm hidden-xs">Produziertes Kapital </span>
+        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/4-1.png" alt="4-1">
       </span>
     </button>
   </section>
   <section>
-    <button class="item-btn item-btn-nav green" onclick="location.href='https://beyondgdp.github.io/bygdp-indicators//'">
+    <button class="item-btn item-btn-nav green" onclick="location.href='https://beyondgdp.github.io/bygdp-indicators//4-3'">
       <span class="item-label">
-        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/.png" alt="">
-        <span class="item-label item-label-nav hidden-sm hidden-xs"> </span>
+        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/4-3.png" alt="4-3">
+        <span class="item-label item-label-nav hidden-sm hidden-xs">Sozialkapital </span>
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </span>
     </button>
@@ -437,13 +437,13 @@ data-event-label="high"
 
   <!-- <div class="row justify-content-md-center">
     <div class="col d-grid gap-2">
-      <a href="https://beyondgdp.github.io/bygdp-indicators//" class="btn btn-primary btn-block goal- navigation-btn" role="button" style="margin-top: 50px">
+      <a href="https://beyondgdp.github.io/bygdp-indicators//4-1" class="btn btn-primary btn-block goal- navigation-btn" role="button" style="margin-top: 50px">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Vorheriger Indikator </b>
       </a>
     </div>
 
     <div class="col d-grid gap-2">
-      <a href="https://beyondgdp.github.io/bygdp-indicators//" class="btn btn-primary btn-block goal- navigation-btn" role="button"style="margin-top: 50px">
+      <a href="https://beyondgdp.github.io/bygdp-indicators//4-3" class="btn btn-primary btn-block goal- navigation-btn" role="button"style="margin-top: 50px">
         <b class="btn-label hidden-sm hidden-xs">Nächster Indikator </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
@@ -464,6 +464,13 @@ data-event-label="high"
 
   
 
+<div class="row" id="page-content">
+  <div class="col-xs-12">
+    <p><span></span></p>
+
+  </div>
+</div>
+
 
   
 
@@ -474,38 +481,38 @@ data-event-label="high"
   id="indicatorData"
   data-indicatorid='indicator_4-2'
   data-id="4-2"
-  data-country="Germany"
-  data-charttitle="global_indicators.4-2-title"
+  data-country="Deutschland"
+  data-charttitle="Anteil der Jugendlichen, die weder eine Schule besuchen, noch einer Beschäftigung nachgehen oder eine Ausbildung absolvieren (NEET)"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit=""
+  data-measurementunit="Prozent"
   data-xaxislabel=""
   data-showdata="true"
   data-showinfo=""
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap=""
-  data-startvalues="null"
+  data-showmap="false"
+  data-startvalues="&quot;&quot;"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-fill=""
+  data-fill="false"
   data-fillabove=""
   data-fillbelow=""
-  data-showline=""
-  data-spangaps=""
+  data-showline="true"
+  data-spangaps="true"
   data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
   data-graphtargetpoints="null"
   data-graphtargetlabels="null"
-  data-graphseriesbreaks="null"
+  data-graphseriesbreaks="[{&quot;value&quot;:0.5},{&quot;value&quot;:1.5},{&quot;value&quot;:9.5},{&quot;value&quot;:10.5},{&quot;value&quot;:13.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;NEET-Rate von Jugendlichen (15 bis unter 25 Jahre)&quot;,&quot;potential years of life lost (pyll), all causes&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;r&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
   data-compositebreakdownlabel=""
-  data-precision="null"
+  data-precision="[{&quot;decimals&quot;:1}]"
   data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
@@ -547,7 +554,7 @@ data-event-label="high"
     
     <h3></h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>global_indicators.4-2-title</caption>
+      <caption>Anteil der Jugendlichen, die weder eine Schule besuchen, noch einer Beschäftigung nachgehen oder eine Ausbildung absolvieren (NEET)</caption>
       <thead>
         
         
@@ -989,7 +996,13 @@ data-event-label="high"
   
   <div id="datatableFooter">
     
+    <p>Datenquelle: <a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></p>
     
+    
+    <p>Geographische Abdeckung: Deutschland</p>
+    
+    
+    <p>Einheit: Prozent</p>
     
     
   </div>
@@ -1078,7 +1091,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">global_indicators.4-2-title</h4>
+          <h4 id="chart-heading" class="chart-title">Anteil der Jugendlichen, die weder eine Schule besuchen, noch einer Beschäftigung nachgehen oder eine Ausbildung absolvieren (NEET)</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -1098,7 +1111,15 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+          
+            <dt><u>Datenquellen</u>:</dt>
+          
+          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');" title="Klicken Sie hier um zur Website der Organisation Statistisches Amt der Europäischen Union (Eurostat) zu gelangen."> Statistisches Amt der Europäischen Union (Eurostat) </a></dd>
+        
 
+        
+          <dt><u>Geographische Abdeckung</u>:</dt>
+          <dd>Deutschland</dd>
         
 
         <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
@@ -1108,6 +1129,23 @@ data-event-label="Change to Table tab"
 
         
 
+        
+          
+            
+              <dt
+                data-for-series="NEET-Rate von Jugendlichen (15 bis unter 25 Jahre)"
+                data-for-unit=""
+              ><u>Anmerkungen</u>:</dt>
+              
+              
+
+              <dd
+                data-for-series="NEET-Rate von Jugendlichen (15 bis unter 25 Jahre)"
+                data-for-unit=""
+                
+              ><br>• NEET: Not in education, employment or training (nicht in Bildung, Arbeit oder Aus- bzw. Weiterbildung).<br>• Die Ergebnisse ab 2010, ab 2011, ab 2012, ab 2020, ab 2021 und ab 2024 sind jeweils nur eingeschränkt mit den Vorjahren vergleichbar. Weiterführende Informationen siehe "3. Beschreibung der Daten" in den nationalen Metadaten.</dd>
+            
+          
         
 
         
@@ -1136,6 +1174,9 @@ data-event-label="Change to Table tab"
           <dl class="observation-attribute-list" style= "margin-bottom: 10px;"></dl>
         
 
+        
+          <dt><u>Copyright</u>:</dt>
+          <dd>&copy; Statistisches Bundesamt (Destatis), 2026</dd>
         
     </dl>
 </div>
@@ -1173,7 +1214,15 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+          
+            <dt><u>Datenquellen</u>:</dt>
+          
+          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');" title="Klicken Sie hier um zur Website der Organisation Statistisches Amt der Europäischen Union (Eurostat) zu gelangen."> Statistisches Amt der Europäischen Union (Eurostat) </a></dd>
+        
 
+        
+          <dt><u>Geographische Abdeckung</u>:</dt>
+          <dd>Deutschland</dd>
         
 
         <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
@@ -1183,6 +1232,23 @@ data-event-label="Change to Table tab"
 
         
 
+        
+          
+            
+              <dt
+                data-for-series="NEET-Rate von Jugendlichen (15 bis unter 25 Jahre)"
+                data-for-unit=""
+              ><u>Anmerkungen</u>:</dt>
+              
+              
+
+              <dd
+                data-for-series="NEET-Rate von Jugendlichen (15 bis unter 25 Jahre)"
+                data-for-unit=""
+                
+              ><br>• NEET: Not in education, employment or training (nicht in Bildung, Arbeit oder Aus- bzw. Weiterbildung).<br>• Die Ergebnisse ab 2010, ab 2011, ab 2012, ab 2020, ab 2021 und ab 2024 sind jeweils nur eingeschränkt mit den Vorjahren vergleichbar. Weiterführende Informationen siehe "3. Beschreibung der Daten" in den nationalen Metadaten.</dd>
+            
+          
         
 
         
@@ -1211,6 +1277,9 @@ data-event-label="Change to Table tab"
           <dl class="observation-attribute-list" style= "margin-bottom: 10px;"></dl>
         
 
+        
+          <dt><u>Copyright</u>:</dt>
+          <dd>&copy; Statistisches Bundesamt (Destatis), 2026</dd>
         
     </dl>
 </div>
@@ -1298,6 +1367,22 @@ data-event-label="Change to Sources tab"
       
       
       
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Verfügbare Zeitreihe </th>
+        <td style="width: 100%">
+          
+            <ul style="padding-left: 25px;"><li>NEET-Rate von Jugendlichen (15 bis unter 25 Jahre)</li> <li> Potenzielle verlorene Lebensjahre (PYLL), alle Ursachen</li></ul>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -1368,13 +1453,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Datenstand </th>
+        <td style="width: 100%">
           
-      
-      
-      
-        
+            <p>Zuletzt aktualisiert am 29.06.2026. Sobald Daten für weitere Berichtszeiträume vorliegen, werden diese zeitnah hinzugefügt.</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -1572,7 +1663,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Indikatorenbezeichnung </th>
         <td style="width: 100%">
           
-            <p>global_indicators.4-2-title</p>
+            <p>Anteil der Jugendlichen, die weder eine Schule besuchen, noch einer Beschäftigung nachgehen oder eine Ausbildung absolvieren (NEET)</p>
 
           
         </td>
@@ -1828,6 +1919,813 @@ data-event-label="Change to Sources tab"
 
 
 
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Datenquelle 1</h4>
+      
+      
+<table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;"> </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.destatis.de" target="_blank"><img src="https://sdg-indikatoren.de/public/OrgImgDe/destatis.png" alt="Logo destatis" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Organisation </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Datenquelle 2</h4>
+      
+      
+<table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;"> </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');"><img src="https://sdg-indikatoren.de/public/OrgImgDe/eurostat.png" alt="Logo eurostat" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Organisation </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');" title="Klicken Sie hier um zur Website der Organisation Statistisches Amt der Europäischen Union (Eurostat) zu gelangen."> Statistisches Amt der Europäischen Union (Eurostat) </a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Datenquelle </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://ec.europa.eu/eurostat/databrowser/view/tesem150/default/table?lang=de" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');">
+                  Nichterwerbstätige Jugendliche, die weder an Bildung noch an Weiterbildung teilnehmen: Eurostat-Tabelle [yth_empl_150] <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
+  </div>
+
 
 </div>
     
@@ -1907,6 +2805,8 @@ data-event-label="Change to Sources tab"
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
@@ -1924,12 +2824,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260731090614'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260731091744'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260731090614"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260731091744"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
