@@ -270,6 +270,14 @@
       "indicators": [
         
         {
+          "id": "3-1",
+          "title": "Wealth share of the richest 1%",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/3-1/",
+          "status": "notstarted"
+        },
+        {
           "id": "3-1-1",
           "title": "Wealth share of the richest 1%",
           "description": "",
@@ -278,11 +286,27 @@
           "status": "notstarted"
         },
         {
+          "id": "3-2",
+          "title": "Gini index",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/3-2/",
+          "status": "complete"
+        },
+        {
           "id": "3-2-1",
           "title": "Gini index",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/3-2-1/",
+          "status": "complete"
+        },
+        {
+          "id": "3-3",
+          "title": "Poverty headcount ratio at societal poverty line (fixed at a baseline)",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/3-3/",
           "status": "complete"
         },
         {
@@ -294,11 +318,27 @@
           "status": "complete"
         },
         {
+          "id": "3-4",
+          "title": "Average hourly earnings of women as a proportion of men",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/3-4/",
+          "status": "complete"
+        },
+        {
           "id": "3-4-1",
           "title": "Average hourly earnings of women as a proportion of men",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/3-4-1/",
+          "status": "complete"
+        },
+        {
+          "id": "3-5",
+          "title": "Proportion of the rural population who live within 2 km of an all-season road",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/3-5/",
           "status": "complete"
         },
         {
@@ -308,6 +348,14 @@
           "keywords": "",
           "href": "/bygdp-indicators/en/3-5-1/",
           "status": "complete"
+        },
+        {
+          "id": "3-6",
+          "title": "Multidimensional poverty index",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/3-6/",
+          "status": "notstarted"
         },
         {
           "id": "3-6-1",

@@ -270,6 +270,14 @@
       "indicators": [
         
         {
+          "id": "3-1",
+          "title": "Vermögensanteil der reichsten 1 %",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-1/",
+          "status": "notstarted"
+        },
+        {
           "id": "3-1-1",
           "title": "Vermögensanteil der reichsten 1 %",
           "description": "",
@@ -278,11 +286,27 @@
           "status": "notstarted"
         },
         {
+          "id": "3-2",
+          "title": "Gini-Index",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-2/",
+          "status": "complete"
+        },
+        {
           "id": "3-2-1",
           "title": "Gini-Index",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-2-1/",
+          "status": "complete"
+        },
+        {
+          "id": "3-3",
+          "title": "Anteil der von Armut betroffenen Personen gemessen an der gesellschaftlichen Armutsgrenze (festgelegt auf einem Basiswert)",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-3/",
           "status": "complete"
         },
         {
@@ -294,11 +318,27 @@
           "status": "complete"
         },
         {
+          "id": "3-4",
+          "title": "Durchschnittlicher Stundenlohn von Frauen im Verhältnis zu dem der Männer",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-4/",
+          "status": "complete"
+        },
+        {
           "id": "3-4-1",
           "title": "Durchschnittlicher Stundenlohn von Frauen im Verhältnis zu dem der Männer",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-4-1/",
+          "status": "complete"
+        },
+        {
+          "id": "3-5",
+          "title": "Anteil der ländlichen Bevölkerung, der im Umkreis von 2 km um eine ganzjährig befahrbare Straße lebt",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-5/",
           "status": "complete"
         },
         {
@@ -308,6 +348,14 @@
           "keywords": "",
           "href": "/bygdp-indicators/3-5-1/",
           "status": "complete"
+        },
+        {
+          "id": "3-6",
+          "title": "Multidimensionaler Armutsindex",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/3-6/",
+          "status": "notstarted"
         },
         {
           "id": "3-6-1",
