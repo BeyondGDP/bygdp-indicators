@@ -158,6 +158,14 @@
           "status": "complete"
         },
         {
+          "id": "2-4",
+          "title": "<ul style='padding-left: 25px;'><li>Vorsätzliche Tötungsdelikte pro 100.000 Einwohnerinnen/ Einwohner</li> <li> Anteil der Bevölkerung, der sich sicher fühlt, wenn er nach Einbruch der Dunkelheit allein in der Umgebung seines Wohnortes spazieren geht</li></ul>",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-4/",
+          "status": "complete"
+        },
+        {
           "id": "2-4-1",
           "title": "Vorsätzliche Tötungsdelikte pro 100.000 Einwohnerinnen/ Einwohner",
           "description": "",

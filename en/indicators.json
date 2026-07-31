@@ -158,6 +158,14 @@
           "status": "complete"
         },
         {
+          "id": "2-4",
+          "title": "<ul style='padding-left: 25px;'><li>Intentional homicides per 100,000 population</li> <li> Proportion of population that feel safe walking alone around the area they live after dark</li></ul>",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/2-4/",
+          "status": "complete"
+        },
+        {
           "id": "2-4-1",
           "title": "Intentional homicides per 100,000 population",
           "description": "",
