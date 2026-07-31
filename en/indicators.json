@@ -252,6 +252,14 @@
           "keywords": "",
           "href": "/bygdp-indicators/en/2-8-2/",
           "status": "complete"
+        },
+        {
+          "id": "2-8x",
+          "title": "global_indicators.2-8x-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/2-8x/",
+          "status": "complete"
         }]
     }
   },
