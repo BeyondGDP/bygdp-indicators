@@ -374,12 +374,28 @@
       "indicators": [
         
         {
+          "id": "4-1",
+          "title": "global_indicators.4-1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-1/",
+          "status": "complete"
+        },
+        {
           "id": "4-1-1",
           "title": "Netto-Kapitalstock",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-1-1/",
           "status": "notstarted"
+        },
+        {
+          "id": "4-2",
+          "title": "global_indicators.4-2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-2/",
+          "status": "complete"
         },
         {
           "id": "4-2-1",
@@ -398,6 +414,14 @@
           "status": "notstarted"
         },
         {
+          "id": "4-3",
+          "title": "global_indicators.4-3-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-3/",
+          "status": "complete"
+        },
+        {
           "id": "4-3-1",
           "title": "Anteil der Personen, die der Meinung sind, dass man den meisten Menschen vertrauen kann",
           "description": "",
@@ -406,12 +430,28 @@
           "status": "notstarted"
         },
         {
+          "id": "4-4",
+          "title": "global_indicators.4-4-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-4/",
+          "status": "complete"
+        },
+        {
           "id": "4-4-1",
           "title": "Anteil der Bevölkerung, der angibt, Vertrauen in die öffentliche Verwaltung zu haben",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-4-1/",
           "status": "notstarted"
+        },
+        {
+          "id": "4-5",
+          "title": "global_indicators.4-5-title",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/4-5/",
+          "status": "complete"
         },
         {
           "id": "4-5-1",
