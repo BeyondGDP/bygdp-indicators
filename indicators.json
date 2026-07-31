@@ -182,11 +182,27 @@
           "status": "complete"
         },
         {
+          "id": "2-5",
+          "title": "Lebenszufriedenheit",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-5/",
+          "status": "notstarted"
+        },
+        {
           "id": "2-5-1",
           "title": "Lebenszufriedenheit",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-6",
+          "title": "Anteil der Personen, die angaben, sich „einen Großteil des gestrigen Tages“ einsam gefühlt zu haben",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-6/",
           "status": "notstarted"
         },
         {
@@ -196,6 +212,14 @@
           "keywords": "",
           "href": "/bygdp-indicators/2-6-1/",
           "status": "notstarted"
+        },
+        {
+          "id": "2-7",
+          "title": "Anteil der Bevölkerung, der mit seiner letzten Erfahrung mit öffentlichen Dienstleistungen zufrieden ist",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/2-7/",
+          "status": "complete"
         },
         {
           "id": "2-7-1",

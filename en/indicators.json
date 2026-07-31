@@ -182,11 +182,27 @@
           "status": "complete"
         },
         {
+          "id": "2-5",
+          "title": "Life satisfaction",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/2-5/",
+          "status": "notstarted"
+        },
+        {
           "id": "2-5-1",
           "title": "Life satisfaction",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-6",
+          "title": "Proportion of people saying they felt loneliness “a lot of the day yesterday”",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/2-6/",
           "status": "notstarted"
         },
         {
@@ -196,6 +212,14 @@
           "keywords": "",
           "href": "/bygdp-indicators/en/2-6-1/",
           "status": "notstarted"
+        },
+        {
+          "id": "2-7",
+          "title": "Proportion of population satisfied with their last experience of public services",
+          "description": "",
+          "keywords": "",
+          "href": "/bygdp-indicators/en/2-7/",
+          "status": "complete"
         },
         {
           "id": "2-7-1",

@@ -2847,6 +2847,9 @@ body.contrast-high {
   --text: #ffffff;
   --text-other: #000000; }
 
+body.contrast-high .column-header {
+  color: var(--text-other); }
+
 body.contrast-high .item-btn {
   color: #ffffff;
   border: 2px solid #ffffff; }
