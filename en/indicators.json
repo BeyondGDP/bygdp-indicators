@@ -7,7 +7,7 @@
         
         {
           "id": "1-1",
-          "title": "Number of total conflict-related deaths per 100,000 population<br>Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months",
+          "title": "Number of total conflict-related deaths per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-1/",
@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2",
-          "title": "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months<br><br>Proportion of ever-partnered women and girls subjected to physical and/or sexual violence by a current or former intimate partner in the previous 12 months",
+          "title": "<ul style='padding-left: 25px;'><li>Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months</li> <li>Proportion of ever-partnered women and girls subjected to physical and/or sexual violence by a current or former intimate partner in the previous 12 months</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-2/",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-3",
-          "title": "Total greenhouse gas emissions and greenhouse gas emissions per capita<br><br>Biodiversity intactness index",
+          "title": "<ul style='padding-left: 25px;'><li>Total greenhouse gas emissions and greenhouse gas emissions per capita</li> <li>Biodiversity intactness index</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-3/",
@@ -79,7 +79,7 @@
         
         {
           "id": "2-1",
-          "title": "Household disposable income per capita<br><br>Composite rate of labour underutilization<br><br>Proportion of time spent on unpaid domestic and care work",
+          "title": "<ul style='padding-left: 25px;'><li>Household disposable income per capita</li> <li>Composite rate of labour underutilizationa</li> <li>Proportion of time spent on unpaid domestic and care work</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-1/",
@@ -111,7 +111,7 @@
         },
         {
           "id": "2-2",
-          "title": "Healthy life expectancy at birth<br><br>Low-birthweight babies (percentage of births)",
+          "title": "<ul style='padding-left: 25px;'><li>Healthy life expectancy at birth</li> <li>Low-birthweight babies (percentage of births)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-2/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "Proportion of children and young people achieving a minimum proficiency level in reading and mathematics<br><br>Proportion of youth and adults with information and communications technology skills",
+          "title": "<ul style='padding-left: 25px;'><li>Proportion of children and young people achieving a minimum proficiency level in reading and mathematics</li> <li>Proportion of youth and adults with information and communications technology skills</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-3/",
