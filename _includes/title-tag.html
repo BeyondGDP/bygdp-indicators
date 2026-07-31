@@ -3,8 +3,8 @@
         {% unless page.indicator.standalone %}
         Beyond GDP -
         {% endunless %}
-        {{ page.indicator.target | escape }}
-        
+        {{ page.indicator.target }}
+
     </title>
 {% elsif page.goal %}
     {% if page.goal_heading and page.goal_heading != '' %}
