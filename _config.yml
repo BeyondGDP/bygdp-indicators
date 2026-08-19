@@ -53,6 +53,10 @@ frontpage_goals_grid:
     title: frontpage.heading
     description: frontpage.instructions
 
+frontpage_introduction_banner:
+    title: frontpage.title
+    description: frontpge.description
+
 frontpage_cards:
     # - rule_color: grey
     #   title: ''
@@ -66,6 +70,7 @@ frontpage_cards:
 
 analytics:
   ga_prod: ''
+
 
 ###################################################################################################
 email_contacts:
