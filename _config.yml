@@ -55,7 +55,7 @@ frontpage_goals_grid:
 
 frontpage_introduction_banner:
     title: frontpage.title
-    description: frontpge.description
+    description: frontpage.description
 
 frontpage_cards:
     # - rule_color: grey
