@@ -4,12 +4,20 @@
         {% if site.environment == 'production' %}
           <title>Passwortgeschützter Bereich</title>
           <script>
-              const password = prompt("Bitte gib das Passwort ein:");
-              if (password !== "BYGDP-indicators!") {
-                  alert("Falsches Passwort!");
-                  window.location.href = "https://beyondgdp-germany.github.io/"; // Weiterleitung bei falschem Passwort
-              }
-          </script>
+          const correctPassword = "BYGDP-indicators!";
+
+          // Prüfen, ob bereits in dieser Sitzung eingeloggt wurde
+          if (localStorage.getItem("authenticated") !== "true") {
+            const password = prompt("Bitte gib das Passwort ein:");
+
+            if (password === correctPassword) {
+              localStorage.setItem("authenticated", "true");
+            } else {
+              alert("Falsches Passwort!");
+              window.location.href = "https://beyondgdp-germany.github.io/";
+            }
+          }
+        </script>
         {% endif %}
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
