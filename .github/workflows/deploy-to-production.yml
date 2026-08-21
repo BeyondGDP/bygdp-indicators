@@ -42,7 +42,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.6.2
       with:
-        REPOSITORY_NAME: sustainabledevelopment-germany/sustainabledevelopment-germany.github.io
+        REPOSITORY_NAME: BeyondGDP-Germany/BeyondGDP-Germany.github.io
         ACCESS_TOKEN: ${{ secrets.token }}
         BRANCH: master
         FOLDER: _site
