@@ -3,12 +3,20 @@
     <head>
           <title>Passwortgeschützter Bereich</title>
           <script>
-              const password = prompt("Bitte gib das Passwort ein:");
-              if (password !== "BYGDP-indicators!") {
-                  alert("Falsches Passwort!");
-                  window.location.href = "https://beyondgdp-germany.github.io/"; // Weiterleitung bei falschem Passwort
-              }
-          </script>
+          const correctPassword = "BYGDP-indicators!";
+
+          // Prüfen, ob bereits in dieser Sitzung eingeloggt wurde
+          if (sessionStorage.getItem("authenticated") !== "true") {
+            const password = prompt("Bitte gib das Passwort ein:");
+
+            if (password === correctPassword) {
+              sessionStorage.setItem("authenticated", "true");
+            } else {
+              alert("Falsches Passwort!");
+              window.location.href = "https://beyondgdp-germany.github.io/";
+            }
+          }
+        </script>
 
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
@@ -159,7 +167,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260821100018">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260821100749">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -2019,12 +2027,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260821100018'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260821100749'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260821100018"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260821100749"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
