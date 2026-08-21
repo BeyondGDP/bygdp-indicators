@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.language }}" class="no-js">
     <head>
-
-        <title>Passwortgeschützter Bereich</title>
-        <script>
-            const password = prompt("Bitte gib das Passwort ein:");
-            if (password !== "BYGDP-indicators!") {
-                alert("Falsches Passwort!");
-                window.location.href = "https://beyondgdp-germany.github.io/"; // Weiterleitung bei falschem Passwort
-            }
-        </script>
+        {% if site.environment == 'production' %}
+          <title>Passwortgeschützter Bereich</title>
+          <script>
+              const password = prompt("Bitte gib das Passwort ein:");
+              if (password !== "BYGDP-indicators!") {
+                  alert("Falsches Passwort!");
+                  window.location.href = "https://beyondgdp-germany.github.io/"; // Weiterleitung bei falschem Passwort
+              }
+          </script>
+        {% endif %}
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         {% include polyfills.html %}
