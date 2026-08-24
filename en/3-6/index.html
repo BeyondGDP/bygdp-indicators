@@ -151,7 +151,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260824015806">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260824101202">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -479,9 +479,9 @@ data-event-label="high"
   data-indicatorid='indicator_3-6'
   data-id="3-6"
   data-country="Germany"
-  data-charttitle="Bevölkerung, die unter der nationalen Armutsgrenze lebt"
+  data-charttitle="At risk of poverty or social exclusion (AROPE)"
   data-charttitles="null"
-  data-chartsubtitle="Armutsgefährdungsquote nach Eurostat-Definition"
+  data-chartsubtitle=""
   data-chartsubtitles="null"
   data-measurementunit="Prozent"
   data-xaxislabel=""
@@ -509,8 +509,8 @@ data-event-label="high"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;famale&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;18 years and younger&quot;,&quot;18 to under 65 years&quot;,&quot;65 years and older&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
-  data-precision="[{&quot;decimals&quot;:0}]"
-  data-graphstepsize="[{&quot;step&quot;:1.0}]"
+  data-precision="[{&quot;decimals&quot;:1}]"
+  data-graphstepsize="[{&quot;step&quot;:2}]"
   data-proxy=""
   data-proxyseries="null"
 >
@@ -551,7 +551,7 @@ data-event-label="high"
     
     <h3></h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Bevölkerung, die unter der nationalen Armutsgrenze lebt</caption>
+      <caption>At risk of poverty or social exclusion (AROPE)</caption>
       <thead>
         
         
@@ -786,8 +786,8 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Bevölkerung, die unter der nationalen Armutsgrenze lebt</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Armutsgefährdungsquote nach Eurostat-Definition</h6>
+          <h4 id="chart-heading" class="chart-title">At risk of poverty or social exclusion (AROPE)</h4>
+          <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -823,7 +823,7 @@ data-event-label="Change to Table tab"
           <dt><u>Notes</u>:</dt>
           
           
-          <dd ><br>• <br>• Weil Deutschland kein Entwicklungs- oder Schwellenland ist, wird der globale Multidimensionale Armutsindex von UNDP/OPHI für Deutschland nicht ausgewiesen.<br>• AROPE: At risk of poverty or social exclusion (Armuts- oder Ausgrenzungsgefährdung).  ̶  Er ist auf EU-Ebene ein Hauptindikator zur Überwachung des EU-2030-Ziels "Verringerung von Armut".<br>• Bis 2030 soll EU-weit die Zahl der Menschen, die von Armut oder sozialer Ausgrenzug bedroht sind, um mindestens 15 Millionen Menschen reduziert werden, davon mindestens 5 Millionen Kinder.<br>• Alter am 31.12. des Vorjahres.<br>• Eine Person gilt laut EU-Definition als armutsgefährdet, wenn sie weniger als 60% des mittleren Einkommens (Median) der Gesamtbevölkerung verfügt.</dd>
+          <dd ><br>• Age as at 31 December of the previous year.</dd>
         
 
         
@@ -911,7 +911,7 @@ data-event-label="Change to Table tab"
           <dt><u>Notes</u>:</dt>
           
           
-          <dd ><br>• <br>• Weil Deutschland kein Entwicklungs- oder Schwellenland ist, wird der globale Multidimensionale Armutsindex von UNDP/OPHI für Deutschland nicht ausgewiesen.<br>• AROPE: At risk of poverty or social exclusion (Armuts- oder Ausgrenzungsgefährdung).  ̶  Er ist auf EU-Ebene ein Hauptindikator zur Überwachung des EU-2030-Ziels "Verringerung von Armut".<br>• Bis 2030 soll EU-weit die Zahl der Menschen, die von Armut oder sozialer Ausgrenzug bedroht sind, um mindestens 15 Millionen Menschen reduziert werden, davon mindestens 5 Millionen Kinder.<br>• Alter am 31.12. des Vorjahres.<br>• Eine Person gilt laut EU-Definition als armutsgefährdet, wenn sie weniger als 60% des mittleren Einkommens (Median) der Gesamtbevölkerung verfügt.</dd>
+          <dd ><br>• Age as at 31 December of the previous year.</dd>
         
 
         
@@ -1017,7 +1017,11 @@ data-event-label="Change to Sources tab"
   
   
   
-  
+      
+      
+      
+        
+          
       
       
       
@@ -1310,11 +1314,7 @@ data-event-label="Change to Sources tab"
   
   
   
-      
-      
-      
-        
-          
+  
   
   
   
@@ -2419,12 +2419,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260824015806'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260824101202'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260824015806"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260824101202"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
