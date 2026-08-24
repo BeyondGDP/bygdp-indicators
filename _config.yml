@@ -158,6 +158,8 @@ observation_attributes:
 metadata_tabs:
   - scope: national
     title: indicator.national_metadata
+  - scope: sources
+    title: indicator.sources
 
 contrast_type: single
 
