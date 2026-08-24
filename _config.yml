@@ -71,7 +71,6 @@ frontpage_cards:
 analytics:
   ga_prod: ''
 
-
 ###################################################################################################
 email_contacts:
   questions: sdg-indicators@destatis.de
