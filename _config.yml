@@ -71,7 +71,6 @@ frontpage_cards:
 analytics:
   ga_prod: ''
 
-
 ###################################################################################################
 email_contacts:
   questions: sdg-indicators@destatis.de
@@ -155,6 +154,10 @@ observation_attributes:
     label: ''
   - field: COMMENT_OBS_2
     label: ''
+
+metadata_tabs:
+  - scope: national
+    title: indicator.national_metadata
 
 contrast_type: single
 
