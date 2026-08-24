@@ -7,11 +7,11 @@
           const correctPassword = "BYGDP-indicators!";
 
           // Prüfen, ob bereits in dieser Sitzung eingeloggt wurde
-          if (localStorage.getItem("authenticated") !== "true") {
+          if (sessionStorage.getItem("authenticated") !== "true") {
             const password = prompt("Bitte gib das Passwort ein:");
 
             if (password === correctPassword) {
-              localStorage.setItem("authenticated", "true");
+              sessionStorage.setItem("authenticated", "true");
             } else {
               alert("Falsches Passwort!");
               window.location.href = "https://beyondgdp-germany.github.io/";
