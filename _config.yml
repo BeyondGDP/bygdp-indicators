@@ -155,6 +155,10 @@ observation_attributes:
   - field: COMMENT_OBS_2
     label: ''
 
+metadata_tabs:
+  - scope: national
+    title: indicator.national_metadata
+
 contrast_type: single
 
 header_language_toggle: links
