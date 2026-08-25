@@ -7,7 +7,7 @@
         
         {
           "id": "1-1",
-          "title": "Gesamtzahl der konfliktbedingten Todesfälle pro 100.000 Einwohner",
+          "title": "Anzahl der konfliktbezogenen Todesfälle je 100 000 Einwohner/-innen",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-1/",
@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsnormen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat</li> <li>Anteil der Frauen und Mädchen im Alter von 15 Jahren und älter, die in den vorangegangenen 12 Monaten physischer, sexueller oder psychischer Gewalt durch aktuelle oder ehemalige Intimpartner/-innen ausgesetzt waren, nach Art der Gewalt und Alter</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Anteil der Bevölkerung, der angibt, in den vergangenen 12 Monaten persönlich Diskriminierung oder Belästigung erfahren zu haben</li> <li>Anteil der Frauen und Mädchen, die in den vergangenen 12 Monaten körperliche und/oder sexuelle Gewalt durch einen aktuellen oder früheren Intimpartner erfahren haben</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-2/",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-3",
-          "title": "<ul style='padding-left: 25px;'><li>Gesamte Treibhausgasemissionen pro Jahr</li> <li>Index für den Erhalt der biologischen Vielfalt</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Gesamte Treibhausgasemissionen  und Treibhausgasemissionen pro Kopf</li> <li>Index der Integrität der biologischen Vielfalt</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-3/",
@@ -79,7 +79,7 @@
         
         {
           "id": "2-1",
-          "title": "<ul style='padding-left: 25px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Gesamtquote der Unterauslastung der Arbeitskräfte</li> <li>Anteil der Zeit, der für unbezahlte Haus- und Betreuungsarbeit aufgewendet wird</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Quote der Unterauslastung von Arbeitskräften</li> <li>Anteil der für unbezahlte Haus- und Betreuungsarbeit aufgewendeten Zeit</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-1/",
@@ -111,7 +111,7 @@
         },
         {
           "id": "2-2",
-          "title": "<ul style='padding-left: 25px;'><li>Gesunde Lebenserwartung bei der Geburt</li> <li> Babys mit niedrigem Geburtsgewicht (Anteil an den Geburten)</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Gesunde Lebenserwartung bei der Geburt</li> <li> Anteil der Neugeborenen mit niedrigem Geburtsgewicht</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-2/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil der Kinder und Jugendlichen, die ein Mindestleistungsniveau in Lesen und Mathematik erreichen</li> <li> Anteil der Jugendlichen und Erwachsenen mit Kenntnissen im Bereich der Informations- und Kommunikationstechnologie</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Anteil der Kinder und Jugendlichen, die ein Mindestniveau der Lese- und Mathematikkompetenz  erreichen</li> <li>Anteil der Jugendlichen und Erwachsenen mit Informations- und Kommunikationstechnologie-Kompetenzen</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-3/",
@@ -159,7 +159,7 @@
         },
         {
           "id": "2-4",
-          "title": "<ul style='padding-left: 25px;'><li>Vorsätzliche Tötungsdelikte pro 100.000 Einwohnerinnen/ Einwohner</li> <li> Anteil der Bevölkerung, der sich sicher fühlt, wenn er nach Einbruch der Dunkelheit allein in der Umgebung seines Wohnortes spazieren geht</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Vorsätzliche Tötungsdelikte je 100 000 Einwohner/-innen</li> <li>Anteil der Bevölkerung, der sich sicher fühlt, nach Einbruch der Dunkelheit allein in der Umgebung seines Wohnortes zu Fuß unterwegs zu sein</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-4/",
@@ -199,7 +199,7 @@
         },
         {
           "id": "2-6",
-          "title": "Anteil der Personen, die angaben, sich „einen Großteil des gestrigen Tages“ einsam gefühlt zu haben",
+          "title": "Anteil der Bevölkerung, der angibt, am Vortag einen großen Teil des Tages Einsamkeit empfunden zu haben",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-6/",
@@ -231,7 +231,7 @@
         },
         {
           "id": "2-8",
-          "title": "<ul style='padding-left: 25px;'><li>Jahresmittelwerte der Feinstaubkonzentrationen in Städten</li> <li> Anteil der Bevölkerung, der Zugang zu sicher verwalteten Trinkwasserversorgungsdiensten hat</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Jahresmittelwerte der Feinstaubkonzentration in Städten</li> <li>Anteil der Bevölkerung, der eine sicher verwaltete Trinkwasserversorgung nutzt</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-8/",
@@ -263,7 +263,7 @@
         
         {
           "id": "3-1",
-          "title": "Vermögensanteil der reichsten 1 %",
+          "title": "Vermögensanteil des reichsten 1 % der Bevölkerung",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-1/",
@@ -279,7 +279,7 @@
         },
         {
           "id": "3-2",
-          "title": "Gini-Index",
+          "title": "Gini-Koeffizient",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-2/",
@@ -295,7 +295,7 @@
         },
         {
           "id": "3-3",
-          "title": "Anteil der von Armut betroffenen Personen gemessen an der gesellschaftlichen Armutsgrenze (festgelegt auf einem Basiswert)",
+          "title": "Armutsquote nach gesellschaftlicher Armutsgrenze",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-3/",
@@ -311,7 +311,7 @@
         },
         {
           "id": "3-4",
-          "title": "Durchschnittlicher Stundenlohn von Frauen im Verhältnis zu dem der Männer",
+          "title": "Durchschnittlicher Stundenverdienst von Frauen im Verhältnis zu dem der Männer",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-4/",
@@ -327,7 +327,7 @@
         },
         {
           "id": "3-5",
-          "title": "Anteil der ländlichen Bevölkerung, der im Umkreis von 2 km um eine ganzjährig befahrbare Straße lebt",
+          "title": "Anteil der ländlichen Bevölkerung, der innerhalb von 2 km von einer ganzjährig befahrbaren Straße lebt",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-5/",
@@ -367,7 +367,7 @@
         
         {
           "id": "4-1",
-          "title": "Netto-Kapitalstock",
+          "title": "Nettobestand des produzierten Kapitals",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-1/",
@@ -383,7 +383,7 @@
         },
         {
           "id": "4-2",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil der Jugendlichen, die weder eine Schule besuchen, noch einer Beschäftigung nachgehen oder eine Ausbildung absolvieren (NEET)</li> <li> Potenzielle verlorene Lebensjahre (PYLL), alle Ursachen </li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Anteil junger Menschen, die sich weder in Bildung, Beschäftigung noch Ausbildung befinden (NEET)</li> <li>Potenzielle Lebensjahre, die durch vorzeitigen Tod verloren gehen (PYLL), aufgrund aller Todesursachen</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-2/",
@@ -407,7 +407,7 @@
         },
         {
           "id": "4-3",
-          "title": "Anteil der Personen, die der Meinung sind, dass man den meisten Menschen vertrauen kann",
+          "title": "Anteil der Bevölkerung, der angibt, dass den meisten Menschen vertraut werden kann",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-3/",
@@ -423,7 +423,7 @@
         },
         {
           "id": "4-4",
-          "title": "Anteil der Bevölkerung, der angibt, Vertrauen in die öffentliche Verwaltung zu haben",
+          "title": "Anteil der Bevölkerung, der angibt, Vertrauen in den öffentlichen Dienst zu haben",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-4/",
