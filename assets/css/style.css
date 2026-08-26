@@ -2875,6 +2875,10 @@ body.contrast-high .goal-banner {
 .principles-section {
   margin-top: 32px; }
 
+.lead-copy {
+  font-size: 18px;
+  line-height: 1; }
+
 .principles-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
