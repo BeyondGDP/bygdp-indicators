@@ -4,7 +4,7 @@
 
     {% if site.frontpage_introduction_banner %}
     <div>
-        <h1>{{ site.frontpage_introduction_banner.title | t }}</h1>
+        <h1>{{ site.frontpage_goals_grid.title | t }}</h1>
         <div class="lead-copy">{{ site.frontpage_introduction_banner.description | t | markdownify }}</div>
     </div>
     {% endif %}
@@ -12,9 +12,9 @@
     {% if site.frontpage_goals_grid %}
     <div class="frontpage-goals-grid">
 
-        {% if site.frontpage_goals_grid.title %}
+        <!-- {% if site.frontpage_goals_grid.title %}
         <h2 class="frontpage-goals-grid-title">{{ site.frontpage_goals_grid.title | t }}</h2>
-        {% endif %}
+        {% endif %} -->
 
         {% if site.frontpage_goals_grid.description %}
         <div class="frontpage-goals-grid-description">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
