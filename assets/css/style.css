@@ -2877,7 +2877,8 @@ body.contrast-high .goal-banner {
 
 .lead-copy {
   font-size: 18px;
-  line-height: 1.3; }
+  line-height: 1.3;
+  hyphens: auto; }
 
 .principles-row {
   display: grid;
