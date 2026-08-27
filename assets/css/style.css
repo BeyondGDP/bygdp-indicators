@@ -2914,8 +2914,7 @@ body.contrast-high .goal-banner {
   .indicator-details {
     flex: 0 0 100%;
     max-width: 100%;
-    hyphens: auto;
-    text-decoration: underline; }
+    hyphens: auto; }
 
   .item-icon-nav {
     margin: 0; } }
@@ -2981,7 +2980,7 @@ body.contrast-high .goal-banner {
 
 .goal-banner {
   border-radius: var(--radius-pill);
-  padding-left: 50px;
+  padding-left: 80px;
   padding-right: 50px; }
   .goal-banner h1, .goal-banner p {
     color: white; }
@@ -3194,3 +3193,6 @@ body {
 
 h3.h3bold {
   font-weight: bold; }
+
+.indicator-sidebar {
+  hyphens: auto; }
