@@ -163,7 +163,7 @@ body.contrast-high .goal-banner{
 }
 
 .lead-copy {
-  font-size: 18px;
+  font-size: 1.4rem;
   line-height: 1.5;
   hyphens: auto;
 }
@@ -189,7 +189,9 @@ body.contrast-high .goal-banner{
   .item-label-nav {
     display: none;
   }
-
+  .indicator-details{
+    display: none;
+  }
   .item-icon-nav {
     margin: 0;
   }
