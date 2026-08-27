@@ -2916,11 +2916,8 @@ body.contrast-high .goal-banner {
     max-width: 100%;
     hyphens: auto; }
 
-  .indicator-head-target {
+  .indicator-head-target .area-text {
     text-decoration: underline; }
-
-  .indicator-head-target .lead-copy {
-    text-decoration: none; }
 
   .item-icon-nav {
     margin: 0; } }
