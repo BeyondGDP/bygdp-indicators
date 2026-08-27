@@ -38,7 +38,7 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -46,10 +46,10 @@ body {
   display: flex;
   color: var(--text-other);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   letter-spacing: 0.03em;
   justify-content: center;
-  padding: 14px 20px;
+  padding: 14px 30px;
   border-radius: var(--radius-pill);
   margin-bottom: 18px;
   min-height: 82px;
