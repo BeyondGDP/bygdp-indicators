@@ -2886,7 +2886,7 @@ body.contrast-high .goal-banner {
   margin-top: 32px; }
 
 .lead-copy {
-  font-size: 18px;
+  font-size: 1.4rem;
   line-height: 1.5;
   hyphens: auto; }
 
@@ -2905,6 +2905,9 @@ body.contrast-high .goal-banner {
     grid-template-columns: 1fr; } }
 @media (max-width: 720px) {
   .item-label-nav {
+    display: none; }
+
+  .indicator-details {
     display: none; }
 
   .item-icon-nav {
