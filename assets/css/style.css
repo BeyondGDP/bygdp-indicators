@@ -2918,16 +2918,6 @@ body.contrast-high .goal-banner {
 /*#2.1 Navigation Buttons */
 .goal-1.goal-banner {
   background-color: #AA2B5F; }
-.goal-1.sup-goal-banner {
-  height: 5px;
-  background-color: #cd3b77;
-  padding-top: 0px;
-  padding-bottom: 0px; }
-.goal-1.sub-goal-banner {
-  height: 5px;
-  background-color: #812148;
-  padding-top: 0px;
-  padding-bottom: 0px; }
 .goal-1.navigation-btn {
   background-color: #AA2B5F;
   color: white;
@@ -2942,16 +2932,6 @@ body.contrast-high .goal-banner {
 
 .goal-2.goal-banner {
   background-color: #FCB513; }
-.goal-2.sup-goal-banner {
-  height: 5px;
-  background-color: #fdc545;
-  padding-top: 0px;
-  padding-bottom: 0px; }
-.goal-2.sub-goal-banner {
-  height: 5px;
-  background-color: #d99803;
-  padding-top: 0px;
-  padding-bottom: 0px; }
 .goal-2.navigation-btn {
   background-color: #FCB513;
   color: white;
@@ -2966,16 +2946,6 @@ body.contrast-high .goal-banner {
 
 .goal-3.goal-banner {
   background-color: #9E5EA6; }
-.goal-3.sup-goal-banner {
-  height: 5px;
-  background-color: #b27fb8;
-  padding-top: 0px;
-  padding-bottom: 0px; }
-.goal-3.sub-goal-banner {
-  height: 5px;
-  background-color: #804a87;
-  padding-top: 0px;
-  padding-bottom: 0px; }
 .goal-3.navigation-btn {
   background-color: #9E5EA6;
   color: white;
@@ -2990,16 +2960,6 @@ body.contrast-high .goal-banner {
 
 .goal-4.goal-banner {
   background-color: #71BE43; }
-.goal-4.sup-goal-banner {
-  height: 5px;
-  background-color: #8ecb69;
-  padding-top: 0px;
-  padding-bottom: 0px; }
-.goal-4.sub-goal-banner {
-  height: 5px;
-  background-color: #5a9935;
-  padding-top: 0px;
-  padding-bottom: 0px; }
 .goal-4.navigation-btn {
   background-color: #71BE43;
   color: white;
@@ -3012,20 +2972,22 @@ body.contrast-high .goal-banner {
 .goal-4.navigation-btn:hover {
   background-color: #5a9935; }
 
-.goal-banner h1, .goal-banner p {
-  color: white; }
-  @media only screen and (max-width: 600px) {
-    .goal-banner h1, .goal-banner p {
-      font-size: 4vw; } }
-  @media only screen and (max-width: 500px) {
-    .goal-banner h1, .goal-banner p {
-      font-size: 5vw; } }
-  @media only screen and (max-width: 400px) {
-    .goal-banner h1, .goal-banner p {
-      font-size: 6vw; } }
-  @media only screen and (max-width: 300px) {
-    .goal-banner h1, .goal-banner p {
-      font-size: 7vw; } }
+.goal-banner {
+  border-radius: var(--radius-pill); }
+  .goal-banner h1, .goal-banner p {
+    color: white; }
+    @media only screen and (max-width: 600px) {
+      .goal-banner h1, .goal-banner p {
+        font-size: 4vw; } }
+    @media only screen and (max-width: 500px) {
+      .goal-banner h1, .goal-banner p {
+        font-size: 5vw; } }
+    @media only screen and (max-width: 400px) {
+      .goal-banner h1, .goal-banner p {
+        font-size: 6vw; } }
+    @media only screen and (max-width: 300px) {
+      .goal-banner h1, .goal-banner p {
+        font-size: 7vw; } }
 
 /*#2.1*/
 body {
