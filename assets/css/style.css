@@ -2768,6 +2768,7 @@ body {
   gap: 24px; }
 
 .column-header {
+  display: flex;
   color: var(--text-other);
   font-weight: 700;
   font-size: 0.95rem;
