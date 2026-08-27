@@ -2977,7 +2977,9 @@ body.contrast-high .goal-banner {
   background-color: #5a9935; }
 
 .goal-banner {
-  border-radius: var(--radius-pill); }
+  border-radius: var(--radius-pill);
+  padding-left: 50px;
+  right: 50px; }
   .goal-banner h1, .goal-banner p {
     color: white; }
     @media only screen and (max-width: 600px) {
