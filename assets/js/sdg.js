@@ -5066,6 +5066,7 @@ function updateChartDownloadButton(table, selectedSeries, selectedUnit) {
  * @return {null|undefined|Float|String}
  */
 function alterDataDisplay(value, info, context, additionalInfo) {
+    console.log("value, info, context, additionalInfo", value, info, context, additionalInfo);
     // If value is empty, we will not alter it.
     if (value == null || value == undefined) {
         return value;
