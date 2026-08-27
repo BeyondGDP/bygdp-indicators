@@ -2888,7 +2888,8 @@ body.contrast-high .goal-banner {
 .lead-copy {
   font-size: 1.4rem;
   line-height: 1.5;
-  hyphens: auto; }
+  hyphens: auto;
+  display: inline-block; }
 
 .principles-row {
   display: grid;
@@ -2913,7 +2914,8 @@ body.contrast-high .goal-banner {
   .indicator-details {
     flex: 0 0 100%;
     max-width: 100%;
-    hyphens: auto; }
+    hyphens: auto;
+    text-decoration: underline; }
 
   .item-icon-nav {
     margin: 0; } }
