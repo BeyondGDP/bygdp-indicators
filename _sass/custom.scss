@@ -51,6 +51,8 @@ body {
   padding: 14px 20px;
   border-radius: var(--radius-pill);
   margin-bottom: 18px;
+  min-height: 64px;
+  align-items: center;
 }
 
 .header-orange { background: var(--orange); }
@@ -78,6 +80,7 @@ body {
   text-align: left;
   cursor: pointer;
   transition: filter 0.15s ease, transform 0.1s ease;
+  min-height: 64px;
 }
 
 .item-btn-nav {
@@ -142,6 +145,7 @@ body.contrast-high .goal-banner{
 
 .item-label {
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .item-label-nav {
