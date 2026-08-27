@@ -2921,6 +2921,9 @@ body.contrast-high .goal-banner {
 
   .item-icon-nav {
     margin: 0; } }
+.metadta-content {
+  hyphens: auto; }
+
 #sources {
   hyphens: auto; }
 
