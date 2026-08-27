@@ -177,6 +177,13 @@ body.contrast-high .goal-banner{
 }
 
 /* Responsive: Spalten untereinander auf kleinen Bildschirmen */
+
+@media (max-width: 993px) {
+  .item-label-nav {
+    display: none;
+  }
+}
+
 @media (max-width: 860px) {
   .columns {
     grid-template-columns: 1fr;
@@ -187,9 +194,6 @@ body.contrast-high .goal-banner{
 }
 
 @media (max-width: 769px) {
-  .item-label-nav {
-    display: none;
-  }
   .goal-icon{
     display: none;
   }
@@ -199,12 +203,13 @@ body.contrast-high .goal-banner{
     hyphens: auto;
   }
   .indicator-head-target {
-    text-decoration: underline
+    text-decoration: underline;
   }
   .indicator-head-target .lead-copy {
     display: inline-block;
+    text-decoration: none;
   }
-  
+
   .item-icon-nav {
     margin: 0;
   }
