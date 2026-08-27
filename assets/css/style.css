@@ -2903,7 +2903,7 @@ body.contrast-high .goal-banner {
 
   .principles-row {
     grid-template-columns: 1fr; } }
-@media (max-width: 720px) {
+@media (max-width: 769px) {
   .item-label-nav {
     display: none; }
 
@@ -2912,7 +2912,8 @@ body.contrast-high .goal-banner {
 
   .indicator-details {
     flex: 0 0 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    hyphens: auto; }
 
   .item-icon-nav {
     margin: 0; } }
