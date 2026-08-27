@@ -1,4 +1,4 @@
-<div class="heading goal-banner indicator goal-{{ page.goal.number }}" style="border-radius: var(--radius-pill);">
+<div class="heading goal-banner indicator goal-{{ page.goal.number }}" >
     <div class="container">
         <div class="row">
             {% unless page.indicator.standalone %}
@@ -11,7 +11,7 @@
                         class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"
                         style="background-color: transparent;"/>
                 <!-- </a> -->
-                
+
             </div>
             <div class="col-8 col-md-9 col-lg-10 indicator-details">
             {% else %}
