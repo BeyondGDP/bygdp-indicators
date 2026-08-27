@@ -2898,6 +2898,9 @@ body.contrast-high .goal-banner {
   margin-top: 18px; }
 
 /* Responsive: Spalten untereinander auf kleinen Bildschirmen */
+@media (max-width: 993px) {
+  .item-label-nav {
+    display: none; } }
 @media (max-width: 860px) {
   .columns {
     grid-template-columns: 1fr; }
@@ -2905,9 +2908,6 @@ body.contrast-high .goal-banner {
   .principles-row {
     grid-template-columns: 1fr; } }
 @media (max-width: 769px) {
-  .item-label-nav {
-    display: none; }
-
   .goal-icon {
     display: none; }
 
@@ -2920,7 +2920,8 @@ body.contrast-high .goal-banner {
     text-decoration: underline; }
 
   .indicator-head-target .lead-copy {
-    display: inline-block; }
+    display: inline-block;
+    text-decoration: none; }
 
   .item-icon-nav {
     margin: 0; } }
