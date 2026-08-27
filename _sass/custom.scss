@@ -166,6 +166,7 @@ body.contrast-high .goal-banner{
   font-size: 1.4rem;
   line-height: 1.5;
   hyphens: auto;
+  display: inline-block;
 }
 
 .principles-row {
@@ -196,6 +197,7 @@ body.contrast-high .goal-banner{
     flex: 0 0 100%;
     max-width: 100%;
     hyphens: auto;
+    text-decoration: underline;
   }
   .item-icon-nav {
     margin: 0;
