@@ -18,15 +18,10 @@
             <div class="col-12 indicator-details">
             {% endunless %}
                 <div>
-                    <h1>
-                        {{ page.indicator.area }}
-                        <!-- {% if page.indicator.name contains "<li>" %}
-                          {{ page.t.general.indicators }}
-                        {% else %}
-                          {{ page.t.general.indicator }}
-                        {% endif %} -->
-                        <span class="lead-copy">{{ page.indicator.name }}</span>
-                    </h1>
+                  <h1 class="indicator-head-target">
+                    <span class="area-text">{{ page.indicator.area }}</span>
+                    <span class="lead-copy">{{ page.indicator.name }}</span>
+                  </h1>
                 </div>
             </div>
         </div>

@@ -166,6 +166,7 @@ body.contrast-high .goal-banner{
   font-size: 1.4rem;
   line-height: 1.5;
   hyphens: auto;
+  display: inline-block;
 }
 
 .principles-row {
@@ -176,6 +177,13 @@ body.contrast-high .goal-banner{
 }
 
 /* Responsive: Spalten untereinander auf kleinen Bildschirmen */
+
+@media (max-width: 993px) {
+  .item-label-nav {
+    display: none;
+  }
+}
+
 @media (max-width: 860px) {
   .columns {
     grid-template-columns: 1fr;
@@ -185,16 +193,17 @@ body.contrast-high .goal-banner{
   }
 }
 
-@media (max-width: 720px) {
-  .item-label-nav {
-    display: none;
-  }
+@media (max-width: 769px) {
   .goal-icon{
     display: none;
   }
   .indicator-details {
     flex: 0 0 100%;
     max-width: 100%;
+    hyphens: auto;
+  }
+  .indicator-head-target .area-text {
+    text-decoration: underline;
   }
   .item-icon-nav {
     margin: 0;
@@ -250,8 +259,8 @@ body.contrast-high .goal-banner{
      }
    };
    border-radius: var(--radius-pill);
-   padding-left: 50px;
-   right: 50px;
+   padding-left: 80px;
+   padding-right: 50px;
  }
 /*#2.1*/
 
@@ -525,4 +534,9 @@ body{
 
 h3.h3bold {
   font-weight: bold;
+}
+
+
+.indicator-sidebar {
+  hyphens: auto;
 }
