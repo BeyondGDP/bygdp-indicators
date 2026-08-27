@@ -2916,6 +2916,12 @@ body.contrast-high .goal-banner {
     max-width: 100%;
     hyphens: auto; }
 
+  .indicator-head-target {
+    text-decoration: underline; }
+
+  .indicator-head-target .lead-copy {
+    display: inline-block; }
+
   .item-icon-nav {
     margin: 0; } }
 #sources {
