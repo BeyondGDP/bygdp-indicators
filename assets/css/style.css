@@ -2910,6 +2910,10 @@ body.contrast-high .goal-banner {
   .goal-icon {
     display: none; }
 
+  .indicator-details {
+    flex: 0 0 100%;
+    max-width: 100%; }
+
   .item-icon-nav {
     margin: 0; } }
 #sources {
