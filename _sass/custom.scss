@@ -226,18 +226,6 @@ body.contrast-high .goal-banner{
      &.goal-banner {
        background-color: $background-c;
      }
-     &.sup-goal-banner {
-       height: 5px;
-       background-color: lighten($background-c,10%);
-       padding-top: 0px;
-       padding-bottom: 0px;
-     }
-     &.sub-goal-banner {
-       height: 5px;
-       background-color: darken($background-c,10%);
-       padding-top: 0px;
-       padding-bottom: 0px;
-     }
      &.navigation-btn {
        background-color: $background-c;
        color: white;
@@ -269,8 +257,8 @@ body.contrast-high .goal-banner{
      @media only screen and (max-width: 300px) {
        font-size:7vw;
      }
-
-   }
+   };
+   border-radius: var(--radius-pill);
  }
 /*#2.1*/
 
