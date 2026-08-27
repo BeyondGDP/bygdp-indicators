@@ -2819,7 +2819,8 @@ body {
 
 .item-btn-nav {
   justify-content: center;
-  padding: 12px; }
+  padding: 12px;
+  min-height: 64px; }
 
 .item-btn:hover {
   filter: brightness(0.95); }
