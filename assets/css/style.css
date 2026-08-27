@@ -2781,8 +2781,7 @@ body {
   border-radius: var(--radius-pill);
   margin-bottom: 18px;
   min-height: 82px;
-  align-items: center;
-  text-align: center; }
+  align-items: center; }
 
 .header-orange {
   background: var(--orange); }
