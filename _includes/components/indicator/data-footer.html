@@ -53,10 +53,13 @@
               <dt
                 data-for-series={{ footer_field.series | default: "" | jsonify }}
                 data-for-unit={{ footer_field.unit | default: "" | jsonify }}
-              ><u>{{ footer_field.label | t  }}</u>:<br></dt>
+              ><u>{{ footer_field.label | t  }}</u>:</dt>
               {% assign indent = '' %}
               {% if footer_field.value contains '<br>  -' %}
                 {% assign indent = ' style= "content: \a; white-space: pre;"' %}
+              {% endif %}
+              {% if footer_field.value contains '<ul>  -' %}
+                <br>
               {% endif %}
 
               <dd
