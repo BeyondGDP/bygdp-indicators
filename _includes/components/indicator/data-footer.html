@@ -44,7 +44,7 @@
           {% if page.indicator.data_footnotes contains '<br>  -' %}
             {% assign indent = ' style= "content: \a; white-space: pre;"' %}
           {% endif %}
-          <dd {{ indent }}>{{ page.indicator.data_footnotes }}</dd>
+          <dd {{ indent }}><br>{{ page.indicator.data_footnotes }}</dd>
         {% endif %}
 
         {% if page.indicator.footer_fields and page.indicator.footer_fields.size > 0 %}
