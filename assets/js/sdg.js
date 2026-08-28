@@ -2744,7 +2744,7 @@ function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, sho
    * @param {String} selectedSeries
    */
   function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
-    console.log(graphStepsize, selectedUnit, selectedSeries, getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries));
+    console.log("X", graphStepsize, selectedUnit, selectedSeries, getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries));
     return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
 
 }
@@ -2979,10 +2979,8 @@ function getAllObservationAttributes(rows) {
         footnoteNumber: footnoteNumber,
       }
       footnoteNumber += 1;
-      console.log("obsAttributeHash[hashKey]: ",obsAttributeHash[hashKey]);
     });
   });
-  console.log("obsAttributeHash: ",obsAttributeHash);
   return obsAttributeHash;
 }
 
@@ -3067,9 +3065,7 @@ function getAllObservationAttributes(rows) {
 
   // general members:
   var that = this;
-  console.log("options.data: ",options.data);
   this.data = helpers.inputData(options.data);
-  console.log("this.data: ", this.data);
   this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
@@ -3153,7 +3149,6 @@ function getAllObservationAttributes(rows) {
 
   // Before continuing, we may need to filter by Series, so set up all the Series stuff.
   this.allData = helpers.prepareData(this.data, { indicatorId: this.indicatorId });
-  console.log("this.allData_2: ",this.allData);
   this.allColumns = helpers.getColumnsFromData(this.allData);
   this.hasSerieses = helpers.dataHasSerieses(this.allColumns);
   this.serieses = this.hasSerieses ? helpers.getUniqueValuesByProperty(helpers.SERIES_COLUMN, this.allData) : [];
@@ -3172,7 +3167,6 @@ function getAllObservationAttributes(rows) {
   }
 
   // calculate some initial values:
-  console.log("this.allData: ",this.allData);
   this.allObservationAttributes = helpers.getAllObservationAttributes(this.allData);
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
@@ -3860,7 +3854,7 @@ function getHeadlineColor(contrast, goalNumber) {
   var headlineColors = ['#AA2B5F', '#FCB513', '#9E5EA6', '#71BE43'];
   var headlineColor = headlineColors[goalNumber-1];
   var htmlString = '' + headlineColor + '';
-  console.log("goalNumber: ", htmlString);
+
     return isHighContrast(contrast) ? '#FFDD00' : htmlString;
 }
 
@@ -4556,7 +4550,7 @@ opensdg.chartTypes.base = function(info) {
         borderWidth: 0,
     };
     if (info.stackedDisaggregation) {
-        console.log('Stacked', info.stackedDisaggregation, typeof info.stackedDisaggregation);
+
         overrides.options = {
             scales: {
                 x: { stacked: true },
@@ -5099,8 +5093,6 @@ function alterDataDisplay(value, info, context, additionalInfo) {
     // StepSize >= 1 --> 0 decimal places, Stepsize >= 0.1 --> 1 decimal place, StepSize >= 0.01 --> 2 decimal places ...
     if (context == 'chart y-axis tick' && VIEW._graphStepsize && VIEW.graphStepsize != 0 && VIEW.graphStepsize != '') {
       precision = Math.ceil(Math.log(1 / VIEW._graphStepsize.step) / Math.LN10);
-      console.log("step", VIEW._graphStepsize.step);
-      console.log("prec", precision);
       if (precision < 0) {
         precision = 0
       }
