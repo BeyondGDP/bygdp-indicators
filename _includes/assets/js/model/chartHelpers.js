@@ -370,7 +370,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
-  console.log("fill, fillAbove, fillBelow:", fill, fillAbove, fillBelow, typeof fill);
+
   return Object.assign(dataset, {
 
     label: getCombinationDescription(combination, labelFallback),
@@ -545,4 +545,5 @@ function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, sho
    */
   function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
     return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
+
 }
