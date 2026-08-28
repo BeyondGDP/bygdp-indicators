@@ -2744,7 +2744,9 @@ function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, sho
    * @param {String} selectedSeries
    */
   function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
+    console.log(graphStepsize, selectedUnit, selectedSeries, getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries));
     return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
+
 }
 
   /**
