@@ -2570,7 +2570,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
-  console.log("fill, fillAbove, fillBelow:", fill, fillAbove, fillBelow, typeof fill);
+
   return Object.assign(dataset, {
 
     label: getCombinationDescription(combination, labelFallback),
@@ -2744,7 +2744,6 @@ function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, sho
    * @param {String} selectedSeries
    */
   function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
-    console.log("X", graphStepsize, selectedUnit, selectedSeries, getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries));
     return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
 
 }
@@ -5096,6 +5095,7 @@ function alterDataDisplay(value, info, context, additionalInfo) {
       if (precision < 0) {
         precision = 0
       }
+      console.log("STEP", VIEW._graphStepsize, precision);
     }
     else {
       var precision = VIEW._precision
