@@ -132,7 +132,7 @@ function getHeadlineColor(contrast, goalNumber) {
   var headlineColors = ['#AA2B5F', '#FCB513', '#9E5EA6', '#71BE43'];
   var headlineColor = headlineColors[goalNumber-1];
   var htmlString = '{{ "' + headlineColor + '" | default: "#00006a" }}';
-  console.log("goalNumber: ", htmlString);
+
     return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : htmlString;
 }
 
