@@ -9,6 +9,7 @@
 {% endfor %}
 {% assign uniqSources = sources_list | uniq | join: ", " %}
 
+
 <div id="{{ include.footerId | default: 'selectionChartFooter' }}" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
