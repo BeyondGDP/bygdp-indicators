@@ -151,7 +151,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260901075517">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260901081419">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -485,7 +485,7 @@ data-event-label="high"
   data-id="1-2"
   data-country="Germany"
   data-charttitle="<ul style='padding-left: 25px;'><li>Anteil der Bevölkerung, der angibt, in den vergangenen 12 Monaten persönlich Diskriminierung oder Belästigung erfahren zu haben</li> <li>Anteil der Frauen und Mädchen, der in den vergangenen 12 Monaten körperliche und/oder sexuelle Gewalt durch einen aktuellen oder früheren Intimpartner erfahren hat</li></ul>"
-  data-charttitles="[{&quot;series&quot;:&quot;Population who felt discriminated in their contacts with public services&quot;,&quot;unit&quot;:&quot;Percentage&quot;,&quot;title&quot;:&quot;Population who felt discriminated in their contacts with public services in the last two years&quot;},{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Per 100,000 female inhabitants&quot;,&quot;title&quot;:&quot;Female victims of sexual violence by an intimate partner&quot;},{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Number&quot;,&quot;title&quot;:&quot;Female victims of sexual violence by an intimate partner&quot;},{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Percentage&quot;,&quot;title&quot;:&quot;Female victims of sexual violence by an intimate partner&quot;}]"
+  data-charttitles="[{&quot;series&quot;:&quot;Population who felt discriminated in their contacts with public services&quot;,&quot;unit&quot;:&quot;Percentage&quot;,&quot;title&quot;:&quot;Population who felt discriminated in their contacts with public services&quot;},{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Per 100,000 female inhabitants&quot;,&quot;title&quot;:&quot;Female victims of sexual violence by an intimate partner&quot;},{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Number&quot;,&quot;title&quot;:&quot;Female victims of sexual violence by an intimate partner&quot;},{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Percentage&quot;,&quot;title&quot;:&quot;Female victims of sexual violence by an intimate partner&quot;}]"
   data-chartsubtitle=""
   data-chartsubtitles="[{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Per 100,000 female inhabitants&quot;,&quot;title&quot;:&quot;Number of victims per 100,000 (V/100,000)&quot;},{&quot;series&quot;:&quot;Women and girls subjected to sexual violence by an intimate partner&quot;,&quot;unit&quot;:&quot;Percentage&quot;,&quot;title&quot;:&quot;Proportion of women and girls aged 15 years and older&quot;}]"
   data-measurementunit=""
@@ -959,7 +959,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Population who felt discriminated in their contacts with public services in the last two years</h4>
+          <h4 id="chart-heading" class="chart-title">Population who felt discriminated in their contacts with public services</h4>
           <h6 id="chart-heading" class="chart-subtitle">Number of victims per 100,000 (V/100,000)</h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -1322,7 +1322,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row" style="min-width:130px;">Time series available </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Population who felt discriminated in their contacts with public services</li> <li>Women and girls subjected to sexual violence by an intimate partner</li></ul>
+            <ul style="padding-left: 25px;"><li>Proportion of population reporting having personally felt discriminated against in their contacts with public services in the previous 12 months</li> <li>Proportion of ever-partnered women and girls subjected to sexual violence by a current or former intimate partner in the previous 12 months</li></ul>
 
           
         </td>
@@ -1335,6 +1335,22 @@ data-event-label="Change to indicator.sources tab"
       
         
           
+      
+      
+      
+      
+      <tr>
+        <th scope="row" style="min-width:130px;">Differences </th>
+        <td style="width: 100%">
+          
+            <ul style="padding-left: 25px;"><li>The data presented here reflects only experiences of discrimination in contacts with public services.</li> <li>The data presented reflects only sexual violence, not to physical and/or sexual violence.</li></ul>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1370,22 +1386,6 @@ data-event-label="Change to indicator.sources tab"
         <td style="width: 100%">
           
             <p>Human rights, as enshrined in the Universal Declaration of Human Rights and the wider body of international human rights law, which recognize that “all human rights are universal, indivisible, and interdependent and interrelated”. This includes civic and political rights as well as economic, social and cultural rights. Progress and human rights are intertwined, and one can scarcely exist without the other. At the same time, we recognize the progressive realization approach to human rights, whereby consideration is given to the financial and other resources available to a government when assessing its compliance with its obligations with respect to civil, social and economic rights.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row" style="min-width:130px;">Differences </th>
-        <td style="width: 100%">
-          
-            <ul style="padding-left: 25px;"><li>The data presented here reflects only experiences of discrimination in contacts with public services.</li> <li>The data presented reflects only sexual violence, not to physical and/or sexual violence.</li></ul>
 
           
         </td>
@@ -2497,12 +2497,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260901075517'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260901081419'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260901075517"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260901081419"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
