@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil der Bevölkerung, der angibt, in den vergangenen 12 Monaten persönlich Diskriminierung oder Belästigung erfahren zu haben</li> <li>Anteil der Frauen und Mädchen, der in den vergangenen 12 Monaten körperliche und/oder sexuelle Gewalt durch einen aktuellen oder früheren Intimpartner erfahren hat</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten persönlich diskriminiert oder belästigt gefühlt hat</li> <li>Anteil der Frauen und Mädchen, der in den vorangegangenen 12 Monaten physischer, und/oder sexueller Gewalt durch aktuelle oder ehemalige Intimpartner/-innen ausgesetzt war</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-2/",
@@ -79,7 +79,7 @@
         
         {
           "id": "2-1",
-          "title": "<ul style='padding-left: 25px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Quote der Unterauslastung von Arbeitskräften</li> <li>Anteil der für unbezahlte Haus- und Pflegearbeit aufgewendeten Zeit</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Quote der Unterauslastung von Arbeitskräften</li> <li>Anteil des Zeitaufwands für unbezahlte Haus- und Pflegearbeit</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-1/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil der Kinder und Jugendlichen, der ein Mindestniveau der Lese- und Mathematikkompetenz  erreicht</li> <li>Anteil der Jugendlichen und Erwachsenen mit Informations- und Kommunikationstechnologie-Kompetenzen</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Anteil der Kinder und Jugendlichen mit einem Mindestniveau in Lesen und Mathematik</li> <li>Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie (IKT)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-3/",
@@ -215,7 +215,7 @@
         },
         {
           "id": "2-7",
-          "title": "Anteil der Bevölkerung, der mit seiner letzten Erfahrung mit öffentlichen Dienstleistungen zufrieden ist",
+          "title": "Anteil der Bevölkerung, der mit seiner letzten Erfahrung mit öffentlichen Dienstleistungen zufrieden war",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-7/",
@@ -295,7 +295,7 @@
         },
         {
           "id": "3-3",
-          "title": "Armutsquote nach gesellschaftlicher Armutsgrenze",
+          "title": "Armutsquote gemessen an der gesellschaftlichen Armutsgrenze (festgelegt auf einem Basiswert)",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-3/",
@@ -311,7 +311,7 @@
         },
         {
           "id": "3-4",
-          "title": "Durchschnittlicher Stundenverdienst von Frauen im Verhältnis zu dem der Männer",
+          "title": "Durchschnittlicher Stundenverdienst von Frauen im Verhältnis zum Stundenverdienst der Männer",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-4/",
@@ -327,7 +327,7 @@
         },
         {
           "id": "3-5",
-          "title": "Anteil der ländlichen Bevölkerung, der innerhalb von 2 km von einer ganzjährig befahrbaren Straße lebt",
+          "title": "Anteil der ländlichen Bevölkerung, der höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt lebt",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-5/",
@@ -383,7 +383,7 @@
         },
         {
           "id": "4-2",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil junger Menschen, der sich weder in Bildung, Beschäftigung noch Ausbildung befindet (NEET)</li> <li>Potenzielle Lebensjahre, die durch vorzeitigen Tod verloren gehen (PYLL), aufgrund aller Todesursachen</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Anteil junger Menschen, der sich weder in Schul- oder Berufsausbildung noch in Erwerbstätigkeit befindet (NEET)</li> <li>Potenzielle Lebensjahre, die durch vorzeitigen Tod verloren gehen (PYLL), alle Todesursachen</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-2/",
@@ -427,7 +427,7 @@
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-4/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "4-4-1",

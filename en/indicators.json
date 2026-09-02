@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "<ul style='padding-left: 25px;'><li>Proportion of children and young people achieving a minimum proficiency level in reading and mathematics</li> <li>Proportion of youth and adults with information and communications technology skills</li></ul>",
+          "title": "<ul style='padding-left: 25px;'><li>Proportion of children and young people achieving a minimum proficiency level in reading and mathematics</li> <li>Proportion of youth and adults with information and communications technology skills (ICT)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-3/",
@@ -427,7 +427,7 @@
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-4/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "4-4-1",
