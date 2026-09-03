@@ -67,6 +67,7 @@
               </a>
             {% endif %}
 
+
           {% elsif indicator_metadata.field.element == 'multiselect' and placeholder_not_needed %}
             {% for item in metadata_content %}
               {{ item | t }}{% unless forloop.last %}, {% endunless %}
