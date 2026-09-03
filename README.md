@@ -6,4 +6,5 @@
 
 
 
+
 This is a development website for collecting and disseminating German data for the Beyond GDP indicators.
