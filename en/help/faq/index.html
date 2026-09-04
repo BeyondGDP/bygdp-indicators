@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260904122213">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260904122645">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -342,25 +342,27 @@ tr {line-height:30px;}
 </style>
 
 <h3 class="h3bold">1. How often is the data updated?</h3>
-The frequency with which new data is published and the time at which this happens varies for many indicators.
-As soon as new data is available for an indicator or previously published data is corrected, this data is also
-published on this dashboard. The dashboard is usually updated once a month. You can see when the last update
-took place on the start page next to the button for downloading the data.
+The frequency and timing of the publication of new data vary depending on the individual
+indicators. As soon as new data for an indicator becomes available, or previously published
+data is revised, it is updated in this dashboard.<br><br>
+The dashboard is usually updated once a month. You can see when the last update took place
+under the Details tab in the <i>Data state</i> section.
 
-<h3 class="h3bold">2. How can I suggest new or different data sources?</h3>
-For feedback on the data sources we use or for suggestions for new data sources, please contact us
-here: <a href="mailto:sdg-indicators@destatis.de">sdg-indicators@destatis.de</a>
+<h3 class="h3bold">2. How can I suggest new or alternative data sources?</h3>
+If you would like to provide feedback on the data sources used or suggest new ones, please contact
+us at <a href="mailto:sdg-indicators@destatis.de">sdg-indicators@destatis.de</a>
 
-<h3 class="h3bold">3. What do the characters and letters on the data in the graphs and tables mean?</h3>
-If numerical values of individual data points cannot be published or cannot be published with their
-original value, a so-called <b>value-replacing character</b> (character instead of numbers) is used
-instead of the actual numerical value, which only appears in the table view.
-In certain constellations, numerical values require an explanation in order to illustrate the
-significance or the origin of the numerical value. In these cases, a so-called <b>value-explanatory
-character</b> (character at numbers) is used in addition to the numerical value. In the chart view,
-value-explanatory symbols appear when you move the mouse over the corresponding data point. In the table
-view, they are attached to the numerical values attached to the numerical values.
-The meaning of the symbols used is shown in the symbol explanation below the chart and table.<br>
+<h3 class="h3bold">3. What do the symbols and letters next to the data in the charts and tables mean?</h3>
+If the numerical values of individual data points cannot be published, or cannot be published
+with their original values, a so-called <b>value-replacement character</b> (a character in place of
+numbers) is used instead of the numerical value. These characters appear exclusively in the
+table view.<br><br>
+In certain cases, numerical values require an explanation, for example to clarify the significance
+or the origin of the numerical value. In such cases, a so-called <b>value-explanatory</b> symbol
+(a symbol next to the numbers) is used in addition to the numerical value.<br><br>
+In the graph view, value-explanatory symbols appear when you hover the mouse over the relevant
+data point. In the table view, they are appended to the numerical values.<br><br>
+The meaning of the symbols used is explained in the legend below the graph and the table.<br>
 <table class="addinfotable">
   <tr class="addinfotr">
   	<th class="addinfoth">Character</th>
@@ -370,32 +372,32 @@ The meaning of the symbols used is shown in the symbol explanation below the cha
   <tr class="addinfotr">
     <td class="addinfotd">0</td>
     <td class="addinfotd">less than half of 1 in the last digit occupied, but more than zero</td>
-    <td class="addinfotd">value-replacing character</td>
+    <td class="addinfotd">value-replacement character</td>
   </tr>
   <tr class="addinfotr">
     <td class="addinfotd">-</td>
     <td class="addinfotd">no figures or magnitude zero</td>
-    <td class="addinfotd">value-replacing character</td>
+    <td class="addinfotd">value-replacement character</td>
   </tr>
   <tr class="addinfotr">
     <td class="addinfotd">...</td>
     <td class="addinfotd">data will be available later</td>
-    <td class="addinfotd">value-replacing character</td>
+    <td class="addinfotd">value-replacement character</td>
   </tr>
   <tr class="addinfotr">
     <td class="addinfotd">/</td>
     <td class="addinfotd">no data because the numerical value is not sufficiently reliable</td>
-    <td class="addinfotd">value-replacing character</td>
+    <td class="addinfotd">value-replacement character</td>
   </tr>
   <tr class="addinfotr">
     <td class="addinfotd">.</td>
     <td class="addinfotd">numerical value unknown or not be disclosed</td>
-    <td class="addinfotd">value-replacing character</td>
+    <td class="addinfotd">value-replacement character</td>
   </tr>
   <tr class="addinfotr">
     <td class="addinfotd">X</td>
     <td class="addinfotd">cell blocked for logical reasons</td>
-    <td class="addinfotd">value-replacing character</td>
+    <td class="addinfotd">value-replacement character</td>
   </tr>
   <tr class="addinfotr">
     <td class="addinfotd">( )</td>
@@ -425,12 +427,12 @@ The meaning of the symbols used is shown in the symbol explanation below the cha
 </table>
 
 <h3 class="h3bold">4. What is disaggregation?</h3>
-Disaggregation is used to divide an existing indicator into further subcategories for more detailed analysis.
-The best known are age or gender.
+Disaggregation involves breaking down an existing indicator into further subcategories
+for a more detailed analysis. Examples include breaking down data by age group or sex.
 
 <h3 class="h3bold">5. Can other countries copy this website?</h3>
-The website can be used freely to create your own online platform. The terms and conditions for the use of GitHub apply.
-Further information can be found at <a href="https://beyond-gdp.de/en/help/guidance/">Technical guidance</a>.
+The website may be used freely to create your own online platform. Use is subject to GitHub’s terms and conditions.
+Further information can be found under <a href="https://beyond-gdp.de/en/help/guidance/">Technical Notes</a>.
 
 
 
@@ -498,12 +500,12 @@ Further information can be found at <a href="https://beyond-gdp.de/en/help/guida
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260904122213'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260904122645'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260904122213"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260904122645"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
