@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260904044136">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260904075039">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -301,30 +301,31 @@ data-event-label="high"
         
 
 
-    Das Dashboard gliedert sich in vier Kategorien, 22 Bereiche und 31 vorläufige Beyond 
-GDP-Indikatoren der High-Level Expert Group on Beyond GDP der Vereinten Nationen.
+    Das Dashboard umfasst vier Kategorien, 22 Bereiche und 31 vorläufige Beyond-GDP
+Indikatoren der unabhängigen hochrangigen Expertengruppe des Generalsekretärs zu Beyond GDP.
 
 <h3 class="h3bold">Darstellung der einzelnen Indikatoren</h3>
-Für jeden Bereich werden die relevanten Daten der verfügbaren Zeitreihen eines Indikators
-sowohl in einer Grafik als auch in einer Tabelle dargestellt. Ergänzt wird diese Darstellung
-bei einigen Indikatoren durch eine interaktive Karte in der die Daten für die deutschen
-Bundesländer dargestellt werden. Einige Indikatoren lassen sich jedoch nicht sinnvoll allein
-durch die Darstellung von Daten abbilden. In diesen Fällen werden, soweit möglich, erläuternde
-Texte mit Verlinkungen zu weiterführenden, thematisch relevanten Informationen bereitgestellt.
+Für jeden Bereich werden die verfügbaren Indikatoren in einer Grafik und einer Tabelle
+dargestellt. Für einige Indikatoren wird die Darstellung durch eine interaktive Karte
+ergänzt, auf der die Daten für die Bundesländer abgebildet werden.
 
-Über die grünen Schaltflächen unterhalb der Grafik können die dargestellten Daten im CSV-Format
-sowie die Grafik als PNG-Datei heruntergeladen werden.
+Über die grünen Schaltflächen unterhalb der Grafik können die dargestellten Daten im CSV-
+Format sowie die Grafik als PNG-Datei heruntergeladen werden.
 
 <h3 class="h3bold">Details und Datenquellen</h3>
 Die Reiter <i>Details</i> und <i>Datenquellen</i> befinden sich am unteren Ende der jeweiligen
 Indikatorseite.
 <ul>
-  <li>Der Reiter <i>Details</i> enthält die Indikatorbezeichnung sowie Informationen zu den
-    verfügbaren Zeitreihen, zum Bereich und zum Datenstand. Außerdem sind hier bei einigen
-    Indikatoren Erläuterungen zur korrekten Interpretation der Indikatoren angegeben.</li>
-  <li>Unter <i>Datenquellen</i> finden sich Links zu den Organisationen, die die Daten für die
-    Zeitreihen bereitstellen. Soweit möglich, werden zudem Links zu den konkreten Datenquellen
-    angegeben.</li>
+  <li>Der Reiter <i>Details</i> enthält die Indikatorbezeichnung, Informationen zum zugehörigen
+    Bereich sowie zum Datenstand. Zudem wird angegeben, ob der Indikator Teil des Indikatorensets
+    der 17 UN-Nachhaltigkeitsziele (Sustainable Development Goals, SDGs) ist.
+    Sofern erforderlich, werden Abweichungen zwischen dem Beyond-GDP Indikator und dem im
+    Dashboard dargestellten Indikator erläutert. Ergänzend werden weitere Erläuterungen zu
+    den Indikatoren bereitgestellt. Darüber hinaus enthält der Reiter eine Beschreibung
+    des jeweiligen Bereichs.</li>
+  <li>Der Reiter <i>Datenquellen</i> enthält Links zu den Organisationen, die die Daten für die 
+    jeweiligen Indikatoren bereitstellen. Soweit möglich, werden zusätzlich Links zu den
+    konkreten Datenquellen angegeben.</li>
 </ul>
 
 
@@ -393,12 +394,12 @@ Indikatorseite.
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260904044136'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260904075039'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260904044136"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260904075039"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

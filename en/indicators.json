@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2",
-          "title": "<ul style='padding-left: 25px;'><li>Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months</li> <li>Proportion of ever-partnered women and girls subjected to physical and/or sexual violence by a current or former intimate partner in the previous 12 months</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months</li> <li>Proportion of ever-partnered women and girls subjected to physical and/or sexual violence by a current or former intimate partner in the previous 12 months</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-2/",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-3",
-          "title": "<ul style='padding-left: 25px;'><li>Total greenhouse gas emissions and greenhouse gas emissions per capita</li> <li>Biodiversity intactness index</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Total greenhouse gas emissions and greenhouse gas emissions per capita</li> <li>Biodiversity intactness index</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-3/",
@@ -79,7 +79,7 @@
         
         {
           "id": "2-1",
-          "title": "<ul style='padding-left: 25px;'><li>Household disposable income per capita</li> <li>Composite rate of labour underutilization</li> <li>Proportion of time spent on unpaid domestic and care work</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Household disposable income per capita</li> <li>Composite rate of labour underutilization</li> <li>Proportion of time spent on unpaid domestic and care work</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-1/",
@@ -111,7 +111,7 @@
         },
         {
           "id": "2-2",
-          "title": "<ul style='padding-left: 25px;'><li>Healthy life expectancy at birth</li> <li>Low-birthweight babies (percentage of births)</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Healthy life expectancy at birth</li> <li>Low-birthweight babies (percentage of births)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-2/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "<ul style='padding-left: 25px;'><li>Proportion of children and young people achieving a minimum proficiency level in reading and mathematics</li> <li>Proportion of youth and adults with information and communications technology skills (ICT)</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Proportion of children and young people achieving a minimum proficiency level in reading and mathematics</li> <li>Proportion of youth and adults with information and communications technology skills (ICT)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-3/",
@@ -159,7 +159,7 @@
         },
         {
           "id": "2-4",
-          "title": "<ul style='padding-left: 25px;'><li>Intentional homicides per 100,000 population</li> <li> Proportion of population that feel safe walking alone around the area they live after dark</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Intentional homicides per 100,000 population</li> <li> Proportion of population that feel safe walking alone around the area they live after dark</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-4/",
@@ -231,7 +231,7 @@
         },
         {
           "id": "2-8",
-          "title": "<ul style='padding-left: 25px;'><li>Annual mean levels of fine particulate matter in cities</li> <li> Proportion of population using safely managed drinking water services</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Annual mean levels of fine particulate matter in cities</li> <li> Proportion of population using safely managed drinking water services</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-8/",
@@ -383,7 +383,7 @@
         },
         {
           "id": "4-2",
-          "title": "<ul style='padding-left: 25px;'><li>Share of youth not in education, employment or training (NEET)</li> <li> Potential years of life lost (PYLL), all causes</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Share of youth not in education, employment or training (NEET)</li> <li> Potential years of life lost (PYLL), all causes</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-2/",

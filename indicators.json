@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten persönlich diskriminiert oder belästigt gefühlt hat</li> <li>Anteil der Frauen und Mädchen, der in den vorangegangenen 12 Monaten physischer, und/oder sexueller Gewalt durch aktuelle oder ehemalige Intimpartner/-innen ausgesetzt war</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten persönlich diskriminiert oder belästigt gefühlt hat</li> <li>Anteil der Frauen und Mädchen, der in den vorangegangenen 12 Monaten physischer, und/oder sexueller Gewalt durch aktuelle oder ehemalige Intimpartner/-innen ausgesetzt war</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-2/",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-3",
-          "title": "<ul style='padding-left: 25px;'><li>Gesamte Treibhausgasemissionen  und Treibhausgasemissionen pro Kopf</li> <li>Index zur Intaktheit der biologischen Vielfalt</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Gesamte Treibhausgasemissionen  und Treibhausgasemissionen pro Kopf</li> <li>Index zur Intaktheit der biologischen Vielfalt</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-3/",
@@ -79,7 +79,7 @@
         
         {
           "id": "2-1",
-          "title": "<ul style='padding-left: 25px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Quote der Unterauslastung von Arbeitskräften</li> <li>Anteil des Zeitaufwands für unbezahlte Haus- und Pflegearbeit</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Quote der Unterauslastung von Arbeitskräften</li> <li>Anteil des Zeitaufwands für unbezahlte Haus- und Pflegearbeit</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-1/",
@@ -111,7 +111,7 @@
         },
         {
           "id": "2-2",
-          "title": "<ul style='padding-left: 25px;'><li>Gesunde Lebenserwartung bei der Geburt</li> <li> Anteil der Neugeborenen mit niedrigem Geburtsgewicht</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Gesunde Lebenserwartung bei der Geburt</li> <li> Anteil der Neugeborenen mit niedrigem Geburtsgewicht</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-2/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil der Kinder und Jugendlichen mit einem Mindestniveau in Lesen und Mathematik</li> <li>Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie (IKT)</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Anteil der Kinder und Jugendlichen mit einem Mindestniveau in Lesen und Mathematik</li> <li>Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie (IKT)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-3/",
@@ -159,7 +159,7 @@
         },
         {
           "id": "2-4",
-          "title": "<ul style='padding-left: 25px;'><li>Vorsätzliche Tötungsdelikte je 100 000 Einwohner/-innen</li> <li>Anteil der Bevölkerung, der sich sicher fühlt, nach Einbruch der Dunkelheit allein in der Umgebung seines Wohnortes zu Fuß unterwegs zu sein</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Vorsätzliche Tötungsdelikte je 100 000 Einwohner/-innen</li> <li>Anteil der Bevölkerung, der sich nach Einbruch der Dunkelheit in seiner Wohnumgebung allein sicher fühlt</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-4/",
@@ -231,7 +231,7 @@
         },
         {
           "id": "2-8",
-          "title": "<ul style='padding-left: 25px;'><li>Jahresmittelwerte der Feinstaubkonzentration in Städten</li> <li>Anteil der Bevölkerung, der eine sicher verwaltete Trinkwasserversorgung nutzt</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Jahresmittelwerte der Feinstaubkonzentration in Städten</li> <li>Anteil der Bevölkerung, der eine sicher verwaltete Trinkwasserversorgung nutzt</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-8/",
@@ -295,7 +295,7 @@
         },
         {
           "id": "3-3",
-          "title": "Armutsquote gemessen an der gesellschaftlichen Armutsgrenze (festgelegt auf einem Basiswert)",
+          "title": "Armutsquote gemessen an der gesellschaftlichen Armutsgrenze (festgelegt auf einen Basiswert)",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/3-3/",
@@ -383,7 +383,7 @@
         },
         {
           "id": "4-2",
-          "title": "<ul style='padding-left: 25px;'><li>Anteil junger Menschen, der sich weder in Schul- oder Berufsausbildung noch in Erwerbstätigkeit befindet (NEET)</li> <li>Potenzielle Lebensjahre, die durch vorzeitigen Tod verloren gehen (PYLL), alle Todesursachen</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Anteil junger Menschen, der sich weder in Schul- oder Berufsausbildung noch in Erwerbstätigkeit befindet (NEET)</li> <li>Potenzielle Lebensjahre, die durch vorzeitigen Tod verloren gehen (PYLL), alle Todesursachen</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/4-2/",
