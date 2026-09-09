@@ -151,7 +151,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260909044012">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20260909061750">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -441,7 +441,7 @@ layout-indicator-iframe
   
   <div id="datatableFooter">
     
-    <p>Data source: <a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></p>
+    <p>Data source: <a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" onclick="return confirm_alert('of the World Values Survey', 'En')" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></p>
     
     
     
@@ -558,7 +558,7 @@ data-event-label="Change to Table tab"
           
             <dt><u>Data source</u>:</dt>
           
-          <dd><a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></dd>
+          <dd><a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" onclick="return confirm_alert('of the World Values Survey', 'En')" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></dd>
         
 
         
@@ -642,7 +642,7 @@ data-event-label="Change to Table tab"
           
             <dt><u>Data source</u>:</dt>
           
-          <dd><a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></dd>
+          <dd><a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" onclick="return confirm_alert('of the World Values Survey', 'En')" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></dd>
         
 
         
@@ -1101,7 +1101,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row" style="min-width:130px;">Organisation </th>
         <td style="width: 100%">
           
-            <p><a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></p>
+            <p><a href="https://www.worldvaluessurvey.org/wvs.jsp" target="_blank" onclick="return confirm_alert('of the World Values Survey', 'En')" title="Click here to go to the website of the World Values Survey."> World Values Survey</a></p>
 
           
         </td>
@@ -1143,7 +1143,7 @@ data-event-label="Change to indicator.sources tab"
 
             
               
-                <a href="https://www.worldvaluessurvey.org/WVSOnline.jsp" target="_blank">
+                <a href="https://www.worldvaluessurvey.org/WVSOnline.jsp" target="_blank" onclick="return confirm_alert('of the World Values Survey','En');">
                   World Values Survey - Online Data Analysis <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -1471,12 +1471,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20260909044012'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20260909061750'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20260909044012"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20260909061750"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
