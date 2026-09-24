@@ -2988,7 +2988,8 @@ body.contrast-high .goal-banner {
   border-radius: var(--radius-pill);
   padding-left: 80px;
   padding-right: 50px;
-  max-width: 1320px; }
+  max-width: 1320px;
+  margin: auto; }
   .goal-banner h1, .goal-banner p {
     color: white; }
     @media only screen and (max-width: 600px) {
