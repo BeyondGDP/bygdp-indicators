@@ -138,6 +138,8 @@ menu:
     #translation_key: menu.1_worldwide
   #- path: menu.1_national_indicators_path
     #translation_key: menu.1_national_indicators
+  - translation_key: menu.1_about_beyond
+    path: /about/
   - translation_key: menu.1_help
     dropdown:
     - path: /help/navigation/
