@@ -2882,8 +2882,8 @@ function sortData(rows, selectedUnit) {
  * @param {String} selectedSeries
  * @return {int|false} true or false
  */
-function getShowMap(showMap, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+function getShowMap(showMaps, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(showMaps, selectedUnit, selectedSeries);
   return (match) ? match.showMap : false;
 }
 
@@ -3105,6 +3105,7 @@ function getAllObservationAttributes(rows) {
   this.validParentsByChild = {};
   this.hasGeoData = false;
   this.showMap = options.showMap;
+  this.showMaps = options.showMaps;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
   this.fill = options.fill;
@@ -5719,6 +5720,7 @@ var indicatorInit = function () {
                         data: res.data,
                         edgesData: res.edges,
                         showMap: domData.showmap,
+                        showMaps: domData.showmaps,
                         country: domData.country,
                         indicatorId: domData.indicatorid,
                         shortIndicatorId: domData.id,
