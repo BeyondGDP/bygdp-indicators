@@ -101,7 +101,6 @@
     sortFieldNames: typeof sortFieldNames !== 'undefined' ? sortFieldNames : function() {},
     sortFieldValueNames: typeof sortFieldValueNames !== 'undefined' ? sortFieldValueNames : function() {},
     getPrecision: getPrecision,
-    getShowMap: getShowMap,
     getGraphLimits: getGraphLimits,
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,

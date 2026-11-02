@@ -2,17 +2,6 @@
  * Model helper functions related to charts and datasets.
  */
 
-
- /**
-  * @param {Array} showMap
-  * @param {String} selectedUnit
-  * @param {String} selectedSeries
-  */
- function getShowMap(showMap, selectedUnit, selectedSeries) {
-   return getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
-}
-
-
 /**
  * @param {string} currentTitle
  * @param {Array} allTitles Objects containing 'unit' and 'title'
@@ -381,7 +370,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
-
+  console.log("fill, fillAbove, fillBelow:", fill, fillAbove, fillBelow, typeof fill);
   return Object.assign(dataset, {
 
     label: getCombinationDescription(combination, labelFallback),
@@ -556,5 +545,4 @@ function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, sho
    */
   function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
     return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
-
 }
