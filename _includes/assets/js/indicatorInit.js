@@ -23,7 +23,7 @@ var indicatorInit = function () {
                     var model = new indicatorModel({
                         data: res.data,
                         edgesData: res.edges,
-                        showMaps: domData.showmaps,
+                        showMap: domData.showmap,
                         country: domData.country,
                         indicatorId: domData.indicatorid,
                         shortIndicatorId: domData.id,
