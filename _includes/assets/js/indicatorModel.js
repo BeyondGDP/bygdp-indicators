@@ -45,6 +45,7 @@ var indicatorModel = function (options) {
   this.validParentsByChild = {};
   this.hasGeoData = false;
   this.showMap = options.showMap;
+  this.showMaps = options.showMaps;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
   this.fill = options.fill;

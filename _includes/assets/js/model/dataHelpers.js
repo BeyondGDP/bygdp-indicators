@@ -84,8 +84,8 @@ function sortData(rows, selectedUnit) {
  * @param {String} selectedSeries
  * @return {int|false} true or false
  */
-function getShowMap(showMap, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+function getShowMap(showMaps, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(showMaps, selectedUnit, selectedSeries);
   return (match) ? match.showMap : false;
 }
 
