@@ -2877,6 +2877,17 @@ function sortData(rows, selectedUnit) {
 }
 
 /**
+ * @param {Array} showMap
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {int|false} true or false
+ */
+function getShowMap(showMap, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+  return (match) ? match.showMap : false;
+}
+
+/**
  * @param {Array} precisions Objects containing 'unit' and 'title'
  * @param {String} selectedUnit
  * @param {String} selectedSeries
@@ -3038,6 +3049,7 @@ function getAllObservationAttributes(rows) {
     sortFieldNames: typeof sortFieldNames !== 'undefined' ? sortFieldNames : function() {},
     sortFieldValueNames: typeof sortFieldValueNames !== 'undefined' ? sortFieldValueNames : function() {},
     getPrecision: getPrecision,
+    getShowMap: getShowMap,
     getGraphLimits: getGraphLimits,
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,
@@ -3353,7 +3365,7 @@ function getAllObservationAttributes(rows) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMap: this.showMap,
+        showMap: helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
