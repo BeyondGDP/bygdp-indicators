@@ -3372,7 +3372,7 @@ function getAllObservationAttributes(rows) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMaps: this.showMaps, //helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
+        showMaps: this.showMaps,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
