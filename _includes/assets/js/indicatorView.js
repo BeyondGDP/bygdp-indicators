@@ -17,6 +17,7 @@ var indicatorView = function (model, options) {
     VIEW._chartInstances = {};
     VIEW._browserDecimalSeparator = helpers.getBrowserDecimalSeparator();
     VIEW._graphStepsize = undefined;
+    VIEW._showMap = undefined;
 
     var chartHeight = screen.height < OPTIONS.maxChartHeight ? screen.height : OPTIONS.maxChartHeight;
     $('.plot-container', OPTIONS.rootElement).css('height', chartHeight + 'px');
@@ -69,6 +70,7 @@ var indicatorView = function (model, options) {
 
         VIEW._precision = args.precision;
         VIEW._graphStepsize = args.graphStepsize;
+        VIEW._showMap = args.showMap;
 
         if (MODEL.showData) {
             $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();

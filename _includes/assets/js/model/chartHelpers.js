@@ -4,16 +4,13 @@
 
 
  /**
-  * @param {string} currentShowMap
-  * @param {Array} allShowMaps Objects containing 'unit' and 'title'
+  * @param {Array} showMap
   * @param {String} selectedUnit
   * @param {String} selectedSeries
-  * @return {String} Updated showMap
   */
- function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
-   var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
-   return (match) ? match.show : currentShowMap;
- }
+ function getShowMap(showMap, selectedUnit, selectedSeries) {
+   return getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+}
 
 
 /**
