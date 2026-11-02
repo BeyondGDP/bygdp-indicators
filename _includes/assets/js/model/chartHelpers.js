@@ -9,7 +9,7 @@
   */
  function getShowMap(showMap, selectedUnit, selectedSeries) {
    console.log(typeof showMap, selectedUnit, selectedSeries);
-   if (typeof showMap == 'Array') {
+   if (typeof showMap == 'object') {
      var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
      console.log(match.show);
      return (match) ? match.show : False;
