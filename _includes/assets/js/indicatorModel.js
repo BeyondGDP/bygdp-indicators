@@ -149,6 +149,10 @@ var indicatorModel = function (options) {
     this.getData();
   };
 
+  this.updateShowMap = function() {
+    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
+  }
+
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
   }
@@ -306,7 +310,7 @@ var indicatorModel = function (options) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMap: helpers.getShowMap(this.showMaps, this.selectedUnit, this.selectedSeries),
+        showMaps: this.showMaps,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -351,6 +355,7 @@ var indicatorModel = function (options) {
       datasetCountExceedsMax = true;
     }
 
+    this.updateShowMap();
     this.updateChartTitle();
     this.updateChartSubtitle();
     this.updateChartType();
@@ -375,6 +380,7 @@ var indicatorModel = function (options) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
+      showMap: this.showMap,
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,

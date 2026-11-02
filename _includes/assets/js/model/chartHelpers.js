@@ -2,6 +2,20 @@
  * Model helper functions related to charts and datasets.
  */
 
+
+ /**
+  * @param {string} currentShowMap
+  * @param {Array} allShowMaps Objects containing 'unit' and 'title'
+  * @param {String} selectedUnit
+  * @param {String} selectedSeries
+  * @return {String} Updated showMap
+  */
+ function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
+   var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
+   return (match) ? match.show : currentShowMap;
+ }
+
+
 /**
  * @param {string} currentTitle
  * @param {Array} allTitles Objects containing 'unit' and 'title'

@@ -79,17 +79,6 @@ function sortData(rows, selectedUnit) {
 }
 
 /**
- * @param {Array} showMap
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {int|false} true or false
- */
-function getShowMap(showMaps, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(showMaps, selectedUnit, selectedSeries);
-  return (match) ? match.showMap : false;
-}
-
-/**
  * @param {Array} precisions Objects containing 'unit' and 'title'
  * @param {String} selectedUnit
  * @param {String} selectedSeries
