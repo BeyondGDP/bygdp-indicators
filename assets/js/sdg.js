@@ -2207,17 +2207,23 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
   * @param {String} selectedUnit
   * @param {String} selectedSeries
   */
- function getShowMap(showMap, selectedUnit, selectedSeries) {
-   console.log(typeof showMap, selectedUnit, selectedSeries);
-   if (typeof showMap == 'object') {
-     var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
-     console.log(match.show);
-     return (match) ? match.show : False;
-   }
-   else {
-    return showMap;
-  }
- }
+
+function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
+
+  var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
+  return (match) ? match.show : currentShowMap;
+}
+ // function getShowMap(showMap, selectedUnit, selectedSeries) {
+ //   console.log(typeof showMap, selectedUnit, selectedSeries);
+ //   if (typeof showMap == 'object') {
+ //     var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+ //     console.log(match.show);
+ //     return (match) ? match.show : False;
+ //   }
+ //   else {
+ //    return showMap;
+ //  }
+ // }
 
 /**
  * @param {string} currentTitle
@@ -3111,6 +3117,7 @@ function getAllObservationAttributes(rows) {
   this.validParentsByChild = {};
   this.hasGeoData = false;
   this.showMap = options.showMap;
+  this.showMaps = options.showMaps;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
   this.fill = options.fill;
@@ -3215,7 +3222,7 @@ function getAllObservationAttributes(rows) {
   };
 
   this.updateShowMap = function() {
-    this.showMap = helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries);
+    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartTitle = function() {
@@ -3375,7 +3382,7 @@ function getAllObservationAttributes(rows) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMap: this.showMap, //helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
+        showMaps: this.showMaps, //helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -3445,7 +3452,7 @@ function getAllObservationAttributes(rows) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
-      showMap: helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
+      showMap: this.showMap,
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
@@ -5731,6 +5738,7 @@ var indicatorInit = function () {
                         data: res.data,
                         edgesData: res.edges,
                         showMap: domData.showmap,
+                        showMaps: domData.showmaps,
                         country: domData.country,
                         indicatorId: domData.indicatorid,
                         shortIndicatorId: domData.id,
