@@ -2,6 +2,16 @@
  * Model helper functions related to charts and datasets.
  */
 
+ /**
+  * @param {Array} showMap
+  * @param {String} selectedUnit
+  * @param {String} selectedSeries
+  */
+ function getShowMap(showMap, selectedUnit, selectedSeries) {
+   console.log(showMap, selectedUnit, selectedSeries);
+   return getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+ }
+
 /**
  * @param {string} currentTitle
  * @param {Array} allTitles Objects containing 'unit' and 'title'
@@ -10,6 +20,7 @@
  * @return {String} Updated title
  */
 function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
+
   var match = getMatchByUnitSeries(allTitles, selectedUnit, selectedSeries);
   return (match) ? match.title : currentTitle;
 }

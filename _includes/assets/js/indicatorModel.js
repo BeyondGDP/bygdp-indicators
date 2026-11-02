@@ -149,7 +149,7 @@ var indicatorModel = function (options) {
   };
 
   this.updateShowMap = function() {
-    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
+    this.showMap = helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartTitle = function() {

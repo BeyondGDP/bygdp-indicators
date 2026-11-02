@@ -94,6 +94,7 @@
     getChartTitle: getChartTitle,
     getChartSubTitle: getChartSubTitle,
     getChartType: getChartType,
+    getShowMap: getShowMap,
     getCombinationData: getCombinationData,
     getDatasets: getDatasets,
     tableDataFromDatasets: tableDataFromDatasets,
