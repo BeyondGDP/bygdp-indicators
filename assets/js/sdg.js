@@ -2202,6 +2202,20 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
  * Model helper functions related to charts and datasets.
  */
 
+
+ /**
+  * @param {string} currentShowMap
+  * @param {Array} allShowMaps Objects containing 'unit' and 'title'
+  * @param {String} selectedUnit
+  * @param {String} selectedSeries
+  * @return {String} Updated showMap
+  */
+ function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
+   var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
+   return (match) ? match.show : currentShowMap;
+ }
+
+
 /**
  * @param {string} currentTitle
  * @param {Array} allTitles Objects containing 'unit' and 'title'
@@ -2877,17 +2891,6 @@ function sortData(rows, selectedUnit) {
 }
 
 /**
- * @param {Array} showMap
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {int|false} true or false
- */
-function getShowMap(showMaps, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(showMaps, selectedUnit, selectedSeries);
-  return (match) ? match.showMap : false;
-}
-
-/**
  * @param {Array} precisions Objects containing 'unit' and 'title'
  * @param {String} selectedUnit
  * @param {String} selectedSeries
@@ -3209,6 +3212,10 @@ function getAllObservationAttributes(rows) {
     this.getData();
   };
 
+  this.updateShowMap = function() {
+    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
+  }
+
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
   }
@@ -3366,7 +3373,7 @@ function getAllObservationAttributes(rows) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMap: helpers.getShowMap(this.showMaps, this.selectedUnit, this.selectedSeries),
+        showMaps: this.showMaps,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -3411,6 +3418,7 @@ function getAllObservationAttributes(rows) {
       datasetCountExceedsMax = true;
     }
 
+    this.updateShowMap();
     this.updateChartTitle();
     this.updateChartSubtitle();
     this.updateChartType();
@@ -3435,6 +3443,7 @@ function getAllObservationAttributes(rows) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
+      showMap: this.showMap,
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
