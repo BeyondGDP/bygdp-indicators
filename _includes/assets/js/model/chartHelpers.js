@@ -8,9 +8,14 @@
   * @param {String} selectedSeries
   */
  function getShowMap(showMap, selectedUnit, selectedSeries) {
-   console.log(showMap, selectedUnit, selectedSeries, getMatchByUnitSeries(showMap, selectedUnit, selectedSeries));
-   var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
-  return (match) ? match.show : False;
+   if (typeof showMap == 'Object') {
+     var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+     console.log(showMap, selectedUnit, selectedSeries, match.show);
+     return (match) ? match.show : False;
+   }
+   else {
+    return showMap;
+  }
  }
 
 /**
@@ -382,7 +387,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
-  console.log("fill, fillAbove, fillBelow:", fill, fillAbove, fillBelow, typeof fill);
+
   return Object.assign(dataset, {
 
     label: getCombinationDescription(combination, labelFallback),
