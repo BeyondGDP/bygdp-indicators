@@ -2208,7 +2208,7 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
   * @param {String} selectedSeries
   */
  function getShowMap(showMap, selectedUnit, selectedSeries) {
-   console.log(showMap, selectedUnit, selectedSeries);
+   console.log(showMap, selectedUnit, selectedSeries, getMatchByUnitSeries(showMap, selectedUnit, selectedSeries));
    return getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
  }
 
