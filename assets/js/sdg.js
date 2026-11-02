@@ -2204,16 +2204,13 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
 
 
  /**
-  * @param {string} currentShowMap
-  * @param {Array} allShowMaps Objects containing 'unit' and 'title'
+  * @param {Array} showMap
   * @param {String} selectedUnit
   * @param {String} selectedSeries
-  * @return {String} Updated showMap
   */
- function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
-   var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
-   return (match) ? match.show : currentShowMap;
- }
+ function getShowMap(showMap, selectedUnit, selectedSeries) {
+   return getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+}
 
 
 /**
@@ -3108,7 +3105,6 @@ function getAllObservationAttributes(rows) {
   this.validParentsByChild = {};
   this.hasGeoData = false;
   this.showMap = options.showMap;
-  this.showMaps = options.showMaps;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
   this.fill = options.fill;
@@ -3373,7 +3369,7 @@ function getAllObservationAttributes(rows) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMaps: this.showMaps,
+        showMap: helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -3443,7 +3439,7 @@ function getAllObservationAttributes(rows) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
-      showMap: this.showMap,
+      showMap: helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
@@ -5433,6 +5429,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
     VIEW._chartInstances = {};
     VIEW._browserDecimalSeparator = helpers.getBrowserDecimalSeparator();
     VIEW._graphStepsize = undefined;
+    VIEW._showMap = undefined;
 
     var chartHeight = screen.height < OPTIONS.maxChartHeight ? screen.height : OPTIONS.maxChartHeight;
     $('.plot-container', OPTIONS.rootElement).css('height', chartHeight + 'px');
@@ -5485,6 +5482,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
 
         VIEW._precision = args.precision;
         VIEW._graphStepsize = args.graphStepsize;
+        VIEW._showMap = args.showMap;
 
         if (MODEL.showData) {
             $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
@@ -5728,7 +5726,6 @@ var indicatorInit = function () {
                     var model = new indicatorModel({
                         data: res.data,
                         edgesData: res.edges,
-                        showMap: domData.showmap,
                         showMaps: domData.showmaps,
                         country: domData.country,
                         indicatorId: domData.indicatorid,
