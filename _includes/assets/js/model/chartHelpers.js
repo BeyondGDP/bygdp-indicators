@@ -9,7 +9,8 @@
   */
  function getShowMap(showMap, selectedUnit, selectedSeries) {
    console.log(showMap, selectedUnit, selectedSeries, getMatchByUnitSeries(showMap, selectedUnit, selectedSeries));
-   return getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+   var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+  return (match) ? match.show : False;
  }
 
 /**
