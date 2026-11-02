@@ -7,17 +7,23 @@
   * @param {String} selectedUnit
   * @param {String} selectedSeries
   */
- function getShowMap(showMap, selectedUnit, selectedSeries) {
-   console.log(typeof showMap, selectedUnit, selectedSeries);
-   if (typeof showMap == 'object') {
-     var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
-     console.log(match.show);
-     return (match) ? match.show : False;
-   }
-   else {
-    return showMap;
-  }
- }
+
+function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
+
+  var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
+  return (match) ? match.show : currentShowMap;
+}
+ // function getShowMap(showMap, selectedUnit, selectedSeries) {
+ //   console.log(typeof showMap, selectedUnit, selectedSeries);
+ //   if (typeof showMap == 'object') {
+ //     var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+ //     console.log(match.show);
+ //     return (match) ? match.show : False;
+ //   }
+ //   else {
+ //    return showMap;
+ //  }
+ // }
 
 /**
  * @param {string} currentTitle

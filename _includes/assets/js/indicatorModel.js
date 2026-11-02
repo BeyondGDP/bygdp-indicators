@@ -45,6 +45,7 @@ var indicatorModel = function (options) {
   this.validParentsByChild = {};
   this.hasGeoData = false;
   this.showMap = options.showMap;
+  this.showMaps = options.showMaps;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
   this.fill = options.fill;
@@ -149,7 +150,7 @@ var indicatorModel = function (options) {
   };
 
   this.updateShowMap = function() {
-    this.showMap = helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries);
+    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartTitle = function() {
@@ -309,7 +310,7 @@ var indicatorModel = function (options) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMap: this.showMap, //helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
+        showMaps: this.showMaps, //helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -379,7 +380,7 @@ var indicatorModel = function (options) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
-      showMap: helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
+      showMap: this.showMap,
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
