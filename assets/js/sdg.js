@@ -2202,6 +2202,16 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
  * Model helper functions related to charts and datasets.
  */
 
+ /**
+  * @param {Array} showMap
+  * @param {String} selectedUnit
+  * @param {String} selectedSeries
+  */
+ function getShowMap(showMap, selectedUnit, selectedSeries) {
+   console.log(showMap, selectedUnit, selectedSeries);
+   return getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
+ }
+
 /**
  * @param {string} currentTitle
  * @param {Array} allTitles Objects containing 'unit' and 'title'
@@ -2210,6 +2220,7 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
  * @return {String} Updated title
  */
 function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
+
   var match = getMatchByUnitSeries(allTitles, selectedUnit, selectedSeries);
   return (match) ? match.title : currentTitle;
 }
@@ -3030,6 +3041,7 @@ function getAllObservationAttributes(rows) {
     getChartTitle: getChartTitle,
     getChartSubTitle: getChartSubTitle,
     getChartType: getChartType,
+    getShowMap: getShowMap,
     getCombinationData: getCombinationData,
     getDatasets: getDatasets,
     tableDataFromDatasets: tableDataFromDatasets,
@@ -3196,7 +3208,7 @@ function getAllObservationAttributes(rows) {
   };
 
   this.updateShowMap = function() {
-    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
+    this.showMap = helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartTitle = function() {
