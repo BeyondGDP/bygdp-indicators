@@ -306,7 +306,7 @@ var indicatorModel = function (options) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMap: helpers.getShowMap(this.showMap, this.selectedUnit, this.selectedSeries),
+        showMap: helpers.getShowMap(this.showMaps, this.selectedUnit, this.selectedSeries),
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
