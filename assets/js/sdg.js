@@ -2208,9 +2208,10 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
   * @param {String} selectedSeries
   */
  function getShowMap(showMap, selectedUnit, selectedSeries) {
-   if (typeof showMap == 'Object') {
+   console.log(typeof showMap, selectedUnit, selectedSeries);
+   if (typeof showMap == 'Array') {
      var match = getMatchByUnitSeries(showMap, selectedUnit, selectedSeries);
-     console.log(showMap, selectedUnit, selectedSeries, match.show);
+     console.log(match.show);
      return (match) ? match.show : False;
    }
    else {
