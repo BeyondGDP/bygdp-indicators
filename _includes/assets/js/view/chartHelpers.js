@@ -9,6 +9,12 @@ function alterChartConfig(config, info) {
     });
 }
 
+function updateShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
+  (match) ? console.log("d", match.show) : console.log("e", currentShowMap);
+  return (match) ? match.show : currentShowMap;
+}
+
 /**
  * @param {String} chartTitle
  * @return null
