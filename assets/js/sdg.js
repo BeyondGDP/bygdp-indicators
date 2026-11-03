@@ -3754,6 +3754,12 @@ function alterChartConfig(config, info) {
     });
 }
 
+function updateShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
+  (match) ? console.log("d", match.show) : console.log("e", currentShowMap);
+  return (match) ? match.show : currentShowMap;
+}
+
 /**
  * @param {String} chartTitle
  * @return null
@@ -5475,6 +5481,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 // they were changed while on the map.
                 helpers.updateChartSubtitle(VIEW._dataCompleteArgs.chartSubtitle);
                 helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle, VIEW._dataCompleteArgs.isProxy);
+                helpers.updateShowMap(VIEW._dataCompleteArgs.showMap, VIEW._dataCompleteArgs.showMaps, VIEW._dataCompleteArgs.selectedUnit, VIEW._dataCompleteArgs.selectedSeries);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateTimeSeriesAttributes(VIEW._dataCompleteArgs.timeSeriesAttributes);
