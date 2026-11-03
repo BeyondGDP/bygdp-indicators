@@ -2211,7 +2211,9 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
 function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
 
   var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
+  (match) ? console.log(match.show) : console.log(currentShowMap);
   return (match) ? match.show : currentShowMap;
+
 }
 
 
