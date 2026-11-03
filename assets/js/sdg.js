@@ -3375,6 +3375,7 @@ function getAllObservationAttributes(rows) {
         startValues: this.startValues,
         indicatorId: this.indicatorId,
         showMaps: this.showMaps,
+        showMap: helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries),
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -3444,7 +3445,7 @@ function getAllObservationAttributes(rows) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
-      showMap: this.showMap,
+      showMap: helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries),
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
@@ -5118,7 +5119,6 @@ function alterDataDisplay(value, info, context, additionalInfo) {
       if (precision < 0) {
         precision = 0
       }
-      console.log("STEP", VIEW._graphStepsize, precision);
     }
     else {
       var precision = VIEW._precision
