@@ -5504,7 +5504,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 helpers.updatePlot(args);
             }
         }
-
+        console.log("f", args);
         helpers.createSelectionsTable(args);
         helpers.updateShowMap(args.showMap, args.showmpas, args.selectedUnit, args.selectedSeries);
         helpers.updateChartSubtitle(args.chartSubtitle);
