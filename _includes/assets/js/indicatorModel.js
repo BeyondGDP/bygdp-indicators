@@ -89,6 +89,7 @@ var indicatorModel = function (options) {
       this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
       this.fieldsBySeries = helpers.fieldsUsedBySeries(this.serieses, this.data, this.allColumns);
       this.dataHasSeriesSpecificFields = helpers.dataHasSeriesSpecificFields(this.fieldsBySeries);
+      this.showMap = helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries);
     }
   }
 
