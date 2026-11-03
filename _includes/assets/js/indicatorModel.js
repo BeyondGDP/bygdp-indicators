@@ -150,6 +150,7 @@ var indicatorModel = function (options) {
   };
 
   this.updateShowMap = function() {
+    console.log("c", this.showMap, this.showMaps);
     this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
   }
 
