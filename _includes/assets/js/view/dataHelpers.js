@@ -40,7 +40,6 @@ function alterDataDisplay(value, info, context, additionalInfo) {
       if (precision < 0) {
         precision = 0
       }
-      console.log("STEP", VIEW._graphStepsize, precision);
     }
     else {
       var precision = VIEW._precision
