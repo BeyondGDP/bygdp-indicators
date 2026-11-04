@@ -370,7 +370,6 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
-
   return Object.assign(dataset, {
 
     label: getCombinationDescription(combination, labelFallback),
@@ -545,5 +544,4 @@ function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, sho
    */
   function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
     return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
-
 }
