@@ -3755,7 +3755,7 @@ function updateChartTitle(chartTitle, isProxy) {
  */
 function updateChartSubtitle(chartSubtitle) {
     if (typeof chartSubtitle !== 'undefined') {
-        $('.chart-subtitle').text(chartSubtitle);
+        $('.chart-subtitle').html(chartSubtitle);
     }
 }
 
