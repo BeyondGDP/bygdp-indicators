@@ -177,7 +177,8 @@ opensdg.autotrack = function(preset, category, action, label) {
         var currentSubtitle = $('#map-subheading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
         newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
-        console.log("A", currentSubtitle, newSubtitle);
+        console.log("A", currentSubtitle, newSubtitle, currentUnit, currentSeries);
+        console.log("B", currentTitle, newTitle, currentUnit, currentSeries);
       }
       if (newTitle) {
         if (this.proxy === 'proxy' || this.proxySerieses.includes(currentSeries)) {
