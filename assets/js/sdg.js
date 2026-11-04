@@ -171,14 +171,15 @@ opensdg.autotrack = function(preset, category, action, label) {
           newSubtitle = null;
       if (this.modelHelpers.GRAPH_TITLE_FROM_SERIES) {
         newTitle = currentSeries;
-
+        var currentSubtitle = $('#map-subheading').text();
+        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
       else {
         var currentTitle = $('#map-heading').text();
+        var currentSubtitle = $('#map-subheading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
-      var currentSubtitle = $('#map-subheading').text();
-      newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       if (newTitle) {
         if (this.proxy === 'proxy' || this.proxySerieses.includes(currentSeries)) {
             newTitle += ' ' + this.viewHelpers.PROXY_PILL;
