@@ -2,19 +2,6 @@
  * Model helper functions related to charts and datasets.
  */
 
- /**
-  * @param {Array} showMap
-  * @param {String} selectedUnit
-  * @param {String} selectedSeries
-  */
-
-function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
-  (match) ? console.log("a", match.show) : console.log("b", currentShowMap);
-  return (match) ? match.show : currentShowMap;
-}
-
-
 /**
  * @param {string} currentTitle
  * @param {Array} allTitles Objects containing 'unit' and 'title'
@@ -23,7 +10,6 @@ function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
  * @return {String} Updated title
  */
 function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
-
   var match = getMatchByUnitSeries(allTitles, selectedUnit, selectedSeries);
   return (match) ? match.title : currentTitle;
 }
@@ -384,7 +370,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
-
+  console.log("fill, fillAbove, fillBelow:", fill, fillAbove, fillBelow, typeof fill);
   return Object.assign(dataset, {
 
     label: getCombinationDescription(combination, labelFallback),

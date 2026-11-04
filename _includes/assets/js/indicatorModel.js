@@ -16,7 +16,9 @@ var indicatorModel = function (options) {
 
   // general members:
   var that = this;
+  console.log("options.data: ",options.data);
   this.data = helpers.inputData(options.data);
+  console.log("this.data: ", this.data);
   this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
@@ -45,7 +47,6 @@ var indicatorModel = function (options) {
   this.validParentsByChild = {};
   this.hasGeoData = false;
   this.showMap = options.showMap;
-  this.showMaps = options.showMaps;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
   this.fill = options.fill;
@@ -89,7 +90,6 @@ var indicatorModel = function (options) {
       this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
       this.fieldsBySeries = helpers.fieldsUsedBySeries(this.serieses, this.data, this.allColumns);
       this.dataHasSeriesSpecificFields = helpers.dataHasSeriesSpecificFields(this.fieldsBySeries);
-      this.showMap = helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries);
     }
   }
 
@@ -102,6 +102,7 @@ var indicatorModel = function (options) {
 
   // Before continuing, we may need to filter by Series, so set up all the Series stuff.
   this.allData = helpers.prepareData(this.data, { indicatorId: this.indicatorId });
+  console.log("this.allData_2: ",this.allData);
   this.allColumns = helpers.getColumnsFromData(this.allData);
   this.hasSerieses = helpers.dataHasSerieses(this.allColumns);
   this.serieses = this.hasSerieses ? helpers.getUniqueValuesByProperty(helpers.SERIES_COLUMN, this.allData) : [];
@@ -120,6 +121,7 @@ var indicatorModel = function (options) {
   }
 
   // calculate some initial values:
+  console.log("this.allData: ",this.allData);
   this.allObservationAttributes = helpers.getAllObservationAttributes(this.allData);
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
@@ -149,11 +151,6 @@ var indicatorModel = function (options) {
     this.updateFieldStates(selectedFields);
     this.getData();
   };
-
-  this.updateShowMap = function() {
-    console.log("c", this.showMap, this.showMaps);
-    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
-  }
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
@@ -312,8 +309,7 @@ var indicatorModel = function (options) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMaps: this.showMaps,
-        showMap: helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries),
+        showMap: this.showMap,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -358,7 +354,6 @@ var indicatorModel = function (options) {
       datasetCountExceedsMax = true;
     }
 
-    this.updateShowMap();
     this.updateChartTitle();
     this.updateChartSubtitle();
     this.updateChartType();
@@ -383,7 +378,6 @@ var indicatorModel = function (options) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
-      showMap: helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries),
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,

@@ -24,7 +24,6 @@ var indicatorInit = function () {
                         data: res.data,
                         edgesData: res.edges,
                         showMap: domData.showmap,
-                        showMaps: domData.showmaps,
                         country: domData.country,
                         indicatorId: domData.indicatorid,
                         shortIndicatorId: domData.id,

@@ -9,54 +9,6 @@ function alterChartConfig(config, info) {
     });
 }
 
-function updateShowMap(items, selectedUnit, selectedSeries) {
-  if (!items || items.length === 0) {
-    return [];
-  }
-  if (!selectedUnit && !selectedSeries) {
-    return items;
-  }
-  // First pass to find any exact matches.
-  var matches = items.filter(function(item) {
-    var seriesMatch = item.series === selectedSeries,
-        unitMatch = item.unit === selectedUnit;
-    if (selectedUnit && selectedSeries) {
-      return seriesMatch && unitMatch;
-    }
-    else if (selectedUnit) {
-      return unitMatch;
-    }
-    else if (selectedSeries) {
-      console.log("g", seriesMatch);
-      return seriesMatch;
-    }
-  });
-  // Second pass to find any partial matches with unspecified unit/series.
-  if (matches.length === 0) {
-    matches = items.filter(function(item) {
-      var seriesMatch = item.series === selectedSeries && item.series && !item.unit,
-          unitMatch = item.unit === selectedUnit && item.unit && !item.series;
-      if (selectedUnit && selectedSeries) {
-        return seriesMatch || unitMatch;
-      }
-      else if (selectedUnit) {
-        return unitMatch;
-      }
-      else if (selectedSeries) {
-        return seriesMatch;
-      }
-    });
-  }
-  // Third pass to catch cases where nothing at all was specified.
-  if (matches.length === 0) {
-    matches = items.filter(function(item) {
-      var nothingSpecified = !item.unit && !item.series;
-      return nothingSpecified;
-    });
-  }
-  return matches;
-}
-
 /**
  * @param {String} chartTitle
  * @return null
@@ -177,10 +129,10 @@ function updateIndicatorDataSeriesStatus(series) {
     //return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
 function getHeadlineColor(contrast, goalNumber) {
 
-  var headlineColors = ['#AA2B5F', '#FCB513', '#9E5EA6', '#71BE43'];
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
   var headlineColor = headlineColors[goalNumber-1];
   var htmlString = '{{ "' + headlineColor + '" | default: "#00006a" }}';
-
+  console.log("goalNumber: ", htmlString);
     return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : htmlString;
 }
 

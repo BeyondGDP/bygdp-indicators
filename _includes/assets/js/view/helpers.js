@@ -30,7 +30,6 @@
     alterChartConfig: alterChartConfig,
     alterTableConfig: alterTableConfig,
     alterDataDisplay: alterDataDisplay,
-    updateShowMap: updateShowMap,
     updateChartTitle: updateChartTitle,
     updateChartSubtitle: updateChartSubtitle,
     updateWithSelectedFields: updateWithSelectedFields,
