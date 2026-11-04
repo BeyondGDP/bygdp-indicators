@@ -2202,19 +2202,6 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
  * Model helper functions related to charts and datasets.
  */
 
- /**
-  * @param {Array} showMap
-  * @param {String} selectedUnit
-  * @param {String} selectedSeries
-  */
-
-function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
-  (match) ? console.log("a", match.show) : console.log("b", currentShowMap);
-  return (match) ? match.show : currentShowMap;
-}
-
-
 /**
  * @param {string} currentTitle
  * @param {Array} allTitles Objects containing 'unit' and 'title'
@@ -2223,7 +2210,6 @@ function getShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
  * @return {String} Updated title
  */
 function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
-
   var match = getMatchByUnitSeries(allTitles, selectedUnit, selectedSeries);
   return (match) ? match.title : currentTitle;
 }
@@ -2584,7 +2570,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
-
+  console.log("fill, fillAbove, fillBelow:", fill, fillAbove, fillBelow, typeof fill);
   return Object.assign(dataset, {
 
     label: getCombinationDescription(combination, labelFallback),
@@ -2991,8 +2977,10 @@ function getAllObservationAttributes(rows) {
         footnoteNumber: footnoteNumber,
       }
       footnoteNumber += 1;
+      console.log("obsAttributeHash[hashKey]: ",obsAttributeHash[hashKey]);
     });
   });
+  console.log("obsAttributeHash: ",obsAttributeHash);
   return obsAttributeHash;
 }
 
@@ -3044,7 +3032,6 @@ function getAllObservationAttributes(rows) {
     getChartTitle: getChartTitle,
     getChartSubTitle: getChartSubTitle,
     getChartType: getChartType,
-    getShowMap: getShowMap,
     getCombinationData: getCombinationData,
     getDatasets: getDatasets,
     tableDataFromDatasets: tableDataFromDatasets,
@@ -3078,7 +3065,9 @@ function getAllObservationAttributes(rows) {
 
   // general members:
   var that = this;
+  console.log("options.data: ",options.data);
   this.data = helpers.inputData(options.data);
+  console.log("this.data: ", this.data);
   this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
@@ -3107,7 +3096,6 @@ function getAllObservationAttributes(rows) {
   this.validParentsByChild = {};
   this.hasGeoData = false;
   this.showMap = options.showMap;
-  this.showMaps = options.showMaps;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
   this.fill = options.fill;
@@ -3151,7 +3139,6 @@ function getAllObservationAttributes(rows) {
       this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
       this.fieldsBySeries = helpers.fieldsUsedBySeries(this.serieses, this.data, this.allColumns);
       this.dataHasSeriesSpecificFields = helpers.dataHasSeriesSpecificFields(this.fieldsBySeries);
-      this.showMap = helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries);
     }
   }
 
@@ -3164,6 +3151,7 @@ function getAllObservationAttributes(rows) {
 
   // Before continuing, we may need to filter by Series, so set up all the Series stuff.
   this.allData = helpers.prepareData(this.data, { indicatorId: this.indicatorId });
+  console.log("this.allData_2: ",this.allData);
   this.allColumns = helpers.getColumnsFromData(this.allData);
   this.hasSerieses = helpers.dataHasSerieses(this.allColumns);
   this.serieses = this.hasSerieses ? helpers.getUniqueValuesByProperty(helpers.SERIES_COLUMN, this.allData) : [];
@@ -3182,6 +3170,7 @@ function getAllObservationAttributes(rows) {
   }
 
   // calculate some initial values:
+  console.log("this.allData: ",this.allData);
   this.allObservationAttributes = helpers.getAllObservationAttributes(this.allData);
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
@@ -3211,11 +3200,6 @@ function getAllObservationAttributes(rows) {
     this.updateFieldStates(selectedFields);
     this.getData();
   };
-
-  this.updateShowMap = function() {
-    console.log("c", this.showMap, this.showMaps);
-    this.showMap = helpers.getShowMap(this.showMap, this.showMaps, this.selectedUnit, this.selectedSeries);
-  }
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
@@ -3374,8 +3358,7 @@ function getAllObservationAttributes(rows) {
         hasGeoData: this.hasGeoData,
         startValues: this.startValues,
         indicatorId: this.indicatorId,
-        showMaps: this.showMaps,
-        showMap: helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries),
+        showMap: this.showMap,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
@@ -3420,7 +3403,6 @@ function getAllObservationAttributes(rows) {
       datasetCountExceedsMax = true;
     }
 
-    this.updateShowMap();
     this.updateChartTitle();
     this.updateChartSubtitle();
     this.updateChartType();
@@ -3445,7 +3427,6 @@ function getAllObservationAttributes(rows) {
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
-      showMap: helpers.getShowMap(this.showMap, this.showmaps, this.selectedUnit, this.selectedSeries),
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
@@ -3754,54 +3735,6 @@ function alterChartConfig(config, info) {
     });
 }
 
-function updateShowMap(items, selectedUnit, selectedSeries) {
-  if (!items || items.length === 0) {
-    return [];
-  }
-  if (!selectedUnit && !selectedSeries) {
-    return items;
-  }
-  // First pass to find any exact matches.
-  var matches = items.filter(function(item) {
-    var seriesMatch = item.series === selectedSeries,
-        unitMatch = item.unit === selectedUnit;
-    if (selectedUnit && selectedSeries) {
-      return seriesMatch && unitMatch;
-    }
-    else if (selectedUnit) {
-      return unitMatch;
-    }
-    else if (selectedSeries) {
-      console.log("g", seriesMatch);
-      return seriesMatch;
-    }
-  });
-  // Second pass to find any partial matches with unspecified unit/series.
-  if (matches.length === 0) {
-    matches = items.filter(function(item) {
-      var seriesMatch = item.series === selectedSeries && item.series && !item.unit,
-          unitMatch = item.unit === selectedUnit && item.unit && !item.series;
-      if (selectedUnit && selectedSeries) {
-        return seriesMatch || unitMatch;
-      }
-      else if (selectedUnit) {
-        return unitMatch;
-      }
-      else if (selectedSeries) {
-        return seriesMatch;
-      }
-    });
-  }
-  // Third pass to catch cases where nothing at all was specified.
-  if (matches.length === 0) {
-    matches = items.filter(function(item) {
-      var nothingSpecified = !item.unit && !item.series;
-      return nothingSpecified;
-    });
-  }
-  return matches;
-}
-
 /**
  * @param {String} chartTitle
  * @return null
@@ -3922,10 +3855,10 @@ function updateIndicatorDataSeriesStatus(series) {
     //return isHighContrast(contrast) ? '#FFDD00' : '#b8b8b8';
 function getHeadlineColor(contrast, goalNumber) {
 
-  var headlineColors = ['#AA2B5F', '#FCB513', '#9E5EA6', '#71BE43'];
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
   var headlineColor = headlineColors[goalNumber-1];
   var htmlString = '' + headlineColor + '';
-
+  console.log("goalNumber: ", htmlString);
     return isHighContrast(contrast) ? '#FFDD00' : htmlString;
 }
 
@@ -5445,7 +5378,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
     alterChartConfig: alterChartConfig,
     alterTableConfig: alterTableConfig,
     alterDataDisplay: alterDataDisplay,
-    updateShowMap: updateShowMap,
     updateChartTitle: updateChartTitle,
     updateChartSubtitle: updateChartSubtitle,
     updateWithSelectedFields: updateWithSelectedFields,
@@ -5524,7 +5456,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 // they were changed while on the map.
                 helpers.updateChartSubtitle(VIEW._dataCompleteArgs.chartSubtitle);
                 helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle, VIEW._dataCompleteArgs.isProxy);
-                helpers.updateShowMap(VIEW._dataCompleteArgs.showMaps, VIEW._dataCompleteArgs.selectedUnit, VIEW._dataCompleteArgs.selectedSeries);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateTimeSeriesAttributes(VIEW._dataCompleteArgs.timeSeriesAttributes);
@@ -5546,9 +5477,8 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 helpers.updatePlot(args);
             }
         }
-        console.log("f", args);
+
         helpers.createSelectionsTable(args);
-        helpers.updateShowMap(args.showmpas, args.selectedUnit, args.selectedSeries);
         helpers.updateChartSubtitle(args.chartSubtitle);
         helpers.updateChartTitle(args.chartTitle, args.isProxy);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
@@ -5781,7 +5711,6 @@ var indicatorInit = function () {
                         data: res.data,
                         edgesData: res.edges,
                         showMap: domData.showmap,
-                        showMaps: domData.showmaps,
                         country: domData.country,
                         indicatorId: domData.indicatorid,
                         shortIndicatorId: domData.id,
