@@ -9,10 +9,52 @@ function alterChartConfig(config, info) {
     });
 }
 
-function updateShowMap(currentShowMap, allShowMaps, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(allShowMaps, selectedUnit, selectedSeries);
-  (match) ? console.log("d", match.show) : console.log("e", currentShowMap);
-  return (match) ? match.show : currentShowMap;
+function updateShowMap(items, selectedUnit, selectedSeries) {
+  if (!items || items.length === 0) {
+    return [];
+  }
+  if (!selectedUnit && !selectedSeries) {
+    return items;
+  }
+  // First pass to find any exact matches.
+  var matches = items.filter(function(item) {
+    var seriesMatch = item.series === selectedSeries,
+        unitMatch = item.unit === selectedUnit;
+    if (selectedUnit && selectedSeries) {
+      return seriesMatch && unitMatch;
+    }
+    else if (selectedUnit) {
+      return unitMatch;
+    }
+    else if (selectedSeries) {
+      console.log("g", seriesMatch);
+      return seriesMatch;
+    }
+  });
+  // Second pass to find any partial matches with unspecified unit/series.
+  if (matches.length === 0) {
+    matches = items.filter(function(item) {
+      var seriesMatch = item.series === selectedSeries && item.series && !item.unit,
+          unitMatch = item.unit === selectedUnit && item.unit && !item.series;
+      if (selectedUnit && selectedSeries) {
+        return seriesMatch || unitMatch;
+      }
+      else if (selectedUnit) {
+        return unitMatch;
+      }
+      else if (selectedSeries) {
+        return seriesMatch;
+      }
+    });
+  }
+  // Third pass to catch cases where nothing at all was specified.
+  if (matches.length === 0) {
+    matches = items.filter(function(item) {
+      var nothingSpecified = !item.unit && !item.series;
+      return nothingSpecified;
+    });
+  }
+  return matches;
 }
 
 /**

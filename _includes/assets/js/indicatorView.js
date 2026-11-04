@@ -58,7 +58,7 @@ var indicatorView = function (model, options) {
                 // they were changed while on the map.
                 helpers.updateChartSubtitle(VIEW._dataCompleteArgs.chartSubtitle);
                 helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle, VIEW._dataCompleteArgs.isProxy);
-                helpers.updateShowMap(VIEW._dataCompleteArgs.showMap, VIEW._dataCompleteArgs.showMaps, VIEW._dataCompleteArgs.selectedUnit, VIEW._dataCompleteArgs.selectedSeries);
+                helpers.updateShowMap(VIEW._dataCompleteArgs.showMaps, VIEW._dataCompleteArgs.selectedUnit, VIEW._dataCompleteArgs.selectedSeries);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateTimeSeriesAttributes(VIEW._dataCompleteArgs.timeSeriesAttributes);
@@ -82,7 +82,7 @@ var indicatorView = function (model, options) {
         }
         console.log("f", args);
         helpers.createSelectionsTable(args);
-        helpers.updateShowMap(args.showMap, args.showmpas, args.selectedUnit, args.selectedSeries);
+        helpers.updateShowMap(args.showmpas, args.selectedUnit, args.selectedSeries);
         helpers.updateChartSubtitle(args.chartSubtitle);
         helpers.updateChartTitle(args.chartTitle, args.isProxy);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
