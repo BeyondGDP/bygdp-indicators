@@ -171,6 +171,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           newSubtitle = null;
       if (this.modelHelpers.GRAPH_TITLE_FROM_SERIES) {
         newTitle = currentSeries;
+        var currentSubtitle = $('#map-subheading').text();
         newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
       else {
