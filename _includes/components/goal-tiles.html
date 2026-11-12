@@ -21,66 +21,56 @@
         {% endif %}
 
         <section>
-          <h2 class="column-title">
-            <button type="button"
-                    class="column-header header-{{ color }}"
-                    aria-expanded="false"
-                    aria-controls="panel-{{ goal.number }}">
-              <span>{{ goal.name }}</span>
-            </button>
-          </h2>
-        
-          <div class="item-panel" id="panel-{{ goal.number }}">
-            <div class="item-list">
-              {% for group in goal_indicators %}
+          <h2 class="column-header header-{{ color }}" style="text-align: center;">{{ goal.name }}</h2>
+          <div class="item-list">
+        {% for group in goal_indicators %}
 
-                {% assign target = group.name | sdg_lookup %}
-                {% case target.slug %}
-                    {% when "2-1" %}
-                        {% assign target_title = page.t.global_targets.2-1-title %}
-                    {% when "2-2" %}
-                        {% assign target_title = page.t.global_targets.2-2-title %}
-                    {% when "2-3" %}
-                        {% assign target_title = page.t.global_targets.2-3-title %}
-                    {% when "2-4" %}
-                        {% assign target_title = page.t.global_targets.2-4-title %}
-                    {% when "2-5" %}
-                        {% assign target_title = page.t.global_targets.2-5-title %}
-                    {% when "2-6" %}
-                        {% assign target_title = page.t.global_targets.2-6-title %}
-                    {% when "2-7" %}
-                        {% assign target_title = page.t.global_targets.2-7-title %}
-                    {% when "2-8" %}
-                        {% assign target_title = page.t.global_targets.2-8-title %}
-                    {% when "3-1" %}
-                        {% assign target_title = page.t.global_targets.3-1-title %}
-                    {% when "3-2" %}
-                        {% assign target_title = page.t.global_targets.3-2-title %}
-                    {% when "3-3" %}
-                        {% assign target_title = page.t.global_targets.3-3-title %}
-                    {% when "3-4" %}
-                        {% assign target_title = page.t.global_targets.3-4-title %}
-                    {% when "3-5" %}
-                        {% assign target_title = page.t.global_targets.3-5-title %}
-                    {% when "3-6" %}
-                        {% assign target_title = page.t.global_targets.3-6-title %}
-                    {% when "4-1" %}
-                        {% assign target_title = page.t.global_targets.4-1-title %}
-                    {% when "4-2" %}
-                        {% assign target_title = page.t.global_targets.4-2-title %}
-                    {% when "4-3" %}
-                        {% assign target_title = page.t.global_targets.4-3-title %}
-                    {% when "4-4" %}
-                        {% assign target_title = page.t.global_targets.4-4-title %}
-                    {% when "4-5" %}
-                        {% assign target_title = page.t.global_targets.4-5-title %}
-                {% endcase %}
-                <button class="item-btn {{ color }}" onclick="location.href='{{ baseurl }}/{{ language }}/{{ target.slug }}'" data-item="{{ target.name }}">
-                  <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
-                  <span class="item-label">{{ target_title }}</span>
-                </button>
-              {% endfor %}
-            </div>
+          {% assign target = group.name | sdg_lookup %}
+          {% case target.slug %}
+              {% when "2-1" %}
+                  {% assign target_title = page.t.global_targets.2-1-title %}
+              {% when "2-2" %}
+                  {% assign target_title = page.t.global_targets.2-2-title %}
+              {% when "2-3" %}
+                  {% assign target_title = page.t.global_targets.2-3-title %}
+              {% when "2-4" %}
+                  {% assign target_title = page.t.global_targets.2-4-title %}
+              {% when "2-5" %}
+                  {% assign target_title = page.t.global_targets.2-5-title %}
+              {% when "2-6" %}
+                  {% assign target_title = page.t.global_targets.2-6-title %}
+              {% when "2-7" %}
+                  {% assign target_title = page.t.global_targets.2-7-title %}
+              {% when "2-8" %}
+                  {% assign target_title = page.t.global_targets.2-8-title %}
+              {% when "3-1" %}
+                  {% assign target_title = page.t.global_targets.3-1-title %}
+              {% when "3-2" %}
+                  {% assign target_title = page.t.global_targets.3-2-title %}
+              {% when "3-3" %}
+                  {% assign target_title = page.t.global_targets.3-3-title %}
+              {% when "3-4" %}
+                  {% assign target_title = page.t.global_targets.3-4-title %}
+              {% when "3-5" %}
+                  {% assign target_title = page.t.global_targets.3-5-title %}
+              {% when "3-6" %}
+                  {% assign target_title = page.t.global_targets.3-6-title %}
+              {% when "4-1" %}
+                  {% assign target_title = page.t.global_targets.4-1-title %}
+              {% when "4-2" %}
+                  {% assign target_title = page.t.global_targets.4-2-title %}
+              {% when "4-3" %}
+                  {% assign target_title = page.t.global_targets.4-3-title %}
+              {% when "4-4" %}
+                  {% assign target_title = page.t.global_targets.4-4-title %}
+              {% when "4-5" %}
+                  {% assign target_title = page.t.global_targets.4-5-title %}
+          {% endcase %}
+          <button class="item-btn {{ color }}" onclick="location.href='{{ baseurl }}/{{ language }}/{{ target.slug }}'" data-item="{{ target.name }}">
+            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
+            <span class="item-label">{{ target_title }}</span>
+          </button>
+        {% endfor %}
           </div>
         </section>
       {% endif %}
@@ -90,40 +80,30 @@
 
     <!-- FOUNDATIONAL PRINCIPLES -->
     <div class="principles-section">
-      <h2 class="column-title">
-        <button type="button"
-                class="column-header header-magenta"
-                aria-expanded="false"
-                aria-controls="panel-1">
-          <span>{{ page.t.global_goals.1-title }}</span>
+      <h2 class="column-header header-magenta">{{ page.t.global_goals.1-title }}</h2>
+      <div class="principles-row">
+        <button class="item-btn magenta" onclick="location.href='{{ baseurl }}/{{ language }}/1-1'"data-item="Peace">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-1.png" alt="1-1">
+          <span class="item-label">{{ page.t.global_targets.1-1-title }}</span>
         </button>
-      </h2>
-
-      <div class="item-panel" id="panel-1">
-        <div class="principles-row">
-          <button class="item-btn magenta" onclick="location.href='{{ baseurl }}/{{ language }}/1-1'"data-item="Peace">
-            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-1.png" alt="1-1">
-            <span class="item-label">{{ page.t.global_targets.1-1-title }}</span>
-          </button>
-          <button class="item-btn magenta" onclick="location.href='{{ baseurl }}/{{ language }}/1-2'" data-item="Human Rights">
-            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-2.png" alt="1-2">
-            <span class="item-label">{{ page.t.global_targets.1-2-title }}</span>
-          </button>  
-          <button class="item-btn magenta" onclick="location.href='{{ baseurl }}/{{ language }}/1-3'"data-item="Respect for the Planet">
-            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-3.png" alt="1-3">
-            <span class="item-label">{{ page.t.global_targets.1-3-title }}</span>
-          </button>
-        </div>
+        <button class="item-btn magenta" onclick="location.href='{{ baseurl }}/{{ language }}/1-2'" data-item="Human Rights">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-2.png" alt="1-2">
+          <span class="item-label">{{ page.t.global_targets.1-2-title }}
+        </button>
+        <button class="item-btn magenta" onclick="location.href='{{ baseurl }}/{{ language }}/1-3'"data-item="Respect for the Planet">
+          <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/1-3.png" alt="1-3">
+          <span class="item-label">{{ page.t.global_targets.1-3-title }}</span>
+        </button>
       </div>
     </div>
-  </div>
-  <script>
-    document.querySelectorAll('.column-header[aria-controls]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const panel = document.getElementById(btn.getAttribute('aria-controls'));
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        panel.classList.toggle('open', !open);
-      });
+
+<!-- <script>
+  document.querySelectorAll('.item-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.getAttribute('data-item');
+      console.log('Geklickt:', item);
+      // Hier kann eigene Logik ergänzt werden, z.B.
+      // eine Detailansicht öffnen oder Daten nachladen.
     });
-  </script>
+  });
+</script> -->
