@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* open-sans-regular - latin */
 @font-face {
   font-family: 'Open Sans';
@@ -2780,15 +2779,9 @@ body {
   justify-content: center;
   padding: 14px 30px;
   border-radius: var(--radius-pill);
+  margin-bottom: 18px;
   min-height: 82px;
-  align-items: center;
-  width: 100%;
-  border: none;
-  font-family: inherit;
-  line-height: 1.2;
-  cursor: pointer;
-  margin-bottom: 0;
-  transition: filter 0.15s ease; }
+  align-items: center; }
 
 .header-orange {
   background: var(--orange); }
@@ -2802,63 +2795,6 @@ body {
 .header-magenta {
   background: var(--magenta); }
 
-.column-title {
-  margin: 0; }
-
-.column-header:hover {
-  filter: brightness(0.95); }
-
-.column-header:focus-visible {
-  outline: 3px solid #333;
-  outline-offset: 2px; }
-
-body.contrast-high .column-header:focus-visible {
-  outline-color: #ffff00; }
-
-/* Pfeil als Hinweis, dass die Blase aufklappbar ist */
-.column-header::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  margin-left: 14px;
-  margin-top: -4px;
-  border-right: 3px solid currentColor;
-  border-bottom: 3px solid currentColor;
-  transform: rotate(45deg);
-  transition: transform 0.3s ease; }
-
-.column-header[aria-expanded="true"]::after {
-  transform: rotate(-135deg);
-  margin-top: 4px; }
-
-/* Aufklapp-Panel: zu = Höhe 0, offen = natürliche Höhe (animiert) */
-.item-panel {
-  display: grid;
-  grid-template-rows: 0fr;
-  margin-top: 0;
-  transition: grid-template-rows 0.3s ease, margin-top 0.3s ease; }
-
-.item-panel.open {
-  grid-template-rows: 1fr;
-  margin-top: 18px; }
-
-.item-panel > .item-list,
-.item-panel > .principles-row {
-  overflow: hidden;
-  min-height: 0;
-  visibility: hidden;
-  /* zugeklappte Buttons nicht per Tab erreichbar */
-  transition: visibility 0s linear 0.3s; }
-
-.item-panel.open > .item-list,
-.item-panel.open > .principles-row {
-  visibility: visible;
-  transition-delay: 0s; }
-
-.item-panel .item-btn:focus-visible {
-  outline-offset: -3px; }
-
-/* wird sonst von overflow:hidden abgeschnitten */
 .item-list {
   display: flex;
   flex-direction: column;
@@ -2959,7 +2895,7 @@ body.contrast-high .goal-banner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-top: 0px; }
+  margin-top: 18px; }
 
 /* Responsive: Spalten untereinander auf kleinen Bildschirmen */
 @media (max-width: 993px) {
