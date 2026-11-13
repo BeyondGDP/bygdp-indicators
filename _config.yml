@@ -196,7 +196,7 @@ decimal_separator: ','
 thousands_separator: ' '
 #graph_color_headline: '#b8b8b8' #
 graph_color_headline: ['#a6215e', '#f5a623', '#8e5a9e', '#7cb342']
-useHeadlineColor: false
+useHeadlineColor: true
 no_value_character: '(.)'
 
 reporting_status:
