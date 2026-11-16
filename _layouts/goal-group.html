@@ -38,12 +38,15 @@
     {% include components/goal/breadcrumbs.html %}
     <!-- Header-Banner -->
     <h1 class="column-header theme-banner header-{{ color }}">{{ goal_title }}</h1>
-    <div class="frontpage-goals-grid-description">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
+
+
     <!-- Textfeld (Inhalt der jeweiligen Seitendatei) -->
     <div class="theme-text">
       {{ content }}
     </div>
 
+    <div class="frontpage-goals-grid-description">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
+    
     <!-- Blasen mit Symbolen und Unterthemen -->
     <div class="theme-items" style="--cols: {{ cols }};">
       {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_number' %}
