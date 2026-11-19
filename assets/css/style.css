@@ -3252,5 +3252,9 @@ body {
 h3.h3bold {
   font-weight: bold; }
 
+h4.h4bold {
+  font-weight: bold;
+  margin-top: .5rem; }
+
 .indicator-sidebar {
   hyphens: auto; }
