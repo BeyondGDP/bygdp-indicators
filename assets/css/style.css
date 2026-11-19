@@ -3178,6 +3178,9 @@ body {
 .indicator-link-goal-page {
   padding-left: 0px; }
 
+.container {
+  margin-bottom: 50px; }
+
 .container_frontpage {
   display: grid;
   grid-template-columns: 95px 1fr;

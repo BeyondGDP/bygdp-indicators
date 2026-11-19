@@ -7,7 +7,7 @@
         
         {
           "id": "1-1",
-          "title": "Anzahl der konfliktbezogenen Todesfälle je 100 000 Einwohner/-innen",
+          "title": "Anzahl der konfliktbezogenen Todesfälle je 100 000 Einwohner/-innen (<a href='https://sdg-indikatoren.de/16-1-2href='https://sdg-indikatoren.de/16.1.2</a>)",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/1-1/",
@@ -79,7 +79,7 @@
         
         {
           "id": "2-1",
-          "title": "<ul style='padding-left: 15px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Quote der Unterauslastung von Arbeitskräften</li> <li>Anteil des Zeitaufwands für unbezahlte Haus- und Pflegearbeit</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Verfügbares Haushaltseinkommen pro Kopf</li> <li> Quote der Unterauslastung von Arbeitskräften</li> <li>Anteil des Zeitaufwands für unbezahlte Haus- und Pflegearbeit (<a href='https://sdg-indikatoren.de/5-4-1href='https://sdg-indikatoren.de/5.4.1</a>)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-1/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "<ul style='padding-left: 15px;'><li>Anteil der Kinder und Jugendlichen mit einem Mindestniveau in Lesen und Mathematik</li> <li>Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie (IKT)</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Anteil der Kinder und Jugendlichen mit einem Mindestniveau in Lesen und Mathematik (<a href='https://sdg-indikatoren.de/4-1-1href='https://sdg-indikatoren.de/4.1.1</a>)</li> <li>Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie (IKT) (<a href='https://sdg-indikatoren.de/4-4-1href='https://sdg-indikatoren.de/4.4.1</a>)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/2-3/",
