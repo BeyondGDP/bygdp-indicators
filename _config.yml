@@ -58,15 +58,15 @@ frontpage_introduction_banner:
     description: frontpage.description
 
 frontpage_cards:
-    - rule_color: grey
-      title: ''
-      include: components/download-all-data.html
-    - rule_color: grey
-     title: ''
-     include: components/sdg_column.html
-    - rule_color: grey
-     title: ''
-     include: components/dns_column.html
+  - rule_color: grey
+    title: ''
+    include: components/download-all-data.html
+  - rule_color: grey
+    title: ''
+    include: components/sdg_column.html
+  - rule_color: grey
+    title: ''
+    include: components/dns_column.html
 
 analytics:
   ga_prod: ''
