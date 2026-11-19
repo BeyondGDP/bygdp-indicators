@@ -23,6 +23,9 @@ body {
   color: var(--text);
 }
 
+.frontpage-goals-grid-description{
+  border-top: 2px solid #ccc;
+}
 
 
 /* Startseite: 2, 3, 4 in einer Reihe, 1 über die volle Breite darunter */
@@ -69,8 +72,8 @@ a.column-header:hover { filter: brightness(0.95); }
 
 .theme-text {
   max-width: 1400px;
-  margin: 0 auto 36px;
-  font-size: 1.1rem;
+  margin: 50px;
+  font-size: 16px;
   line-height: 1.5;
   hyphens: auto;
 }
