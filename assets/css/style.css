@@ -2752,8 +2752,11 @@ body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text); }
 
-.frontpage-goals-grid-description {
+.frontpage-goals-grid-description-click {
   border-top: 2px solid #ccc; }
+
+.frontpage-goals-grid {
+  border-top: 0px; }
 
 /* Startseite: 2, 3, 4 in einer Reihe, 1 über die volle Breite darunter */
 .themes-grid {
