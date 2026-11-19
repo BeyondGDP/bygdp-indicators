@@ -58,13 +58,13 @@ frontpage_introduction_banner:
     description: frontpage.description
 
 frontpage_cards:
-  - rule_color: grey
+  - rule_color: #ccc
     title: ''
     include: components/download-all-data.html
-  - rule_color: grey
+  - rule_color: #ccc
     title: ''
     include: components/sdg_column.html
-  - rule_color: grey
+  - rule_color: #ccc
     title: ''
     include: components/dns_column.html
 
