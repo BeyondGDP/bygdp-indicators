@@ -3,15 +3,14 @@
 {% assign col_key  = page.goal.number | minus: 1 %}
 {% assign color = colors[col_key] %}
 
-
+<h2 class="heading goal-banner column-title theme-{{ page.goal.number }}">
+  <a class="column-header header-{{ color }}"
+     href="{{ baseurl }}{{ lang_path }}/thema-{{ page.goal.number }}/">
+    <span>{{ page.goal.name }}</span>
+  </a>
+</h2>
 
 <div class="heading goal-banner indicator goal-{{ page.goal.number }}" >
-    <h2 class="column-title theme-{{ page.goal.number }}">
-      <a class="column-header header-{{ color }}"
-         href="{{ baseurl }}{{ lang_path }}/thema-{{ page.goal.number }}/">
-        <span>{{ page.goal.name }}</span>
-      </a>
-    </h2>
     <div class="container">
         <div class="row">
             {% unless page.indicator.standalone %}
