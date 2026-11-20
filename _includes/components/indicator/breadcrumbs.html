@@ -2,7 +2,6 @@
 <nav>
     <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         {% if site.breadcrumbs.indicator and site.breadcrumbs.indicator.size > 0 %}
-        <p>1</p>
           {% for item in site.breadcrumbs.indicator %}
             {%- assign item_path = item.path -%}
             {%- assign item_path_first = item_path | slice: 0 %}
@@ -20,20 +19,18 @@
                  {{ page.t.general.goal }} {{ page.goal.number }}
               </a>
           </li>
-
         {% else %}
-        <p>2</p>
           <li class="breadcrumb-item">
               <a href="{{ page.baseurl }}">{{ page.t.general.home }}</a>
           </li>
           <li class="breadcrumb-item">
-              <a href="{{ page.goal.url }}"
+              <a href="{{ baseurl }}thema-{{ page.goal.number }}"
                  title="{{ page.t.general.goal }} {{ page.goal.number }} - {{ page.goal.short | escape }}"
                  aria-label="{{ page.t.general.goal }} {{ goal.number }} - {{ goal.short | escape }}">
-                 {{ page.t.general.goal }} {{ page.goal.number }}
+                 {{ page.goal.name }}
               </a>
           </li>
-          <li class="breadcrumb-item active">{{ page.t.general.indicator }} {{ page.indicator.number }}</li>
+          <li class="breadcrumb-item active">{{ page.indicator.name }}</li>
         {% endif %}
     </ol>
 </nav>
