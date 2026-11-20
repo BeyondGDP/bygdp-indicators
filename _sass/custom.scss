@@ -10,6 +10,7 @@
   --text: #2c2c2c;
   --text-other: #ffffff;
   --radius-pill: 999px;
+  --font-ui: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -19,8 +20,44 @@ body {
   margin: 0;
   padding: 40px 20px;
   background: #ffffff;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-ui);
   color: var(--text);
+}
+
+/* Einheitliche Schrift für Themen-Button, Header und Navigation-Buttons
+   (überschreibt evtl. abweichende Überschriften-/Button-Fonts des Themes) */
+.goal-banner,
+.goal-banner h1,
+.goal-banner h2,
+.goal-banner p,
+.goal-banner span,
+.item-btn,
+.item-btn * {
+  font-family: var(--font-ui);
+}
+
+/* Themen-Button oberhalb des Indikator-Headers:
+   gleiche Breite wie .goal-banner, Optik wie .item-btn-nav */
+.theme-link-wrapper {
+  max-width: 1320px;
+  margin: 0 auto 10px;
+}
+
+a.item-btn-theme,
+a.item-btn-theme:hover,
+a.item-btn-theme:focus,
+a.item-btn-theme:visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a.item-btn-theme {
+  justify-content: center;
+  text-align: center;
+}
+
+.item-label-theme {
+  font-weight: 500;
 }
 
 .frontpage-goals-grid-description-click{
