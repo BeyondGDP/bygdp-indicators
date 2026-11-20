@@ -2768,7 +2768,7 @@ body {
    gleiche Breite wie .goal-banner, Optik wie .item-btn-nav */
 .theme-link-wrapper {
   max-width: 1320px;
-  margin: 0 auto 50px; }
+  margin: 0 auto 30px; }
 
 a.item-btn-theme,
 a.item-btn-theme:hover,
