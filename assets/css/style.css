@@ -3043,19 +3043,19 @@ body.contrast-high .goal-banner {
   padding-right: 50px;
   max-width: 1320px;
   margin: auto; }
-  .goal-banner h1, .goal-banner p {
+  .goal-banner h1, .goal-banner h2, .goal-banner p {
     color: white; }
     @media only screen and (max-width: 600px) {
-      .goal-banner h1, .goal-banner p {
+      .goal-banner h1, .goal-banner h2, .goal-banner p {
         font-size: 4vw; } }
     @media only screen and (max-width: 500px) {
-      .goal-banner h1, .goal-banner p {
+      .goal-banner h1, .goal-banner h2, .goal-banner p {
         font-size: 5vw; } }
     @media only screen and (max-width: 400px) {
-      .goal-banner h1, .goal-banner p {
+      .goal-banner h1, .goal-banner h2, .goal-banner p {
         font-size: 6vw; } }
     @media only screen and (max-width: 300px) {
-      .goal-banner h1, .goal-banner p {
+      .goal-banner h1, .goal-banner h2, .goal-banner p {
         font-size: 7vw; } }
 
 /*#2.1*/
