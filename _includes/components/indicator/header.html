@@ -1,3 +1,15 @@
+
+{% assign colors = 'magenta,orange,purple,green' | split: ',' %}
+{% assign col_key  = goal.number | minus: 1 %}
+{% assign color = colors[col_key] %}
+
+<h2 class="column-title theme-{{ goal.number }}">
+  <a class="column-header header-{{ color }}"
+     href="{{ baseurl }}{{ lang_path }}/thema-{{ goal.number }}/">
+    <span>{{ goal.name }}</span>
+  </a>
+</h2>
+
 <div class="heading goal-banner indicator goal-{{ page.goal.number }}" >
     <div class="container">
         <div class="row">
