@@ -114,42 +114,27 @@ a.column-header:hover { filter: brightness(0.95); }
 .theme-back { margin-bottom: 16px; }
 
 .theme-banner {
-  font-size: 1.6rem;
+  font-family: var(--font-ui);
+  font-size: 1.8rem;
+  font-weight: 700;
   min-height: 110px;
   margin: 0 0 28px;
   text-align: center;
 }
 
+/* Banner-Text in der helleren Goal-Farbe */
+.theme-banner.header-magenta { color: var(--magenta-light); }
+.theme-banner.header-orange  { color: var(--orange-light); }
+.theme-banner.header-purple  { color: var(--purple-light); }
+.theme-banner.header-green   { color: var(--green-light); }
+
 .theme-text {
   max-width: 1400px;
   margin: 30px;
-  font-family: var(--font-ui);
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 16px;
   line-height: 1.5;
   hyphens: auto;
 }
-
-/* Elemente aus {{ content }} übernehmen Schrift und Farbe des Textfelds */
-.theme-text p,
-.theme-text li,
-.theme-text span,
-.theme-text strong,
-.theme-text em {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-}
-
-/* Textfarbe: hellere Goal-Farbe */
-.theme-text-magenta { color: var(--magenta-light); }
-.theme-text-orange  { color: var(--orange-light); }
-.theme-text-purple  { color: var(--purple-light); }
-.theme-text-green   { color: var(--green-light); }
-
-/* Hochkontrast: helle Farben werden dort zu Schwarz → Text weiß halten */
-body.contrast-high .theme-text { color: #ffffff; }
 
 .theme-items {
   display: flex;
