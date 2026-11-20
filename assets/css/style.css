@@ -2768,7 +2768,8 @@ body {
    gleiche Breite wie .goal-banner, Optik wie .item-btn-nav */
 .theme-link-wrapper {
   max-width: 1320px;
-  margin: 0 auto 30px; }
+  margin: 0 auto 50px;
+  /* gleicher Abstand wie .columns-navigation margin-top */ }
 
 a.item-btn-theme,
 a.item-btn-theme:hover,
@@ -2785,9 +2786,14 @@ a.item-btn-theme {
   font-size: 1.8rem;
   font-weight: 700; }
 
-/* Header-Element: Textblock horizontal zentrieren */
-.goal-banner .indicator-details {
-  text-align: center; }
+/* Header-Element: Textblock vertikal zentrieren */
+.goal-banner .row {
+  align-items: center; }
+
+.goal-banner .indicator-head-target {
+  margin-top: 0;
+  margin-bottom: 0;
+  /* Standard-Abstand unter h1 würde die Mitte nach oben verschieben */ }
 
 .frontpage-goals-grid-description-click {
   border-top: 2px solid #ccc; }
