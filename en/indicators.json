@@ -7,7 +7,7 @@
         
         {
           "id": "1-1",
-          "title": "Number of total conflict-related deaths per 100,000 population (<a href='https://sdg-indicators.de/16-1-2'>SDG 16.1.2</a>)",
+          "title": "Number of total conflict-related deaths per 100,000 population",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-1/",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-3",
-          "title": "<ul style='padding-left: 15px;'><li>Total greenhouse gas emissions and greenhouse gas emissions per capita (<a href='https://sdg-indicators.de/13-2-2'>SDG 13.2.2</a>)</li> <li>Biodiversity intactness index</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Total greenhouse gas emissions and greenhouse gas emissions per capita</li> <li>Biodiversity intactness index</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/1-3/",
@@ -79,7 +79,7 @@
         
         {
           "id": "2-1",
-          "title": "<ul style='padding-left: 15px;'><li>Household disposable income per capita</li> <li>Composite rate of labour underutilization</li> <li>Proportion of time spent on unpaid domestic and care work (<a href='https://sdg-indicators.de/5-4-1'>SDG 5.4.1</a>)</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Household disposable income per capita</li> <li>Composite rate of labour underutilization</li> <li>Proportion of time spent on unpaid domestic and care work</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-1/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-3",
-          "title": "<ul style='padding-left: 15px;'><li>Proportion of children and young people achieving a minimum proficiency level in reading and mathematics (<a href='https://sdg-indicators.de/4-1-1'>SDG 4.1.1</a>)</li> <li>Proportion of youth and adults with information and communications technology skills (ICT) (<a href='https://sdg-indicators.de/4-4-1'>SDG 4.4.1</a>)</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Proportion of children and young people achieving a minimum proficiency level in reading and mathematics</li> <li>Proportion of youth and adults with information and communications technology skills (ICT)</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-3/",
@@ -159,7 +159,7 @@
         },
         {
           "id": "2-4",
-          "title": "<ul style='padding-left: 15px;'><li>Intentional homicides per 100,000 population (<a href='https://sdg-indicators.de/16-1-1'>SDG 16.1.1</a>)</li> <li> Proportion of population that feel safe walking alone around the area they live after dark</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Intentional homicides per 100,000 population</li> <li> Proportion of population that feel safe walking alone around the area they live after dark</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-4/",
@@ -215,7 +215,7 @@
         },
         {
           "id": "2-7",
-          "title": "Proportion of population satisfied with their last experience of public services (<a href='https://sdg-indicators.de/16-6-2'>SDG 16.6.2</a>)",
+          "title": "Proportion of population satisfied with their last experience of public services",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/2-7/",
@@ -311,7 +311,7 @@
         },
         {
           "id": "3-4",
-          "title": "Average hourly earnings of women as a proportion of men (<a href='https://sdg-indicators.de/8-5-1'>SDG 8.5.1</a>)",
+          "title": "Average hourly earnings of women as a proportion of men",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/3-4/",
@@ -327,7 +327,7 @@
         },
         {
           "id": "3-5",
-          "title": "Proportion of the rural population who live within 2 km of an all-season road (<a href='https://sdg-indicators.de/9-1-1'>SDG 9.1.1</a>)",
+          "title": "Proportion of the rural population who live within 2 km of an all-season road",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/3-5/",
@@ -383,7 +383,7 @@
         },
         {
           "id": "4-2",
-          "title": "<ul style='padding-left: 15px;'><li>Share of youth not in education, employment or training (NEET) (<a href='https://sdg-indicators.de/8-6-1'>SDG 8.6.1</a>)</li> <li> Potential years of life lost (PYLL), all causes</li></ul>",
+          "title": "<ul style='padding-left: 15px;'><li>Share of youth not in education, employment or training (NEET)</li> <li> Potential years of life lost (PYLL), all causes</li></ul>",
           "description": "",
           "keywords": "",
           "href": "/bygdp-indicators/en/4-2/",
