@@ -15,6 +15,10 @@
 
 * { box-sizing: border-box; }
 
+.container: {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 body {
   margin: 0;
@@ -40,7 +44,7 @@ body {
    gleiche Breite wie .goal-banner, Optik wie .item-btn-nav */
 .theme-link-wrapper {
   max-width: 1320px;
-  margin: 0 auto 50px;   /* gleicher Abstand wie .columns-navigation margin-top */
+  margin: 0 auto 30px;   /* gleicher Abstand wie .columns-navigation margin-top */
 }
 
 a.item-btn-theme,
@@ -161,7 +165,7 @@ a.column-header:hover { filter: brightness(0.95); }
 
 
 .columns-navigation {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
