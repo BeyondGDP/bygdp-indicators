@@ -2845,12 +2845,20 @@ a.column-header:hover {
   margin-bottom: 16px; }
 
 .theme-banner {
-  font-family: var(--font-ui);
-  font-size: 1.8rem;
-  font-weight: 700;
   min-height: 110px;
   margin: 0 0 28px;
   text-align: center; }
+
+/* Schrift exakt wie im Themen-Button (.item-label-theme).
+   #main-content erhöht die Spezifität, damit Heading-Regeln des Themes
+   (z. B. "#main-content h1") nicht gewinnen. */
+#main-content h1.theme-banner {
+  font-family: var(--font-ui);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: normal;
+  /* .column-header setzt 0.03em */ }
 
 /* Banner-Text in der helleren Goal-Farbe */
 .theme-banner.header-magenta {
