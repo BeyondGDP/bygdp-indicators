@@ -4,151 +4,47 @@
   {% assign language = page.language %}
 {% endif %}
 
-
 {% if site.environment == 'staging' %}
   {% assign baseurl = 'https://beyondgdp.github.io/bygdp-indicators' %}
 {% else %}
   {% assign baseurl = 'https://beyondgdp-germany.github.io' %}
 {% endif %}
 
-{% if page.goal.number == '1' %}
-  {% assign color = 'magenta' %}
-{% elsif page.goal.number == '2' %}
-  {% assign color = 'orange' %}
-{% elsif page.goal.number == '3' %}
-  {% assign color = 'purple' %}
-{% else %}
-  {% assign color = 'green' %}
-{% endif %}
+{% assign colors = 'magenta,orange,purple,green' | split: ',' %}
 
-{% case page.indicator.previous %}
-    {% when "1-1" %}
-        {% assign previous = page.t.global_targets.1-1-title %}
-    {% when "1-2" %}
-        {% assign previous = page.t.global_targets.1-2-title %}
-    {% when "1-3" %}
-        {% assign previous = page.t.global_targets.1-3-title %}
-    {% when "2-1" %}
-        {% assign previous = page.t.global_targets.2-1-title %}
-    {% when "2-2" %}
-        {% assign previous = page.t.global_targets.2-2-title %}
-    {% when "2-3" %}
-        {% assign previous = page.t.global_targets.2-3-title %}
-    {% when "2-4" %}
-        {% assign previous = page.t.global_targets.2-4-title %}
-    {% when "2-5" %}
-        {% assign previous = page.t.global_targets.2-5-title %}
-    {% when "2-6" %}
-        {% assign previous = page.t.global_targets.2-6-title %}
-    {% when "2-7" %}
-        {% assign previous = page.t.global_targets.2-7-title %}
-    {% when "2-8" %}
-        {% assign previous = page.t.global_targets.2-8-title %}
-    {% when "3-1" %}
-        {% assign previous = page.t.global_targets.3-1-title %}
-    {% when "3-2" %}
-        {% assign previous = page.t.global_targets.3-2-title %}
-    {% when "3-3" %}
-        {% assign previous = page.t.global_targets.3-3-title %}
-    {% when "3-4" %}
-        {% assign previous = page.t.global_targets.3-4-title %}
-    {% when "3-5" %}
-        {% assign previous = page.t.global_targets.3-5-title %}
-    {% when "3-6" %}
-        {% assign previous = page.t.global_targets.3-6-title %}
-    {% when "4-1" %}
-        {% assign previous = page.t.global_targets.4-1-title %}
-    {% when "4-2" %}
-        {% assign previous = page.t.global_targets.4-2-title %}
-    {% when "4-3" %}
-        {% assign previous = page.t.global_targets.4-3-title %}
-    {% when "4-4" %}
-        {% assign previous = page.t.global_targets.4-4-title %}
-    {% when "4-5" %}
-        {% assign previous = page.t.global_targets.4-5-title %}
-{% endcase %}
+{% comment %} Vorheriger Indikator: Ziel-Nummer = Teil vor dem Bindestrich {% endcomment %}
+{% assign prev_id    = page.indicator.previous %}
+{% assign prev_goal  = prev_id | split: '-' | first | minus: 1 %}
+{% assign color_prev = colors[prev_goal] %}
+{% assign prev_key   = prev_id | append: '-title' %}
+{% assign previous   = page.t.global_targets[prev_key] %}
 
-{% case page.indicator.next %}
-    {% when "1-1" %}
-        {% assign next = page.t.global_targets.1-1-title %}
-    {% when "1-2" %}
-        {% assign next = page.t.global_targets.1-2-title %}
-    {% when "1-3" %}
-        {% assign next = page.t.global_targets.1-3-title %}
-    {% when "2-1" %}
-        {% assign next = page.t.global_targets.2-1-title %}
-    {% when "2-2" %}
-        {% assign next = page.t.global_targets.2-2-title %}
-    {% when "2-3" %}
-        {% assign next = page.t.global_targets.2-3-title %}
-    {% when "2-4" %}
-        {% assign next = page.t.global_targets.2-4-title %}
-    {% when "2-5" %}
-        {% assign next = page.t.global_targets.2-5-title %}
-    {% when "2-6" %}
-        {% assign next = page.t.global_targets.2-6-title %}
-    {% when "2-7" %}
-        {% assign next = page.t.global_targets.2-7-title %}
-    {% when "2-8" %}
-        {% assign next = page.t.global_targets.2-8-title %}
-    {% when "3-1" %}
-        {% assign next = page.t.global_targets.3-1-title %}
-    {% when "3-2" %}
-        {% assign next = page.t.global_targets.3-2-title %}
-    {% when "3-3" %}
-        {% assign next = page.t.global_targets.3-3-title %}
-    {% when "3-4" %}
-        {% assign next = page.t.global_targets.3-4-title %}
-    {% when "3-5" %}
-        {% assign next = page.t.global_targets.3-5-title %}
-    {% when "3-6" %}
-        {% assign next = page.t.global_targets.3-6-title %}
-    {% when "4-1" %}
-        {% assign next = page.t.global_targets.4-1-title %}
-    {% when "4-2" %}
-        {% assign next = page.t.global_targets.4-2-title %}
-    {% when "4-3" %}
-        {% assign next = page.t.global_targets.4-3-title %}
-    {% when "4-4" %}
-        {% assign next = page.t.global_targets.4-4-title %}
-    {% when "4-5" %}
-        {% assign next = page.t.global_targets.4-5-title %}
-{% endcase %}
+{% comment %} Nächster Indikator {% endcomment %}
+{% assign next_id    = page.indicator.next %}
+{% assign next_goal  = next_id | split: '-' | first | minus: 1 %}
+{% assign color_next = colors[next_goal] %}
+{% assign next_key   = next_id | append: '-title' %}
+{% assign next       = page.t.global_targets[next_key] %}
 
 <!---Indicator page-->
 
 <div class="columns-navigation">
   <section>
-    <button class="item-btn item-btn-nav {{ color }}" onclick="location.href='{{ baseurl }}/{{ language }}/{{ page.indicator.previous }}'">
+    <button class="item-btn item-btn-nav {{ color_prev }}" onclick="location.href='{{ baseurl }}/{{ language }}/{{ prev_id }}'">
       <span class="item-label">
         <i class="fa fa-chevron-left" aria-hidden="true" style="padding-right: 10px"></i>
         <span class="item-label item-label-nav hidden-sm hidden-xs">{{ previous }} </span>
-        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/{{ page.indicator.previous }}.png" alt="{{ page.indicator.previous }}">
+        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/{{ prev_id }}.png" alt="{{ prev_id }}">
       </span>
     </button>
   </section>
   <section>
-    <button class="item-btn item-btn-nav {{ color }}" onclick="location.href='{{ baseurl }}/{{ language }}/{{ page.indicator.next }}'">
+    <button class="item-btn item-btn-nav {{ color_next }}" onclick="location.href='{{ baseurl }}/{{ language }}/{{ next_id }}'">
       <span class="item-label">
-        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/{{ page.indicator.next }}.png" alt="{{ page.indicator.next }}">
+        <img class="item-icon item-icon-nav" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/black/{{ next_id }}.png" alt="{{ next_id }}">
         <span class="item-label item-label-nav hidden-sm hidden-xs">{{ next }} </span>
         <i class="fa fa-chevron-right" aria-hidden="true" style="padding-left: 10px"></i>
       </span>
     </button>
   </section>
-
-
-  <!-- <div class="row justify-content-md-center">
-    <div class="col d-grid gap-2">
-      <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.page.goal.number }} navigation-btn" role="button" style="margin-top: 50px">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.prev_indicator }} </b>
-      </a>
-    </div>
-
-    <div class="col d-grid gap-2">
-      <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.page.goal.number }} navigation-btn" role="button"style="margin-top: 50px">
-        <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.next_indicator }} </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div> -->
 </div>

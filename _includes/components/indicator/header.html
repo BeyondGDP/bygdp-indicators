@@ -1,4 +1,29 @@
-<div class="heading goal-banner indicator goal-{{ page.goal.number }}" >
+{% assign colors = 'magenta,orange,purple,green' | split: ',' %}
+{% assign col_key  = page.goal.number | minus: 1 %}
+{% assign color = colors[col_key] %}
+
+{% if page.language == 'de' %}
+  {% assign lang_path = '' %}
+{% else %}
+  {% assign lang_path = '/' | append: page.language %}
+{% endif %}
+
+{% if site.environment == 'staging' %}
+  {% assign baseurl = 'https://beyondgdp.github.io/bygdp-indicators' %}
+{% else %}
+  {% assign baseurl = 'https://beyondgdp-germany.github.io' %}
+{% endif %}
+
+<!-- {% unless page.indicator.standalone %}
+<div class="theme-link-wrapper theme-link-goal-{{ page.goal.number }}">
+  <a class="item-btn item-btn-nav item-btn-theme {{ color }}"
+     href="{{ baseurl }}{{ lang_path }}/thema-{{ page.goal.number }}">
+    <span class="item-label-theme">{{ page.goal.name }}</span>
+  </a>
+</div>
+{% endunless %} -->
+
+<div class="heading goal-banner indicator goal-{{ page.goal.number }}"  style="padding-top: 10px; padding-bottom: 10px;">
     <div class="container">
         <div class="row">
             {% unless page.indicator.standalone %}

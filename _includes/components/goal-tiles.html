@@ -4,7 +4,11 @@
   {% else %}
     {% assign language = page.language %}
   {% endif %}
-  {% capture lang_path %}{% if language != '' %}/{{ language }}{% endif %}{% endcapture %}
+  {% capture lang_path %}
+  {% if language != '' %}
+  /{{ language }}
+  {% endif %}
+  {% endcapture %}
 
   <div class="themes-grid">
     {% for goal in page.goals %}

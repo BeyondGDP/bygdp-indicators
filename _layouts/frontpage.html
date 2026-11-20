@@ -13,7 +13,7 @@
     <div class="frontpage-goals-grid">
 
         {% if site.frontpage_goals_grid.description %}
-        <div class="frontpage-goals-grid-description">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
+        <div class="frontpage-goals-grid-description frontpage-goals-grid-description-click">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
         {% endif %}
 
         {% include components/goal-tiles.html %}

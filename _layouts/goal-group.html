@@ -35,18 +35,18 @@
 
 <div id="main-content" class="container" role="main">
   <div class="board">
-    {% include components/goal/breadcrumbs.html %}
+    <!--{% include components/goal/breadcrumbs.html %}-->
     <!-- Header-Banner -->
     <h1 class="column-header theme-banner header-{{ color }}">{{ goal_title }}</h1>
 
 
     <!-- Textfeld (Inhalt der jeweiligen Seitendatei) -->
-    <div class="theme-text">
+    <div class="theme-text theme-text-{{ color }}">
       {{ content }}
     </div>
 
-    <div class="frontpage-goals-grid-description">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
-    
+    <div class="frontpage-goals-grid-description frontpage-goals-grid-description-click">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
+
     <!-- Blasen mit Symbolen und Unterthemen -->
     <div class="theme-items" style="--cols: {{ cols }};">
       {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_number' %}
