@@ -57,7 +57,13 @@ a.item-btn-theme {
 }
 
 .item-label-theme {
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Header-Element: Textblock horizontal zentrieren */
+.goal-banner .indicator-details {
+  text-align: center;
 }
 
 .frontpage-goals-grid-description-click{
@@ -332,6 +338,24 @@ body.contrast-high .goal-banner{
      &.navigation-btn:hover {
        background-color: darken($background-c,10%);
      }
+   }
+   /* Themen-Button: Text in der Hintergrundfarbe des Header-Elements */
+   .theme-link-goal-#{$i} {
+     a.item-btn-theme,
+     a.item-btn-theme:hover,
+     a.item-btn-theme:focus,
+     a.item-btn-theme:visited {
+       color: $background-c;
+     }
+   }
+ }
+
+ body.contrast-high .theme-link-wrapper {
+   a.item-btn-theme,
+   a.item-btn-theme:hover,
+   a.item-btn-theme:focus,
+   a.item-btn-theme:visited {
+     color: #ffffff;
    }
  }
 
