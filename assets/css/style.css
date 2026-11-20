@@ -2782,7 +2782,12 @@ a.item-btn-theme {
   text-align: center; }
 
 .item-label-theme {
-  font-weight: 500; }
+  font-size: 1.8rem;
+  font-weight: 700; }
+
+/* Header-Element: Textblock horizontal zentrieren */
+.goal-banner .indicator-details {
+  text-align: center; }
 
 .frontpage-goals-grid-description-click {
   border-top: 2px solid #ccc; }
@@ -3027,6 +3032,13 @@ body.contrast-high .goal-banner {
 .goal-1.navigation-btn:hover {
   background-color: #812148; }
 
+/* Themen-Button: Text in der Hintergrundfarbe des Header-Elements */
+.theme-link-goal-1 a.item-btn-theme,
+.theme-link-goal-1 a.item-btn-theme:hover,
+.theme-link-goal-1 a.item-btn-theme:focus,
+.theme-link-goal-1 a.item-btn-theme:visited {
+  color: #AA2B5F; }
+
 .goal-2.goal-banner {
   background-color: #FCB513; }
 .goal-2.navigation-btn {
@@ -3040,6 +3052,13 @@ body.contrast-high .goal-banner {
   padding-bottom: 6px; }
 .goal-2.navigation-btn:hover {
   background-color: #d99803; }
+
+/* Themen-Button: Text in der Hintergrundfarbe des Header-Elements */
+.theme-link-goal-2 a.item-btn-theme,
+.theme-link-goal-2 a.item-btn-theme:hover,
+.theme-link-goal-2 a.item-btn-theme:focus,
+.theme-link-goal-2 a.item-btn-theme:visited {
+  color: #FCB513; }
 
 .goal-3.goal-banner {
   background-color: #9E5EA6; }
@@ -3055,6 +3074,13 @@ body.contrast-high .goal-banner {
 .goal-3.navigation-btn:hover {
   background-color: #804a87; }
 
+/* Themen-Button: Text in der Hintergrundfarbe des Header-Elements */
+.theme-link-goal-3 a.item-btn-theme,
+.theme-link-goal-3 a.item-btn-theme:hover,
+.theme-link-goal-3 a.item-btn-theme:focus,
+.theme-link-goal-3 a.item-btn-theme:visited {
+  color: #9E5EA6; }
+
 .goal-4.goal-banner {
   background-color: #71BE43; }
 .goal-4.navigation-btn {
@@ -3068,6 +3094,19 @@ body.contrast-high .goal-banner {
   padding-bottom: 6px; }
 .goal-4.navigation-btn:hover {
   background-color: #5a9935; }
+
+/* Themen-Button: Text in der Hintergrundfarbe des Header-Elements */
+.theme-link-goal-4 a.item-btn-theme,
+.theme-link-goal-4 a.item-btn-theme:hover,
+.theme-link-goal-4 a.item-btn-theme:focus,
+.theme-link-goal-4 a.item-btn-theme:visited {
+  color: #71BE43; }
+
+body.contrast-high .theme-link-wrapper a.item-btn-theme,
+body.contrast-high .theme-link-wrapper a.item-btn-theme:hover,
+body.contrast-high .theme-link-wrapper a.item-btn-theme:focus,
+body.contrast-high .theme-link-wrapper a.item-btn-theme:visited {
+  color: #ffffff; }
 
 .goal-banner {
   border-radius: var(--radius-pill);
