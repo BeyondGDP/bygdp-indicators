@@ -299,7 +299,7 @@ body.contrast-high .goal-banner{
  }
 
  .goal-banner {
-   h1, p {
+   h1, h2, p {
      color: $goal-banner-color;
      @media only screen and (max-width: 600px) {
        font-size:4vw;
@@ -314,6 +314,7 @@ body.contrast-high .goal-banner{
        font-size:7vw;
      }
    };
+
    border-radius: var(--radius-pill);
    padding-left: 80px;
    padding-right: 50px;
