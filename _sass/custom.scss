@@ -32,15 +32,15 @@ body {
 .goal-banner p,
 .goal-banner span,
 .item-btn,
-.item-btn * {
+.item-btn *:not(.fa) {
   font-family: var(--font-ui);
 }
 
 /* Themen-Button oberhalb des Indikator-Headers:
    gleiche Breite wie .goal-banner, Optik wie .item-btn-nav */
 .theme-link-wrapper {
-  max-width: 1320px;
-  margin: 0 auto 10px;
+ max-width: 1320px;
+ margin: 0 auto 50px;
 }
 
 a.item-btn-theme,
