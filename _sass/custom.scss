@@ -28,6 +28,25 @@ body {
   color: var(--text);
 }
 
+
+
+/* Popup */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+  width: min(500px, 90%);
+}
+
+.modal {
+  padding: 24px;
+}
+
+
 /* Einheitliche Schrift für Themen-Button, Header und Navigation-Buttons
    (überschreibt evtl. abweichende Überschriften-/Button-Fonts des Themes) */
 .goal-banner,
@@ -118,8 +137,11 @@ a.column-header:hover { filter: brightness(0.95); }
 .theme-back { margin-bottom: 16px; }
 
 .theme-banner {
+  position: relative;        /* Bezugsrahmen für die Pfeile */
   min-height: 110px;
   margin: 0 0 28px;
+  padding-left: 80px;        /* Platz für die Pfeile, damit der Titel nicht darunter läuft */
+  padding-right: 80px;
   text-align: center;
 }
 
@@ -139,6 +161,48 @@ a.column-header:hover { filter: brightness(0.95); }
 .theme-banner.header-orange  { color: var(--orange-light); }
 .theme-banner.header-purple  { color: var(--purple-light); }
 .theme-banner.header-green   { color: var(--green-light); }
+
+/* Pfeile: fest am linken bzw. rechten Rand des Banners, vertikal mittig */
+.theme-banner .theme-banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  text-decoration: none !important;
+  transition: opacity 0.15s ease;
+}
+.theme-banner .theme-banner-arrow:first-child { left: 24px; }
+.theme-banner .theme-banner-arrow:last-child  { right: 24px; }
+
+/* Pfeile in derselben Farbe wie der Titel.
+   !important, weil Link-Farben des Themes (oft per ID-Selektor) sonst gewinnen;
+   "inherit" übernimmt auch das Schwarz im Hochkontrast-Modus. */
+.theme-banner .theme-banner-arrow,
+.theme-banner .theme-banner-arrow:hover,
+.theme-banner .theme-banner-arrow:focus,
+.theme-banner .theme-banner-arrow:visited,
+.theme-banner .theme-banner-arrow .fa {
+  color: inherit !important;
+}
+
+.theme-banner .theme-banner-arrow:hover { opacity: 0.75; }
+.theme-banner .theme-banner-arrow:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  .theme-banner {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+  .theme-banner .theme-banner-arrow:first-child { left: 8px; }
+  .theme-banner .theme-banner-arrow:last-child  { right: 8px; }
+}
 
 .theme-text {
   max-width: 1400px;
