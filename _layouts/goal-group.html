@@ -22,6 +22,31 @@
   {% assign goal_title = goal.name %}
 {% endif %}
 
+{% comment %} Vorheriges / nächstes Thema (zyklisch: 1 ← … → 4 → 1) {% endcomment %}
+{% assign goal_count = page.goals.size | default: 4 %}
+{% assign goal_n     = page.goal_number | plus: 0 %}
+
+{% assign prev_n = goal_n | minus: 1 %}
+{% if prev_n < 1 %}{% assign prev_n = goal_count %}{% endif %}
+{% assign next_n = goal_n | plus: 1 %}
+{% if next_n > goal_count %}{% assign next_n = 1 %}{% endif %}
+
+{% assign prev_s = prev_n | append: '' %}
+{% assign next_s = next_n | append: '' %}
+
+{% if prev_s == '1' %}
+  {% assign prev_title = page.t.global_goals.1-title %}
+{% else %}
+  {% assign prev_goal  = page.goals | where: 'number', prev_s | first %}
+  {% assign prev_title = prev_goal.name %}
+{% endif %}
+{% if next_s == '1' %}
+  {% assign next_title = page.t.global_goals.1-title %}
+{% else %}
+  {% assign next_goal  = page.goals | where: 'number', next_s | first %}
+  {% assign next_title = next_goal.name %}
+{% endif %}
+
 {% assign n_items = goal_indicators.size %}
 {% if page.goal_number == '1' %}{% assign n_items = 3 %}{% endif %}
 
@@ -37,9 +62,19 @@
   <div class="board">
     <!--{% include components/goal/breadcrumbs.html %}-->
     <!-- Header-Banner -->
-    <h1 class="column-header theme-banner header-{{ color }}">{{ goal_title }}</h1>
+    <h1 class="column-header theme-banner header-{{ color }}">
+      <a class="theme-banner-arrow" href="{{ baseurl }}{{ lang_path }}/thema-{{ prev_s }}"
+         aria-label="{{ prev_title }}" title="{{ prev_title }}">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </a>
+      <span class="theme-banner-title">{{ goal_title }}</span>
+      <a class="theme-banner-arrow" href="{{ baseurl }}{{ lang_path }}/thema-{{ next_s }}"
+         aria-label="{{ next_title }}" title="{{ next_title }}">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+    </h1>
 
-
+    {% include components/goal/breadcrumbs.html %}
     <!-- Textfeld (Inhalt der jeweiligen Seitendatei) -->
     <div class="theme-text theme-text-{{ color }}">
       {{ content }}
@@ -56,7 +91,7 @@
           {% assign title_key = slug | append: '-title' %}
           <button class="item-btn {{ color }}"
                   onclick="location.href='{{ baseurl }}{{ lang_path }}/{{ slug }}'">
-            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators_v3/assets/img/targets/{{ slug }}.png" alt="{{ slug }}">
+            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ slug }}.png" alt="{{ slug }}">
             <span class="item-label">{{ page.t.global_targets[title_key] }}</span>
           </button>
         {% endfor %}
@@ -67,7 +102,7 @@
           <button class="item-btn {{ color }}"
                   onclick="location.href='{{ baseurl }}{{ lang_path }}/{{ target.slug }}'"
                   data-item="{{ target.name }}">
-            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators_v3/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
+            <img class="item-icon" src="https://beyondgdp.github.io/bygdp-indicators/assets/img/targets/{{ target.slug }}.png" alt="{{ target.slug }}">
             <span class="item-label">{{ page.t.global_targets[title_key] }}</span>
           </button>
         {% endfor %}

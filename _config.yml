@@ -60,7 +60,7 @@ frontpage_introduction_banner:
 frontpage_cards:
   - rule_color: #ccc
     title: ''
-    include: components/download-all-data.html
+    include: components/byg_column.html
   - rule_color: #ccc
     title: ''
     include: components/sdg_column.html

@@ -118,8 +118,11 @@ a.column-header:hover { filter: brightness(0.95); }
 .theme-back { margin-bottom: 16px; }
 
 .theme-banner {
+  position: relative;        /* Bezugsrahmen für die Pfeile */
   min-height: 110px;
   margin: 0 0 28px;
+  padding-left: 80px;        /* Platz für die Pfeile, damit der Titel nicht darunter läuft */
+  padding-right: 80px;
   text-align: center;
 }
 
@@ -139,6 +142,48 @@ a.column-header:hover { filter: brightness(0.95); }
 .theme-banner.header-orange  { color: var(--orange-light); }
 .theme-banner.header-purple  { color: var(--purple-light); }
 .theme-banner.header-green   { color: var(--green-light); }
+
+/* Pfeile: fest am linken bzw. rechten Rand des Banners, vertikal mittig */
+.theme-banner .theme-banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  text-decoration: none !important;
+  transition: opacity 0.15s ease;
+}
+.theme-banner .theme-banner-arrow:first-child { left: 24px; }
+.theme-banner .theme-banner-arrow:last-child  { right: 24px; }
+
+/* Pfeile in derselben Farbe wie der Titel.
+   !important, weil Link-Farben des Themes (oft per ID-Selektor) sonst gewinnen;
+   "inherit" übernimmt auch das Schwarz im Hochkontrast-Modus. */
+.theme-banner .theme-banner-arrow,
+.theme-banner .theme-banner-arrow:hover,
+.theme-banner .theme-banner-arrow:focus,
+.theme-banner .theme-banner-arrow:visited,
+.theme-banner .theme-banner-arrow .fa {
+  color: inherit !important;
+}
+
+.theme-banner .theme-banner-arrow:hover { opacity: 0.75; }
+.theme-banner .theme-banner-arrow:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  .theme-banner {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+  .theme-banner .theme-banner-arrow:first-child { left: 8px; }
+  .theme-banner .theme-banner-arrow:last-child  { right: 8px; }
+}
 
 .theme-text {
   max-width: 1400px;
@@ -168,6 +213,7 @@ a.column-header:hover { filter: brightness(0.95); }
 .board {
   max-width: 1400px;
   margin: 0;
+  margin-top: 40px;
 }
 
 
@@ -688,4 +734,87 @@ h4.h4bold {
 
 .indicator-sidebar {
   hyphens: auto;
+}
+
+/* ---------- Willkommens-Popup (Startseite) ---------- */
+.welcome-popup {
+  padding: 0;                     /* Klick-Erkennung auf den Hintergrund */
+  border: none;
+  border-radius: 24px;
+  max-width: 560px;
+  width: calc(100% - 40px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-ui);
+  color: var(--text);
+  background: #ffffff;
+}
+.welcome-popup::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-popup-inner {
+  position: relative;
+  padding: 40px 36px 32px;
+  text-align: center;
+}
+
+.welcome-popup-logo {
+  display: block;
+  max-width: 220px;
+  max-height: 110px;
+  margin: 0 auto 20px;
+  object-fit: contain;
+}
+
+.welcome-popup-title {
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.welcome-popup-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  hyphens: auto;
+  margin: 0 0 24px;
+}
+
+.welcome-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.welcome-popup-close:hover { background: rgba(0, 0, 0, 0.06); }
+.welcome-popup-close:focus-visible,
+.welcome-popup-ok:focus-visible {
+  outline: 3px solid #333;
+  outline-offset: 2px;
+}
+
+.welcome-popup-ok {
+  width: auto;
+  min-width: 180px;
+  margin: 0 auto;
+  font-weight: 700;
+  background: var(--green-light);
+}
+
+body.contrast-high .welcome-popup {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+body.contrast-high .welcome-popup-close { color: #ffffff; }
+body.contrast-high .welcome-popup-close:focus-visible,
+body.contrast-high .welcome-popup-ok:focus-visible {
+  outline-color: #ffff00;
 }
