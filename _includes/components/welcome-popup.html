@@ -5,15 +5,10 @@
   Einbinden im Startseiten-Layout:  {% include components/welcome-popup.html %}
 {% endcomment %}
 
-  {% assign wp_title = 'Willkommen bei den Beyond-GDP-Indikatoren' %}
-  {% assign wp_text  = page.t.frontpage.byg_column %}
-  {% assign wp_close = 'Schließen' %}
-  {% assign wp_ok    = 'Verstanden' %}
-
 
 <dialog id="welcome-popup" class="welcome-popup" aria-labelledby="welcome-popup-title">
   <div class="welcome-popup-inner">
-  <button type="button" class="welcome-popup-close" data-welcome-close aria-label="{{ wp_close }}">
+  <button type="button" class="welcome-popup-close" data-welcome-close aria-label="{{ page.t.frontpage.close }}">
     <i class="fa fa-times" aria-hidden="true"></i>
   </button>
 
@@ -21,11 +16,11 @@
        src="{{ '/assets/img/byg.png' | relative_url }}"
        alt="Logo">
 
-  <h2 id="welcome-popup-title" class="welcome-popup-title">{{ wp_title }}</h2>
+  <h2 id="welcome-popup-title" class="welcome-popup-title">{{page.t.frontpage.welcome }}</h2>
   <p class="welcome-popup-text">{{ page.t.frontpage.byg_column }}</p>
 
   <button type="button" class="item-btn item-btn-nav welcome-popup-ok" data-welcome-close>
-    {{ wp_ok }}
+    {{ page.t.frontpage.ok }}
   </button>
   </div>
 </dialog>
