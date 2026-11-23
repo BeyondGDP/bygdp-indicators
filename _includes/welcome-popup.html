@@ -1,0 +1,65 @@
+{% comment %}
+  Willkommens-Popup für die Startseite.
+  Öffnet sich nur beim ersten Besuch (Merker in localStorage) und
+  zeigt Logo + Infotext in der Sprache der Seite (de / sonst en).
+  Einbinden im Startseiten-Layout:  {% include components/welcome-popup.html %}
+{% endcomment %}
+
+  {% assign wp_title = 'Willkommen bei den Beyond-GDP-Indikatoren' %}
+  {% assign wp_text  = page.t.frontpage.byg_column %}
+  {% assign wp_close = 'Schließen' %}
+  {% assign wp_ok    = 'Verstanden' %}
+
+
+<dialog id="welcome-popup" class="welcome-popup" aria-labelledby="welcome-popup-title">
+  <div class="welcome-popup-inner">
+  <button type="button" class="welcome-popup-close" data-welcome-close aria-label="{{ wp_close }}">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </button>
+
+  <img class="welcome-popup-logo"
+       src="{{ '/assets/img/byg.png' | relative_url }}"
+       alt="Logo">
+
+  <h2 id="welcome-popup-title" class="welcome-popup-title">{{ wp_title }}</h2>
+  <p class="welcome-popup-text">{{ wp_text }}</p>
+
+  <button type="button" class="item-btn item-btn-nav welcome-popup-ok" data-welcome-close>
+    {{ wp_ok }}
+  </button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var KEY = 'bygdp-welcome-seen';
+  var dlg = document.getElementById('welcome-popup');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+
+  var seen = false;
+  try { seen = localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (seen) return;
+
+  function close() {
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    dlg.close();
+  }
+
+  dlg.querySelectorAll('[data-welcome-close]').forEach(function (btn) {
+    btn.addEventListener('click', close);
+  });
+
+  // Klick auf den abgedunkelten Hintergrund schließt ebenfalls
+  // (der Dialog selbst hat kein Padding, Inhalte liegen im inneren div)
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg) close();
+  });
+
+  // Escape-Taste: Merker ebenfalls setzen
+  dlg.addEventListener('cancel', function () {
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+  });
+
+  dlg.showModal();
+})();
+</script>
