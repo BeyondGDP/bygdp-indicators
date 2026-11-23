@@ -4,23 +4,6 @@
 
         
 
-        <button id="open-modal">Popup öffnen</button>
-
-        <dialog id="modal">
-          <form method="dialog" class="modal">
-            <h2>Hinweis</h2>
-            <p>Dies ist ein modernes In-Page-Popup ohne Blocker.</p>
-            <button value="close">Schließen</button>
-          </form>
-        </dialog>
-        <script>
-        document.getElementById("open-modal")
-          .addEventListener("click", () => {
-            document.getElementById("modal").showModal();
-          });
-        </script>
-
-
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
@@ -164,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20261123092218">
+        <link rel="stylesheet" href="/bygdp-indicators/assets/css/style.css?v=20261123100253">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -403,19 +386,12 @@ data-event-label="high"
       
 
       
-        <div class="container_frontpage">
-    <div style="text-align: center; padding-top: 20px;">
-        <a href="https://beyondgdp.github.io/bygdp-data/de/zip/all_indicators.zip" role="button">
-          <i class="fa fa-download download-icon"></i>
-        </a>
-    </div>
+        <div>
     <div>
-        <br>
-        <u>Alle Daten herunterladen (.zip):</u><br>Dateigröße: 564.0 kB
-        
-            <br>
-            <u>Letzte Datenaktualisierung:</u><br>23.11.2026
-        
+      <a href="https://sdg-indikatoren.de">
+        <img src="https://beyondgdp.github.io/bygdp-indicators//assets/img/byg.png" alt="Beyond-BGP logo" style="width:100px; margin-right:10px; float:left">
+      </a>
+      
     </div>
 </div>
 
@@ -511,6 +487,67 @@ data-event-label="high"
 
 </div>
 
+
+  
+  
+  
+  
+
+
+<dialog id="welcome-popup" class="welcome-popup" aria-labelledby="welcome-popup-title">
+  <div class="welcome-popup-inner">
+  <button type="button" class="welcome-popup-close" data-welcome-close aria-label="Schließen">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </button>
+
+  <img class="welcome-popup-logo"
+       src="/bygdp-indicators/assets/img/byg.png"
+       alt="Logo">
+
+  <h2 id="welcome-popup-title" class="welcome-popup-title">Willkommen bei den Beyond-GDP-Indikatoren</h2>
+  <p class="welcome-popup-text"></p>
+
+  <button type="button" class="item-btn item-btn-nav welcome-popup-ok" data-welcome-close>
+    Verstanden
+  </button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var KEY = 'bygdp-welcome-seen';
+  var dlg = document.getElementById('welcome-popup');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+
+  var seen = false;
+  try { seen = localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (seen) return;
+
+  function close() {
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    dlg.close();
+  }
+
+  dlg.querySelectorAll('[data-welcome-close]').forEach(function (btn) {
+    btn.addEventListener('click', close);
+  });
+
+  // Klick auf den abgedunkelten Hintergrund schließt ebenfalls
+  // (der Dialog selbst hat kein Padding, Inhalte liegen im inneren div)
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg) close();
+  });
+
+  // Escape-Taste: Merker ebenfalls setzen
+  dlg.addEventListener('cancel', function () {
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+  });
+
+  dlg.showModal();
+})();
+</script>
+
+
 <footer role="contentinfo" style="margin-top: 100px;">
     <div class="container">
         <div class="row">
@@ -571,12 +608,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/bygdp-indicators/assets/js/sdg.js?v=20261123092218'></script>
+<script src='/bygdp-indicators/assets/js/sdg.js?v=20261123100253'></script>
 
 
     
     
-    <script src="/bygdp-indicators/assets/js/custom.js?v=20261123092218"></script><script>
+    <script src="/bygdp-indicators/assets/js/custom.js?v=20261123100253"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

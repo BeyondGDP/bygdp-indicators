@@ -2757,19 +2757,6 @@ body {
   font-family: var(--font-ui);
   color: var(--text); }
 
-/* Popup */
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.6); }
-
-dialog {
-  border: none;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  width: min(500px, 90%); }
-
-.modal {
-  padding: 24px; }
-
 /* Einheitliche Schrift für Themen-Button, Header und Navigation-Buttons
    (überschreibt evtl. abweichende Überschriften-/Button-Fonts des Themes) */
 .goal-banner,
@@ -3429,3 +3416,83 @@ h4.h4bold {
 
 .indicator-sidebar {
   hyphens: auto; }
+
+/* ---------- Willkommens-Popup (Startseite) ---------- */
+.welcome-popup {
+  padding: 0;
+  /* Klick-Erkennung auf den Hintergrund */
+  border: none;
+  border-radius: 24px;
+  max-width: 560px;
+  width: calc(100% - 40px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-ui);
+  color: var(--text);
+  background: #ffffff; }
+
+.welcome-popup::backdrop {
+  background: rgba(0, 0, 0, 0.5); }
+
+.welcome-popup-inner {
+  position: relative;
+  padding: 40px 36px 32px;
+  text-align: center; }
+
+.welcome-popup-logo {
+  display: block;
+  max-width: 220px;
+  max-height: 110px;
+  margin: 0 auto 20px;
+  object-fit: contain; }
+
+.welcome-popup-title {
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px; }
+
+.welcome-popup-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  hyphens: auto;
+  margin: 0 0 24px; }
+
+.welcome-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer; }
+
+.welcome-popup-close:hover {
+  background: rgba(0, 0, 0, 0.06); }
+
+.welcome-popup-close:focus-visible,
+.welcome-popup-ok:focus-visible {
+  outline: 3px solid #333;
+  outline-offset: 2px; }
+
+.welcome-popup-ok {
+  width: auto;
+  min-width: 180px;
+  margin: 0 auto;
+  font-weight: 700;
+  background: var(--green-light); }
+
+body.contrast-high .welcome-popup {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff; }
+
+body.contrast-high .welcome-popup-close {
+  color: #ffffff; }
+
+body.contrast-high .welcome-popup-close:focus-visible,
+body.contrast-high .welcome-popup-ok:focus-visible {
+  outline-color: #ffff00; }
