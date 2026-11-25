@@ -3452,12 +3452,6 @@ h4.h4bold {
   font-weight: 700;
   margin: 0 0 12px; }
 
-.welcome-popup-title:focus,
-.welcome-popup-title:focus-visible {
-  outline: none;
-  background: transparent;
-  box-shadow: none; }
-
 .welcome-popup-text {
   font-size: 1rem;
   line-height: 1.5;
@@ -3503,3 +3497,11 @@ body.contrast-high .welcome-popup-close {
 body.contrast-high .welcome-popup-close:focus-visible,
 body.contrast-high .welcome-popup-ok:focus-visible {
   outline-color: #ffff00; }
+
+/* Startfokus liegt auf der Überschrift (nicht bedienbar) → keine Markierung.
+   Das X bekommt die gelbe Fokus-Markierung weiterhin, sobald man mit Tab dorthin springt. */
+.welcome-popup-title:focus,
+.welcome-popup-title:focus-visible {
+  outline: none;
+  background: transparent;
+  box-shadow: none; }
