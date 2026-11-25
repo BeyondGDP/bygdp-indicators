@@ -773,6 +773,13 @@ h4.h4bold {
   margin: 0 0 12px;
 }
 
+.welcome-popup-title:focus,
+.welcome-popup-title:focus-visible {
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+}
+
 .welcome-popup-text {
   font-size: 1rem;
   line-height: 1.5;

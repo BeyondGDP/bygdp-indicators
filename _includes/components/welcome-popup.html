@@ -1,11 +1,3 @@
-{% comment %}
-  Willkommens-Popup für die Startseite.
-  Öffnet sich nur beim ersten Besuch (Merker in localStorage) und
-  zeigt Logo + Infotext in der Sprache der Seite (de / sonst en).
-  Einbinden im Startseiten-Layout:  {% include components/welcome-popup.html %}
-{% endcomment %}
-
-
 <dialog id="welcome-popup" class="welcome-popup" aria-labelledby="welcome-popup-title">
   <div class="welcome-popup-inner">
   <button type="button" class="welcome-popup-close" data-welcome-close aria-label="{{ page.t.frontpage.close }}">
@@ -16,7 +8,7 @@
        src="{{ '/assets/img/byg.png' | relative_url }}"
        alt="Logo">
 
-  <h2 id="welcome-popup-title" class="welcome-popup-title">{{page.t.frontpage.welcome }}</h2>
+  <h2 id="welcome-popup-title" class="welcome-popup-title" tabindex="-1" autofocus>{{ wp_title }}</h2>
   <p class="welcome-popup-text">{{ page.t.frontpage.byg_column }}</p>
 
   <!-- <button type="button" class="item-btn item-btn-nav welcome-popup-ok" data-welcome-close>
