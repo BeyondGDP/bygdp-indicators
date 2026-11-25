@@ -819,11 +819,12 @@ body.contrast-high .welcome-popup-ok:focus-visible {
   outline-color: #ffff00;
 }
 
-/* Startfokus liegt auf der Überschrift (nicht bedienbar) → keine Markierung.
-   Das X bekommt die gelbe Fokus-Markierung weiterhin, sobald man mit Tab dorthin springt. */
-.welcome-popup-title:focus,
-.welcome-popup-title:focus-visible {
-  outline: none;
-  background: transparent;
-  box-shadow: none;
+#welcome-popup .welcome-popup-title:focus,
+#welcome-popup .welcome-popup-title:focus-visible {
+  outline: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  text-decoration: none !important;
 }
