@@ -3215,6 +3215,50 @@ body.contrast-high .theme-link-wrapper a.item-btn-theme:visited {
         font-size: 7vw; } }
 
 /*#2.1*/
+/* Indikator-Banner auf Smartphones: weniger Rundung, gleichmäßiger
+   Innenabstand und kleinere Schrift, damit der Text nicht an den Rand stößt.
+   (Die Pill-Rundung würde bei einem schmalen, hohen Banner die Ecken weit
+   ins Innere ziehen.) */
+@media (max-width: 769px) {
+  .goal-banner {
+    border-radius: 28px;
+    padding: 18px 24px !important;
+    /* !important: überschreibt das Inline-Padding im Header */ }
+
+  .goal-banner .row {
+    margin-left: 0;
+    margin-right: 0; }
+
+  .goal-banner .indicator-details {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .goal-banner h1.indicator-head-target {
+    font-size: 1.1rem;
+    /* ersetzt die 4–7vw-Werte */
+    line-height: 1.35;
+    overflow-wrap: break-word;
+    /* lange Komposita notfalls umbrechen */ }
+
+  .goal-banner .area-text {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 4px; }
+
+  .goal-banner .lead-copy {
+    font-size: 1.1rem;
+    line-height: 1.35; } }
+@media (max-width: 400px) {
+  .goal-banner {
+    border-radius: 22px;
+    padding: 14px 18px !important; }
+
+  .goal-banner h1.indicator-head-target,
+  .goal-banner .lead-copy {
+    font-size: 1rem; }
+
+  .goal-banner .area-text {
+    font-size: 0.9rem; } }
 body {
   background: white;
   padding-top: 15px; }
