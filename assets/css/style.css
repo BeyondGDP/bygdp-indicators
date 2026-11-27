@@ -3277,7 +3277,7 @@ body.contrast-high .theme-link-wrapper a.item-btn-theme:visited {
 @media (max-width: 400px) {
   .goal-banner {
     border-radius: 44px;
-    padding: 14px 22px !important; }
+    padding: 16px 24px !important; }
 
   .goal-banner h1.indicator-head-target,
   .goal-banner .lead-copy {
