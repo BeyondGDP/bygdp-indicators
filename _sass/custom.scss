@@ -490,7 +490,7 @@ body.contrast-high .goal-banner{
 @media (max-width: 769px) {
   .goal-banner {
     border-radius: 84px;
-    padding: 18px 24px !important;   /* !important: überschreibt das Inline-Padding im Header */
+    padding: 18px 28px !important;   /* !important: überschreibt das Inline-Padding im Header */
   }
   .goal-banner .row {
     margin-left: 0;
@@ -507,7 +507,7 @@ body.contrast-high .goal-banner{
   }
   .goal-banner .area-text {
     display: block;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin-bottom: 4px;
   }
   .goal-banner .lead-copy {
