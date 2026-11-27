@@ -3221,7 +3221,7 @@ body.contrast-high .theme-link-wrapper a.item-btn-theme:visited {
    ins Innere ziehen.) */
 @media (max-width: 769px) {
   .goal-banner {
-    border-radius: 28px;
+    border-radius: 42px;
     padding: 18px 24px !important;
     /* !important: überschreibt das Inline-Padding im Header */ }
 
