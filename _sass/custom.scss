@@ -117,13 +117,23 @@ a.column-header:hover { filter: brightness(0.95); }
 /* Unterseiten */
 .theme-back { margin-bottom: 16px; }
 
+/* Maße der Pfeile im Themen-Banner.
+   Innenabstand links/rechts = Randabstand + Pfeilbreite + Mindestabstand zum Titel */
 .theme-banner {
-  position: relative;        /* Bezugsrahmen für die Pfeile */
+  --arrow-offset: 20px;   /* Abstand Pfeil ↔ Banner-Rand */
+  --arrow-w: 44px;        /* Klickfläche des Pfeils */
+  --arrow-gap: 20px;      /* Mindestabstand Pfeil ↔ Titel */
+  position: relative;
   min-height: 110px;
   margin: 0 0 28px;
-  padding-left: 80px;        /* Platz für die Pfeile, damit der Titel nicht darunter läuft */
-  padding-right: 80px;
   text-align: center;
+}
+
+/* Doppelte Klasse: .column-header (weiter unten) setzt sonst padding: 14px 30px
+   und würde den Platz für die Pfeile wieder wegnehmen */
+h1.column-header.theme-banner {
+  padding-left:  calc(var(--arrow-offset) + var(--arrow-w) + var(--arrow-gap));
+  padding-right: calc(var(--arrow-offset) + var(--arrow-w) + var(--arrow-gap));
 }
 
 /* Schrift exakt wie im Themen-Button (.item-label-theme).
@@ -151,13 +161,16 @@ a.column-header:hover { filter: brightness(0.95); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
-  border-radius: var(--radius-pill);
+  width: var(--arrow-w);
+  height: var(--arrow-w);
+  padding: 0;
+  font-size: 1.4rem;
+  border-radius: 50%;
   text-decoration: none !important;
   transition: opacity 0.15s ease;
 }
-.theme-banner .theme-banner-arrow:first-child { left: 24px; }
-.theme-banner .theme-banner-arrow:last-child  { right: 24px; }
+.theme-banner .theme-banner-arrow:first-child { left:  var(--arrow-offset); }
+.theme-banner .theme-banner-arrow:last-child  { right: var(--arrow-offset); }
 
 /* Pfeile in derselben Farbe wie der Titel.
    !important, weil Link-Farben des Themes (oft per ID-Selektor) sonst gewinnen;
@@ -176,13 +189,29 @@ a.column-header:hover { filter: brightness(0.95); }
   outline-offset: 2px;
 }
 
-@media (max-width: 860px) {
+/* Smartphone: kleinere Pfeile/Schrift, weniger Rundung (wie Indikator-Banner) */
+@media (max-width: 769px) {
   .theme-banner {
-    padding-left: 56px;
-    padding-right: 56px;
+    --arrow-offset: 8px;
+    --arrow-w: 36px;
+    --arrow-gap: 12px;
   }
-  .theme-banner .theme-banner-arrow:first-child { left: 8px; }
-  .theme-banner .theme-banner-arrow:last-child  { right: 8px; }
+  h1.column-header.theme-banner {
+    border-radius: 28px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    min-height: 0;
+  }
+  #main-content h1.theme-banner {
+    font-size: 1.3rem;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  .theme-banner .theme-banner-arrow { font-size: 1.1rem; }
+}
+
+@media (max-width: 400px) {
+  #main-content h1.theme-banner { font-size: 1.15rem; }
 }
 
 .theme-text {
@@ -460,7 +489,7 @@ body.contrast-high .goal-banner{
    ins Innere ziehen.) */
 @media (max-width: 769px) {
   .goal-banner {
-    border-radius: 42px;
+    border-radius: 84px;
     padding: 18px 24px !important;   /* !important: überschreibt das Inline-Padding im Header */
   }
   .goal-banner .row {
