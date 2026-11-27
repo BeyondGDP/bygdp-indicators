@@ -3248,7 +3248,7 @@ body.contrast-high .theme-link-wrapper a.item-btn-theme:visited {
 @media (max-width: 769px) {
   .goal-banner {
     border-radius: 84px;
-    padding: 18px 24px !important;
+    padding: 18px 28px !important;
     /* !important: überschreibt das Inline-Padding im Header */ }
 
   .goal-banner .row {
@@ -3268,7 +3268,7 @@ body.contrast-high .theme-link-wrapper a.item-btn-theme:visited {
 
   .goal-banner .area-text {
     display: block;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin-bottom: 4px; }
 
   .goal-banner .lead-copy {
